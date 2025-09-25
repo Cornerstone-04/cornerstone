@@ -1,103 +1,103 @@
+"use client";
 import Image from "next/image";
+import { connect, timeline } from "@/lib/me";
+import Link from "next/link";
+import { useState } from "react";
+import { Container } from "@/components/layout";
+import { Accordion } from "@/components/ui";
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [active, setActive] = useState<number | null>(0);
+  const trunkExp = timeline.slice(0, 3);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const handleToggle = (index: number) => {
+    setActive((prev) => (prev === index ? null : index));
+  };
+
+  return (
+    <Container className="pt-12 pb-24">
+      <div className="flex items-start justify-between">
+        <div className="w-full md:w-8/12 text-gray-700">
+          <div className="intro">
+            <h2 className="text-3xl font-medium md:text-3xl mb-4">
+              Hi, I&apos;m <br /> Cornerstone Ephraim.
+            </h2>
+          </div>
+
+          <div className="text-sm leading-loose space-y-3">
+            <p>
+              <span className="text-red-400">
+                Your goto artist - a frontend engineer.
+              </span>{" "}
+              I channel my days (and often, moonlit nights) into painting the
+              canvas of the internet. Through every project and intricately
+              woven line of code, I weave &lt; and /&gt; into vibrant, immersive
+              experiences that come alive across the digital canvas.
+            </p>
+            <p>
+              When not immersed in coding, I&apos;m probably reading some
+              bookmarked tech articles, leveling up my backend skills, or
+              getting lost in hoop highlight reels. I love exploring the
+              theoretical realm of CS almost as much as I love bringing ideas to
+              life in code. Each feeds the other in an endless quest to satisfy
+              my curiosity.
+            </p>
+          </div>
+
+          <div className="flex items-center space-x-4 my-4">
+            {connect.map((el, index) => {
+              const Icon = el.icon;
+              const isEmail = el.social === "Email";
+
+              // 🔗 PLACEHOLDER: put your real links here
+              // For email: replace the href below with: `mailto:YOUR_EMAIL_HERE`
+              // For other socials: replace the href below with: `https://YOUR_LINK_HERE`
+              const placeholderHref = isEmail ? "#" : "#";
+
+              return (
+                <Link
+                  key={`connect-${index}`}
+                  href={placeholderHref} // PUT LINK HERE
+                  target="_blank"
+                  className="text-red-900 pointer-events-none opacity-60" // disabled until you add real links
+                  rel="noopener noreferrer"
+                  title={
+                    isEmail
+                      ? "PUT EMAIL LINK HERE (e.g., mailto:you@example.com)"
+                      : "PUT SOCIAL LINK HERE (e.g., https://twitter.com/you)"
+                  }
+                >
+                  <Icon size={36} />
+                </Link>
+              );
+            })}
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+
+        <div className="w-3/12 hidden md:block">
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="/images/pic.jpg"
+            className="rounded-full"
+            alt="Cornerstone Ephraim avatar"
+            width={140}
+            height={158}
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        </div>
+      </div>
+
+      <div className="my-4">
+        <h3>Recent experiences</h3>
+        <div className="my-4">
+          {trunkExp.map((exp, index) => (
+            <Accordion
+              key={index}
+              active={active === index}
+              handleToggle={() => handleToggle(index)}
+              exp={exp}
+            />
+          ))}
+        </div>
+      </div>
+    </Container>
   );
 }
