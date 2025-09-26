@@ -77,7 +77,7 @@ export default function Project({
     const isMissing = !href;
     if (isMissing) {
       const placeholderTitle =
-        label === "repo" ? "PUT REPO LINK HERE" : "PUT PROJECT URL HERE";
+        label === "repo" ? "No repo URL was provided" : "No project URL was provided";
       return (
         <TooltipProvider delayDuration={150}>
           <Tooltip>
@@ -152,12 +152,12 @@ export default function Project({
                     <span
                       className="text-zinc-400 inline-flex"
                       aria-disabled
-                      title="PUT PROJECT URL HERE"
+                      title="No project URL was provided"
                     >
                       <LuArrowUpRight className="size-4 relative bottom-0.5" />
                     </span>
                   </TooltipTrigger>
-                  <TooltipContent>PUT PROJECT URL HERE</TooltipContent>
+                  <TooltipContent>No project URL was provided</TooltipContent>
                 </Tooltip>
               </TooltipProvider>
             )}
@@ -234,8 +234,8 @@ export default function Project({
                 </Link>
               ) : (
                 <span className="text-sm text-zinc-500 dark:text-zinc-400">
-                  {/* PUT PROJECT URL HERE */}
-                  PUT PROJECT URL HERE
+                  {/* No project URL was provided */}
+                  No project URL was provided.
                 </span>
               )}
             </section>
@@ -309,8 +309,8 @@ export default function Project({
               </Link>
             ) : (
               <span className="text-sm text-zinc-500 dark:text-zinc-400">
-                {/* PUT PROJECT URL HERE */}
-                PUT PROJECT URL HERE
+                {/* No project URL was provided */}
+                No project URL was provided
               </span>
             )}
           </section>

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
-import Cursor from "@/components/layout/cursor";
 import Header from "@/components/layout/header";
 import MobileNav from "@/components/layout/mobile-nav";
 import Footer from "@/components/layout/footer";
@@ -99,7 +98,6 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Cursor />
           <Header />
           {children}
           <MobileNav />

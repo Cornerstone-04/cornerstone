@@ -13,13 +13,7 @@ export const timeline = [
     company: "Moniepoint Inc",
     url: "https://moniepoint.com/", // PUT COMPANY LINK HERE
     logo: "/images/moniepoint.webp", // PUT COMPANY LOGO HERE
-    tools: [
-      "ReactJS",
-      "TypeScript",
-      "NextJS",
-      "Playwright",
-      "Kamona UI",
-    ],
+    tools: ["ReactJS", "TypeScript", "NextJS", "Playwright", "Kamona UI"],
     summary:
       "Contributed to Kamona UI Library by implementing reusable components and ensuring design consistency across the frontend team. Built and executed Playwright test suites for Moniepoint FX, validating user flows and ensuring seamless experiences. Collaborated closely with designers on usability and accessibility standards, and reported/fixed bugs uncovered during testing.",
   },
@@ -103,8 +97,8 @@ export const projects = [
         description:
           "Portfolio site built with Next.js focusing on performance, responsive UI, and showcasing post-production work.",
         tech: ["Next.js", "TypeScript", "TailwindCSS"],
-        repo: "", // PUT REPO LINK HERE (if public)
-        image: "/images/laughter-portfolio.png", // PUT IMAGE HERE
+        repo: "https://github.com/Cornerstone-04/laughter-portfolio", // PUT REPO LINK HERE (if public)
+        image: "/images/projects/laughter.png", // PUT IMAGE HERE
         gif: "", // OPTIONAL
         url: "https://laughterephraim.vercel.app/",
       },
@@ -113,9 +107,9 @@ export const projects = [
         description:
           "Product website with multi-tab catalog, dynamic galleries, and CTAs. Modular components, smooth animations, and SEO-focused metadata.",
         tech: ["Next.js", "TypeScript", "TailwindCSS", "Framer Motion", "SEO"],
-        repo: "", 
-        image: "/images/power-safety-boots.png", 
-        gif: "", 
+        repo: "https://github.com/Cornerstone-04/powerbooth",
+        image: "/images/projects/pb-logo.png",
+        gif: "",
         url: "https://www.powersafetyboots.com/",
       },
       {
@@ -131,19 +125,19 @@ export const projects = [
           "IPFS (Helia)",
           "REST APIs",
         ],
-        repo: "", 
-        image: "/images/certifychain.png", 
-        gif: "", 
+        repo: "https://github.com/Cornerstone-04/certifychain-fe",
+        image: "/images/projects/certifychain.png",
+        gif: "",
         url: "https://labeeb-fe.vercel.app/",
       },
       {
         title: "PeerShelf v1",
         description:
           "v1 with React + Firebase for auth, profiles, uploads, and downloads; redesigning v2 on a .NET backend for chat and real-time notifications.",
-        tech: ["React", "Firebase Auth/Storage", "Responsive UI"],
-        repo: "", 
-        image: "/images/peershelf.png", 
-        gif: "", 
+        tech: ["React", "Firebase Auth/Storage", "Responsive UI", "Cypress"],
+        repo: "https://github.com/Cornerstone-04/peershelf-fe/",
+        image: "/images/projects/peershelf.png",
+        gif: "",
         url: "https://peershelf.vercel.app/",
       },
     ],
@@ -157,40 +151,40 @@ export const projects = [
         description:
           "Writer and product marketer portfolio with blog integration and Substack RSS feed support.",
         tech: ["Next.js", "TailwindCSS", "SubstackRSS", "ShadCN UI"],
-        repo: "", 
-        image: "/images/forever-portfolio.png", 
-        gif: "", 
-        url: "", // PUT URL HERE
+        repo: "",
+        image: "/images/projects/forever.png",
+        gif: "",
+        url: "",
       },
       {
         title: "TixCore",
         description:
           "Ticketing platform for event organizers and attendees, supporting booking, payments, and real-time updates.",
         tech: ["Next.js", "Node.js", "TailwindCSS", "Zustand", "Axios"],
-        repo: "", 
-        image: "/images/tixcore.png", 
-        gif: "", 
-        url: "", // PUT URL HERE
+        repo: "",
+        image: "/images/projects/tixcore.png",
+        gif: "",
+        url: "",
       },
       {
         title: "TextMi",
         description:
           "Minimalist texting application with a focus on speed, simplicity, and modern authentication.",
         tech: ["Next.js", "TypeScript", "Zustand", "TailwindCSS", "Supabase"],
-        repo: "", 
-        image: "/images/textmi.png", 
-        gif: "", 
-        url: "", // PUT URL HERE
+        repo: "",
+        image: "/images/projects/textmi.png",
+        gif: "",
+        url: "",
       },
       {
         title: "PeerShelf v2",
         description:
           "Rebuilt version of PeerShelf with .NET backend, real-time notifications, and expanded features.",
         tech: ["React", "Next.js", "TypeScript", "TailwindCSS", "Zustand"],
-        repo: "", 
-        image: "/images/peershelf-v2.png", 
-        gif: "", 
-        url: "", // PUT URL HERE
+        repo: "",
+        image: "/images/projects/peershelf.png",
+        gif: "",
+        url: "",
       },
     ],
   },

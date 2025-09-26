@@ -54,7 +54,7 @@ export function Modal({
           exit={{ opacity: 0 }}
           transition={{ duration: 0.25 }}
           onClick={closeOnOverlayClick}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/25 dark:bg-black/50"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/25 dark:bg-black/50 backdrop-blur-sm p-4 sm:p-6"
         >
           <motion.div
             initial={{ y: 24, opacity: 0 }}
@@ -62,10 +62,11 @@ export function Modal({
             exit={{ y: 24, opacity: 0 }}
             transition={{ duration: 0.25 }}
             className={cn(
-              "relative w-[92vw] max-w-5xl max-h-[85vh] overflow-y-auto rounded-lg border",
+              "relative w-full max-w-md mx-auto md:w-[92vw] md:max-w-5xl",
+              "max-h-[calc(100dvh-2rem)] md:max-h-[85vh] overflow-y-auto",
+              "rounded-lg border shadow-xl p-6 sm:p-8",
               "bg-white text-zinc-900 border-zinc-200",
               "dark:bg-zinc-900 dark:text-zinc-100 dark:border-zinc-800",
-              "shadow-xl p-6 sm:p-8",
               className
             )}
           >
