@@ -5,6 +5,13 @@ import Link from "next/link";
 import { useState } from "react";
 import { Container } from "@/components/layout";
 import { Accordion } from "@/components/ui";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { LuInfo } from "react-icons/lu";
 
 export default function Home() {
   const [active, setActive] = useState<number | null>(0);
@@ -15,57 +22,51 @@ export default function Home() {
   };
 
   return (
-    <Container className="pt-12 pb-24">
+    <Container className="pt-12 pb-24 text-zinc-800 dark:text-zinc-200">
       <div className="flex items-start justify-between">
-        <div className="w-full md:w-8/12 text-gray-700">
+        <div className="w-full md:w-8/12 space-y-10">
           <div className="intro">
-            <h2 className="text-3xl font-medium md:text-3xl mb-4">
+            <h2 className="text-3xl md:text-3xl font-medium mb-4 text-zinc-900 dark:text-zinc-100">
               Hi, I&apos;m <br /> Cornerstone Ephraim.
             </h2>
           </div>
 
           <div className="text-sm leading-loose space-y-3">
             <p>
-              <span className="text-red-400">
-                Your goto artist - a frontend engineer.
+              <span className="font-semibold text-blue-600 dark:text-blue-400">
+                Your goto frontend engineer.
               </span>{" "}
-              I channel my days (and often, moonlit nights) into painting the
-              canvas of the internet. Through every project and intricately
-              woven line of code, I weave &lt; and /&gt; into vibrant, immersive
-              experiences that come alive across the digital canvas.
+              I’ve worked across startups and large teams, contributing to
+              design systems, building reusable UI components, and automating
+              testing pipelines to keep products stable and scalable. Whether
+              collaborating with designers, mentoring peers, or debugging late
+              into the night, I enjoy solving problems that make interfaces feel
+              effortless.
             </p>
-            <p>
-              When not immersed in coding, I&apos;m probably reading some
-              bookmarked tech articles, leveling up my backend skills, or
-              getting lost in hoop highlight reels. I love exploring the
-              theoretical realm of CS almost as much as I love bringing ideas to
-              life in code. Each feeds the other in an endless quest to satisfy
-              my curiosity.
-            </p>
+            {/* optional second paragraph */}
+            {/* <p className="text-zinc-700 dark:text-zinc-300">
+              Beyond coding, I’m driven by curiosity—constantly digging into new
+              tools and refining my skills. From experimenting with Playwright
+              test suites to exploring state-management patterns, I try learning
+              and applying that knowledge to real projects.
+            </p> */}
           </div>
 
-          <div className="flex items-center space-x-4 my-4">
+          <div className="flex items-center gap-4 my-4">
             {connect.map((el, index) => {
               const Icon = el.icon;
-              const isEmail = el.social === "Email";
-
-              // 🔗 PLACEHOLDER: put your real links here
-              // For email: replace the href below with: `mailto:YOUR_EMAIL_HERE`
-              // For other socials: replace the href below with: `https://YOUR_LINK_HERE`
-              const placeholderHref = isEmail ? "#" : "#";
+              const href =
+                el.social === "Email"
+                  ? "mailto:fortunecornerstone@gmail.com"
+                  : `https://${el.url}`;
 
               return (
                 <Link
                   key={`connect-${index}`}
-                  href={placeholderHref} // PUT LINK HERE
+                  href={href}
                   target="_blank"
-                  className="text-red-900 pointer-events-none opacity-60" // disabled until you add real links
                   rel="noopener noreferrer"
-                  title={
-                    isEmail
-                      ? "PUT EMAIL LINK HERE (e.g., mailto:you@example.com)"
-                      : "PUT SOCIAL LINK HERE (e.g., https://twitter.com/you)"
-                  }
+                  className="text-blue-800 hover:opacity-80 dark:text-blue-300 transition-opacity"
                 >
                   <Icon size={36} />
                 </Link>
@@ -77,24 +78,41 @@ export default function Home() {
         <div className="w-3/12 hidden md:block">
           <Image
             src="/images/pic.jpg"
-            className="rounded-full"
+            className="rounded-full ring-1 ring-zinc-200 dark:ring-zinc-800"
             alt="Cornerstone Ephraim avatar"
-            width={140}
-            height={158}
+            width={160}
+            height={160}
+            priority
           />
         </div>
       </div>
 
-      <div className="my-4">
-        <h3>Recent experiences</h3>
+      <div className="my-6">
+        <div className="flex items-center gap-2">
+          <h3 className="text-lg font-medium text-zinc-900 dark:text-zinc-100">
+            Recent experiences
+          </h3>
+          <TooltipProvider delayDuration={150}>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <LuInfo className="w-4 h-4 text-zinc-500 cursor-help" />
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Click a box to see more</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        </div>
+
         <div className="my-4">
           {trunkExp.map((exp, index) => (
-            <Accordion
-              key={index}
-              active={active === index}
-              handleToggle={() => handleToggle(index)}
-              exp={exp}
-            />
+            <div key={index} className="py-2">
+              <Accordion
+                active={active === index}
+                handleToggle={() => handleToggle(index)}
+                exp={exp}
+              />
+            </div>
           ))}
         </div>
       </div>

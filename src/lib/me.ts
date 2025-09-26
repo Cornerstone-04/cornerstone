@@ -1,104 +1,49 @@
 import {
-  PiGithubLogoBold,
-  PiLinkedinLogoBold,
-  PiTwitterLogoBold,
-  PiVoicemailBold,
-} from "react-icons/pi";
+  FaGithub,
+  FaLinkedin,
+  FaRegEnvelope,
+  FaXTwitter,
+} from "react-icons/fa6";
 
 export const timeline = [
   {
-    startDate: "April 2022",
-    endDate: null,
-    position: "Senior frontend engineer",
-    company: "Sety.io",
-    url: "https://sety.io",
-    logo: "/images/sety.png",
+    startDate: "May 2024",
+    endDate: "Oct 2024",
+    position: "Frontend Engineering Intern",
+    company: "Moniepoint Inc",
+    url: "https://moniepoint.com/", // PUT COMPANY LINK HERE
+    logo: "/images/moniepoint.webp", // PUT COMPANY LOGO HERE
     tools: [
-      "Typescript",
-      "React",
-      "Next js",
-      "React native",
-      "HTML5",
-      "SCSS",
-      "Figma",
+      "ReactJS",
+      "TypeScript",
+      "NextJS",
+      "Playwright",
+      "Kamona UI",
     ],
     summary:
-      "Led the development of new features for the Sety v2 apps. Mentored interns, drove adoption of modern practices, and championed code quality standards.",
+      "Contributed to Kamona UI Library by implementing reusable components and ensuring design consistency across the frontend team. Built and executed Playwright test suites for Moniepoint FX, validating user flows and ensuring seamless experiences. Collaborated closely with designers on usability and accessibility standards, and reported/fixed bugs uncovered during testing.",
   },
-
   {
-    startDate: "May 2021",
-    endDate: "Mar 2023",
+    startDate: "Nov 2023",
+    endDate: "Apr 2024",
     position: "Frontend Engineer",
-    company: "Netzstrategen GmbH",
-    url: "https://netzstrategen.com/",
-    tools: [
-      "Javascript",
-      "Vuejs",
-      "Vuex",
-      "Vant 3",
-      "SCSS",
-      "Google Firestore",
-    ],
-    logo: "/images/netz.svg",
+    company: "Pysis Technologies",
+    url: "https://pysistech.com/", // PUT COMPANY LINK HERE
+    logo: "/images/fishdey.svg", // PUT COMPANY LOGO HERE
+    tools: ["ReactJS", "Zustand", "TailwindCSS", "Axios", "REST APIs"],
     summary:
-      "Enhanced the daily nutrient intake modules in Loprogramme PWA, boosting tracking functionalities by 45% and slashing protein calculation time from 5 to 2.5s.Developed new features integrating with Google Cloud Firestore, optimized UI/performance, designed a custom graph for protein intake history, and participated in code reviews.",
+      "Built and maintained key modules such as store management, product categories, and user profiles using ReactJS + Zustand. Integrated REST APIs with Axios for seamless data flow, styled responsive interfaces with TailwindCSS, and debugged complex issues to improve stability. Contributed actively to code reviews and team discussions.",
   },
   {
-    startDate: "Oct 2021",
-    endDate: "Sept 2023",
-    position: "Frontend engineer",
-    company: "Quze studio",
-    url: "https://sety.io",
-    logo: "/images/netz.svg",
-    tools: [
-      "Reactjs",
-      "SCSS",
-      "Chrome Extension",
-      "Tailwindcss",
-      "HTML5",
-      "Chakra UI",
-      "Figma",
-    ],
+    startDate: "Apr 2022",
+    endDate: "Jun 2022",
+    position: "Frontend Developer",
+    company: "Stutern",
+    url: "https://stutern.com/", // PUT COMPANY LINK HERE
+    logo: "/images/stutern-2.png", // PUT COMPANY LOGO HERE
+    tools: ["HTML", "CSS", "Bulma.io", "Figma"],
     summary:
-      "Developed a browser extension, boosting backpack feature utilization by 150%, allowing users to save, quote, and manage resources. Made significant contributions to migrating the design system to TailwindCSS. Developed a crawler to extract metadata from users url resources.",
-  },
-  {
-    startDate: "Oct 2021",
-    endDate: "Sept 2023",
-    position: "Fullstack developer",
-    company: "Stackonly",
-    url: "https://stackonly.ng",
-    tools: [
-      "Typescript",
-      "Angular",
-      "Reactjs",
-      "React native",
-      "Nodejs",
-      "A11y",
-    ],
-    logo: "/images/sety.png",
-    summary:
-      "Contributed significantly to Strada PMS with real-time data syncing, led frontend for projects like the SecuredForMe admin portal with robust analytics, Parablues and CDASH while including optimizing performance and modernizing legacy code.",
-  },
-
-  {
-    startDate: "Jan 2019",
-    endDate: "June 2021",
-    position: "Web developer",
-    company: "The Roothub",
-    url: "https://theroothub.com",
-    tools: [
-      "Web design",
-      "Wordpress",
-      "Angular",
-      "Ionic mobile",
-      "Nodejs",
-      "A11y",
-    ],
-    logo: "/images/roothub.png",
-    summary:
-      "Technical instructor for TECH101, training over 80 students on web development and spearheaded redesign of company website using mobile-first responsive design. Developed the high-profile Akwa Ibom@30years events website.",
+      "Led a complete overhaul of the main landing page with HTML and CSS. Redesigned the graduate accelerator page by integrating custom illustrations for accelerator tracks and updating curriculum content. Converted Figma mockups into functional, user-friendly pages, improving usability and clarity.",
   },
 ];
 
@@ -106,22 +51,22 @@ export const connect = [
   {
     social: "LinkedIn",
     url: "linkedin.com/in/cornerstone-ephraim",
-    icon: PiLinkedinLogoBold,
+    icon: FaLinkedin,
   },
   {
     social: "Github",
     url: "github.com/Cornerstone-04",
-    icon: PiGithubLogoBold,
+    icon: FaGithub,
   },
   {
     social: "Email",
     url: "fortunecornerstone@gmail.com",
-    icon: PiVoicemailBold,
+    icon: FaRegEnvelope,
   },
   {
     social: "Twitter",
     url: "x.com/4th_ephraim",
-    icon: PiTwitterLogoBold,
+    icon: FaXTwitter,
   },
 ];
 
@@ -142,161 +87,113 @@ export const menuitems = [
     delay: "200ms",
   },
   {
-    name: "Blog",
-    path: "/blog",
+    name: "Contact",
+    path: "/contact",
     delay: "225ms",
   },
 ];
 
 export const projects = [
   {
-    title: "Frontend",
-    type: "frontend",
+    title: "Shipped & Live",
+    type: "shipped",
     works: [
       {
-        title: "Sety v2",
+        title: "Laughter Ephraim — Portfolio",
         description:
-          "Sety is delivering on-demand safety and security for businesses, individuals and families. ",
-        tech: ["Typescript", "React", "Tailwindcss", "Framer motion"],
-        repo: "",
-        image: "/images/sety.png",
-        gif: "/images/sety-d.gif",
-        url: "http://sety-landing.surge.sh/",
+          "Portfolio site built with Next.js focusing on performance, responsive UI, and showcasing post-production work.",
+        tech: ["Next.js", "TypeScript", "TailwindCSS"],
+        repo: "", // PUT REPO LINK HERE (if public)
+        image: "/images/laughter-portfolio.png", // PUT IMAGE HERE
+        gif: "", // OPTIONAL
+        url: "https://laughterephraim.vercel.app/",
       },
       {
-        title: "The roothub",
+        title: "Power Safety Boots",
         description:
-          " A coworking space, part innovation lab, business incubator, and part community for professionals and creatives",
-        tech: ["Typescript", "Angular", "SCSS", "Rxjs", "UI design"],
-        repo: "",
-        image: "/images/roothub.png",
-        gif: "/images/roothub.gif",
-        url: "https://www.wearetheroothub.com/",
+          "Product website with multi-tab catalog, dynamic galleries, and CTAs. Modular components, smooth animations, and SEO-focused metadata.",
+        tech: ["Next.js", "TypeScript", "TailwindCSS", "Framer Motion", "SEO"],
+        repo: "", 
+        image: "/images/power-safety-boots.png", 
+        gif: "", 
+        url: "https://www.powersafetyboots.com/",
       },
       {
-        title: "Mojec meters",
+        title: "CertifyChain — Blockchain Certification System",
         description:
-          "The meter allocation and ordering process involves assigning meter numbers to households upon registration, enabling their use with IKEDC, IBEDC, EDC...",
-        tech: ["Typescript", "Angular", "SCSS", "Rxjs", "UI design"],
-        repo: "",
-        image: "/images/mojec.svg",
-        gif: "/images/mojec.gif",
-        url: "https://mojecmeters.com/meter",
-      },
-      {
-        title: "Finovo",
-        description:
-          "Finovo is a digital platform providing financial, lifestyle and business services wherever you are in the World.",
-        tech: ["Javascript", "JQuery", "HTML5 & Css", "A11y"],
-        repo: "",
-        image: "/images/finovo.webp",
-        gif: "/images/finovo-web.gif",
-        url: "https://finovo.ng",
-      },
-      {
-        title: "Resume Builder",
-        description:
-          "No description, website, or topics provided. No description, website, or topics provided.",
+          "Responsive frontend for decentralized certificate verification with tabbed UX, animations, uploads, and verification history.",
         tech: [
-          "Typescript",
-          "Nextjs(React)",
+          "React",
+          "TypeScript",
           "Zustand",
-          "Tailwindcss",
-          "HTML5",
-          "A11y",
+          "ShadCN",
+          "TailwindCSS",
+          "IPFS (Helia)",
+          "REST APIs",
         ],
-        repo: "https://github.com/yemiOdetola/craftcv",
-        image: "/images/craftcv.svg",
-        gif: "/images/craftcv.gif",
-        url: "https://craftcv.vercel.app",
+        repo: "", 
+        image: "/images/certifychain.png", 
+        gif: "", 
+        url: "https://labeeb-fe.vercel.app/",
       },
       {
-        title: "Cudo",
+        title: "PeerShelf v1",
         description:
-          "Get quick and confidential consultation with top Medical Doctors, Physiotherapists and Pharmacists across Nigeria using our unique on-demand app.",
-        tech: ["Typescript", "React", "Sass", "HTML5 & CSS3", "A11y"],
-        repo: "",
-        image: "/images/cudo.png",
-        gif: "/images/cudo.gif",
-        url: "https://cudoapp.com/",
+          "v1 with React + Firebase for auth, profiles, uploads, and downloads; redesigning v2 on a .NET backend for chat and real-time notifications.",
+        tech: ["React", "Firebase Auth/Storage", "Responsive UI"],
+        repo: "", 
+        image: "/images/peershelf.png", 
+        gif: "", 
+        url: "https://peershelf.vercel.app/",
       },
     ],
   },
   {
-    title: "Mobile",
-    type: "mobile",
+    title: "In the Lab",
+    type: "building",
     works: [
       {
-        title: "Rapidpay",
+        title: "Forever Ephraim — Portfolio",
         description:
-          "Rapidpay is a cryptocurrency exchange and lending platform that makes it easy for you to buy, sell, store and take a loan with Bitcoin, Ethereum and USDT.",
-        tech: ["Typescript", "React Native", "Styled Components", "Redux"],
-        repo: "",
-        image: "/images/rapidpay.webp",
-        gif: "/images/rapidpay.gif",
-        url: "http://sety-landing.surge.sh/",
+          "Writer and product marketer portfolio with blog integration and Substack RSS feed support.",
+        tech: ["Next.js", "TailwindCSS", "SubstackRSS", "ShadCN UI"],
+        repo: "", 
+        image: "/images/forever-portfolio.png", 
+        gif: "", 
+        url: "", // PUT URL HERE
       },
       {
-        title: "Sety",
-        description: "Sety users mobile application",
-        tech: [
-          "Typescript",
-          "React Native",
-          "API",
-          "Firebase",
-          "Redux toolkit",
-        ],
-        repo: "",
-        image: "/images/sety.png",
-        gif: "/images/sety.gif",
-        url: "https://play.google.com/store/apps/details?id=com.sety",
+        title: "TixCore",
+        description:
+          "Ticketing platform for event organizers and attendees, supporting booking, payments, and real-time updates.",
+        tech: ["Next.js", "Node.js", "TailwindCSS", "Zustand", "Axios"],
+        repo: "", 
+        image: "/images/tixcore.png", 
+        gif: "", 
+        url: "", // PUT URL HERE
       },
       {
-        title: "Finovo",
+        title: "TextMi",
         description:
-          "Finovo is a digital platform providing financial, lifestyle and business services wherever you are in the World. We offer you More of everything now.",
-        tech: ["Typescript", "React Native", "Styled Components", "Redux"],
-        repo: "",
-        image: "/images/finovo.webp",
-        gif: "/images/finovo.gif",
-        url: "https://play.google.com/store/apps/details?id=com.finovo&hl=en_US",
+          "Minimalist texting application with a focus on speed, simplicity, and modern authentication.",
+        tech: ["Next.js", "TypeScript", "Zustand", "TailwindCSS", "Supabase"],
+        repo: "", 
+        image: "/images/textmi.png", 
+        gif: "", 
+        url: "", // PUT URL HERE
       },
       {
-        title: "Clipp",
+        title: "PeerShelf v2",
         description:
-          "Clipp allows you to create a virtual bank account in Dollars, Pounds, Euro and Naira. You can send out your account details to receive money in all the currencies available.",
-        tech: ["Typescript", "React Native", "Styled Components", "Redux"],
-        repo: "",
-        image: "/images/clipp.webp",
-        gif: "/images/clipp.gif",
-        url: "https://play.google.com/store/apps/details?id=com.clipp.africa&hl=en_US",
-      },
-    ],
-  },
-  {
-    title: "Others",
-    type: "misc",
-    works: [
-      {
-        title: "Quze Backpack - Browser Extension",
-        description:
-          "No description, website, or topics provided. No description, website, or topics provided.",
-        tech: ["Javascript", "Manifest", "HTML5 & css", "Web extension"],
-        repo: "",
-        image: "/images/quze.svg",
-        url: "https://chromewebstore.google.com/detail/quze-backpack/kadiombanichkkgjcalkjiondjbngmel",
-      },
-      {
-        title: "Mastermind game",
-        description:
-          "You'll be provided with 6 colors to choose from for your guess, which a secret color code is created from. After submitting your guess in each instance, a color in the right position, gets you a green point.",
-        tech: ["React", "Sass", "CSS3 Animation"],
-        repo: "",
-        image: "/images/mmind.svg",
-        url: "https://mmind.surge.sh/",
+          "Rebuilt version of PeerShelf with .NET backend, real-time notifications, and expanded features.",
+        tech: ["React", "Next.js", "TypeScript", "TailwindCSS", "Zustand"],
+        repo: "", 
+        image: "/images/peershelf-v2.png", 
+        gif: "", 
+        url: "", // PUT URL HERE
       },
     ],
   },
 ];
 
-export type ProjectTypes = "misc" | "mobile" | "frontend";
+export type ProjectTypes = "shipped" | "building";

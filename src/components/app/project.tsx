@@ -3,7 +3,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ExternalLink, Github, Link2 } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -26,8 +25,8 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { cn } from "@/lib/utils";
 import { ProjectTypes } from "@/lib/me";
+import { LuArrowUpRight, LuGithub, LuLink } from "react-icons/lu";
 
 type ProjectProps = {
   title: string;
@@ -83,14 +82,13 @@ export default function Project({
         <TooltipProvider delayDuration={150}>
           <Tooltip>
             <TooltipTrigger asChild>
-              <button
-                type="button"
+              <span
                 aria-disabled
                 className="inline-flex items-center opacity-40 cursor-not-allowed"
                 title={placeholderTitle}
               >
                 <Icon className="size-6" />
-              </button>
+              </span>
             </TooltipTrigger>
             <TooltipContent>{placeholderTitle}</TooltipContent>
           </Tooltip>
@@ -103,7 +101,8 @@ export default function Project({
         target="_blank"
         rel="noopener noreferrer"
         onClick={(e) => e.stopPropagation()}
-        className="inline-flex items-center rounded-lg transition-opacity hover:opacity-70"
+        className="inline-flex items-center rounded-lg transition-opacity hover:opacity-75 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+        aria-label={label === "repo" ? "Open repository" : "Open project"}
       >
         <Icon className="size-6" />
       </Link>
@@ -112,8 +111,11 @@ export default function Project({
 
   const CardBody = (
     <div
-      className="w-full h-auto rounded border border-gray-100 hover:border-gray-200 shadow-sm hover:shadow-[0_2px_4px_rgba(0,0,0,0.05)]
-      p-5 transition-all ease-in-out group hover:cursor-pointer mb-8"
+      className="w-full h-auto rounded border border-zinc-200 dark:border-zinc-800
+                 hover:border-zinc-300 dark:hover:border-zinc-700
+                 shadow-sm hover:shadow-[0_2px_4px_rgba(0,0,0,0.05)]
+                 bg-white dark:bg-zinc-900
+                 p-5 transition-all ease-in-out group mb-8"
     >
       <div className="w-full flex justify-between items-start min-h-16 gap-5">
         <div className="hidden w-1/12 md:block">
@@ -122,13 +124,13 @@ export default function Project({
             alt={`${title} logo`}
             width={60}
             height={60}
-            className="rounded"
+            className="rounded ring-1 ring-zinc-200 dark:ring-zinc-800"
           />
         </div>
 
         <div className="w-10/12">
           <div className="flex items-center">
-            <h3 className="text-md lg:text-lg font-medium mb-2 mr-2">
+            <h3 className="text-md lg:text-lg font-medium mb-2 mr-2 text-zinc-900 dark:text-zinc-100">
               {title}
             </h3>
             {/* External open icon (project URL) */}
@@ -139,9 +141,9 @@ export default function Project({
                 rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
                 aria-label="Open project"
-                className="text-zinc-500"
+                className="text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-200 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded"
               >
-                <ExternalLink className="size-4 relative bottom-0.5" />
+                <LuArrowUpRight className="size-4 relative bottom-0.5" />
               </Link>
             ) : (
               <TooltipProvider>
@@ -152,7 +154,7 @@ export default function Project({
                       aria-disabled
                       title="PUT PROJECT URL HERE"
                     >
-                      <ExternalLink className="size-4 relative bottom-0.5" />
+                      <LuArrowUpRight className="size-4 relative bottom-0.5" />
                     </span>
                   </TooltipTrigger>
                   <TooltipContent>PUT PROJECT URL HERE</TooltipContent>
@@ -161,12 +163,14 @@ export default function Project({
             )}
           </div>
 
-          <p className="text-xs md:text-xs">{description}</p>
+          <p className="text-xs md:text-xs text-zinc-700 dark:text-zinc-300">
+            {description}
+          </p>
         </div>
 
-        <div className="flex justify-end items-end gap-3">
-          <LinkIconBtn href={repo} label="repo" Icon={Github} />
-          <LinkIconBtn href={url} label="url" Icon={Link2} />
+        <div className="flex justify-end items-end gap-3 text-zinc-600 dark:text-zinc-300">
+          <LinkIconBtn href={repo} label="repo" Icon={LuGithub} />
+          <LinkIconBtn href={url} label="url" Icon={LuLink} />
         </div>
       </div>
     </div>
@@ -177,15 +181,20 @@ export default function Project({
     return (
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
-          <button type="button" className="w-full text-left">
+          <button
+            type="button"
+            className="w-full text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded"
+          >
             {CardBody}
           </button>
         </SheetTrigger>
         <SheetContent side="right" className="w-[520px] p-0">
           <SheetHeader className="p-4">
-            <SheetTitle>{title} Mobile Application</SheetTitle>
+            <SheetTitle className="text-zinc-900 dark:text-zinc-100">
+              {title} Mobile Application
+            </SheetTitle>
           </SheetHeader>
-          <div className="p-4 space-y-6">
+          <div className="p-4 space-y-6 text-zinc-800 dark:text-zinc-200">
             {gif && (
               <Image
                 src={gif}
@@ -224,7 +233,7 @@ export default function Project({
                   {url}
                 </Link>
               ) : (
-                <span className="text-sm text-muted-foreground">
+                <span className="text-sm text-zinc-500 dark:text-zinc-400">
                   {/* PUT PROJECT URL HERE */}
                   PUT PROJECT URL HERE
                 </span>
@@ -246,16 +255,21 @@ export default function Project({
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <button type="button" className="w-full text-left">
+        <button
+          type="button"
+          className="w-full text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded"
+        >
           {CardBody}
         </button>
       </DialogTrigger>
       <DialogContent className="max-w-4xl">
         <DialogHeader>
-          <DialogTitle>{title}</DialogTitle>
+          <DialogTitle className="text-zinc-900 dark:text-zinc-100">
+            {title}
+          </DialogTitle>
         </DialogHeader>
 
-        <div className="space-y-6">
+        <div className="space-y-6 text-zinc-800 dark:text-zinc-200">
           {gif && (
             <Image
               src={gif}
@@ -294,7 +308,7 @@ export default function Project({
                 {url}
               </Link>
             ) : (
-              <span className="text-sm text-muted-foreground">
+              <span className="text-sm text-zinc-500 dark:text-zinc-400">
                 {/* PUT PROJECT URL HERE */}
                 PUT PROJECT URL HERE
               </span>

@@ -1,12 +1,7 @@
 import type { Metadata } from "next";
-import {
-  Montserrat,
-  Fira_Mono,
-  Poppins,
-  Inter,
-  Averia_Sans_Libre,
-} from "next/font/google";
+import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "next-themes";
 import Cursor from "@/components/layout/cursor";
 import Header from "@/components/layout/header";
 import MobileNav from "@/components/layout/mobile-nav";
@@ -27,8 +22,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Cornerstone Ephraim | Frontend Engineer",
-  description:
-    "Frontend engineer | React | Next.js | React Native | Vue.js | Angular | Redux | Python | Flask",
+  description: "Frontend engineer | React | Next.js",
 };
 
 export default function RootLayout({
@@ -37,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="author" content="Cornerstone Ephraim" />
         <meta
@@ -102,12 +96,15 @@ export default function RootLayout({
 
       <body
         className={`${inter.className} text-sm leading-6 transition ease text-gray-700`}
+        suppressHydrationWarning
       >
-        <Cursor />
-        <Header />
-        {children}
-        <MobileNav />
-        <Footer />
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Cursor />
+          <Header />
+          {children}
+          <MobileNav />
+          {/* <Footer /> */}
+        </ThemeProvider>
       </body>
     </html>
   );
