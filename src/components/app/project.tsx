@@ -62,7 +62,7 @@ export default function Project({
 
   const isMobileType = String(type).toLowerCase() === "mobile";
   const hasUrl = Boolean(url);
-  const hasRepo = Boolean(repo);
+  // const hasRepo = Boolean(repo);
 
   // small helper to render link icons with placeholder when link is missing
   const LinkIconBtn = ({
@@ -77,7 +77,9 @@ export default function Project({
     const isMissing = !href;
     if (isMissing) {
       const placeholderTitle =
-        label === "repo" ? "No repo URL was provided" : "No project URL was provided";
+        label === "repo"
+          ? "No repo URL was provided"
+          : "No project URL was provided";
       return (
         <TooltipProvider delayDuration={150}>
           <Tooltip>

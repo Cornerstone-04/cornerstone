@@ -22,7 +22,12 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="backdrop-blur-md w-full sticky top-0 z-10 transition ease-in-out">
+    <header
+      className={`backdrop-blur-md w-full sticky top-0 z-10 transition ease-in-out ${
+        scrollPosition > 20 ? "shadow-md" : ""
+      }`}
+    >
+      {" "}
       <nav className="w-11/12 flex items-center justify-between max-w-4xl py-5 mx-auto">
         {/* Logo / Name */}
         <Link

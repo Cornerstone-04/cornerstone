@@ -12,7 +12,7 @@ export const timeline = [
     position: "Frontend Engineering Intern",
     company: "Moniepoint Inc",
     url: "https://moniepoint.com/", // PUT COMPANY LINK HERE
-    logo: "/images/moniepoint.webp", // PUT COMPANY LOGO HERE
+    logo: "/images/moniepoint.png", // PUT COMPANY LOGO HERE
     tools: ["ReactJS", "TypeScript", "NextJS", "Playwright", "Kamona UI"],
     summary:
       "Contributed to Kamona UI Library by implementing reusable components and ensuring design consistency across the frontend team. Built and executed Playwright test suites for Moniepoint FX, validating user flows and ensuring seamless experiences. Collaborated closely with designers on usability and accessibility standards, and reported/fixed bugs uncovered during testing.",
@@ -34,7 +34,7 @@ export const timeline = [
     position: "Frontend Developer",
     company: "Stutern",
     url: "https://stutern.com/", // PUT COMPANY LINK HERE
-    logo: "/images/stutern-2.png", // PUT COMPANY LOGO HERE
+    logo: "/images/stutern.png", // PUT COMPANY LOGO HERE
     tools: ["HTML", "CSS", "Bulma.io", "Figma"],
     summary:
       "Led a complete overhaul of the main landing page with HTML and CSS. Redesigned the graduate accelerator page by integrating custom illustrations for accelerator tracks and updating curriculum content. Converted Figma mockups into functional, user-friendly pages, improving usability and clarity.",

@@ -1,17 +1,9 @@
 import type { Metadata } from "next";
-import { Montserrat, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import Header from "@/components/layout/header";
 import MobileNav from "@/components/layout/mobile-nav";
-import Footer from "@/components/layout/footer";
-
-const montserrat = Montserrat({
-  weight: ["300", "400", "500", "700", "900"],
-  style: ["normal", "italic"],
-  subsets: ["latin"],
-  adjustFontFallback: false,
-});
 
 const inter = Inter({
   weight: ["300", "400", "500", "700", "900"],
@@ -101,7 +93,6 @@ export default function RootLayout({
           <Header />
           {children}
           <MobileNav />
-          {/* <Footer /> */}
         </ThemeProvider>
       </body>
     </html>

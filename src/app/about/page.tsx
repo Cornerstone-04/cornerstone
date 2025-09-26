@@ -31,20 +31,23 @@ export default function About() {
           <div className="w-full md:w-4/5 space-y-6">
             <div>
               <p className="leading-relaxed">
-                The art of frontend development lights me up — blending clean,
-                accessible UI with smooth, meaningful interactions. I focus on
-                reusable components, performance, and modern standards so that
-                products feel fast, stable, and intuitive.
+                I’m a Frontend Engineer with 3 years of experience building
+                scalable, responsive web applications with ReactJS, NextJS, and
+                TypeScript. I enjoy crafting clean, testable code and
+                implementing modern design systems so that products feel
+                seamless, accessible, and performant.
               </p>
             </div>
 
             <div>
               <h5 className="mb-2 font-semibold">Challenge</h5>
               <p className="leading-relaxed">
-                Every project is a chance to level up. I’m exploring C#/.NET and
-                backend fundamentals (streams, threads, networking), and I’m
-                currently cooking with Python (Flask) to deepen my full-stack
-                intuition.
+                For me, every project is a chance to push boundaries. I’ve
+                worked on everything from UI libraries and e-commerce modules to
+                academic platforms and blockchain integrations. Along the way,
+                I’ve deepened my skills with tools like TailwindCSS, Zustand,
+                and Playwright, and I’m now expanding into backend collaboration
+                with .NET to strengthen my full-stack perspective.
               </p>
             </div>
           </div>

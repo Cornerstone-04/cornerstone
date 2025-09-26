@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID } from "@/lib/constants";
 
 type FormState = {
   firstName: string;
@@ -25,13 +26,6 @@ export default function ContactPage() {
   const [errors, setErrors] = useState<Partial<FormState>>({});
   const [submitting, setSubmitting] = useState(false);
   const [sent, setSent] = useState<null | "ok" | "err">(null);
-
-  const SERVICE_ID =
-    process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "PUT_YOUR_SERVICE_ID_HERE";
-  const TEMPLATE_ID =
-    process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "PUT_YOUR_TEMPLATE_ID_HERE";
-  const PUBLIC_KEY =
-    process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "PUT_YOUR_PUBLIC_KEY_HERE";
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -65,8 +59,6 @@ export default function ContactPage() {
       from_last_name: form.lastName,
       from_email: form.email,
       message: form.message,
-      // Optional: add subject or other vars your template expects:
-      // subject: `New contact from ${form.firstName} ${form.lastName}`,
     };
 
     try {
