@@ -48,7 +48,7 @@ export default function RootLayout({
           property="og:url"
           content="https://cornerstoneephraim.vercel.app"
         />
-        <meta property="og:image" content="images/pic.jpg" />
+        <meta property="og:image" content="/images/pic.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@4th_ephraim" />
         <meta
@@ -61,7 +61,7 @@ export default function RootLayout({
         />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="twitter:image" content="images/pic.jpg" />
+        <meta name="twitter:image" content="/images/pic.jpg" />
         <meta name="twitter:site" content="@4th_ephraim" />
         <meta name="robots" content="index, follow" />
         <link rel="icon" href="favicon.ico" />

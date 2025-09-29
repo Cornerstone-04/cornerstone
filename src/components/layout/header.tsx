@@ -77,10 +77,10 @@ export default function Header() {
               className="outline-none p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
               onClick={() =>
                 setTheme(resolvedTheme === "dark" ? "light" : "dark")
-              } // ⬅️ use resolvedTheme
+              }
               aria-label="Toggle theme"
             >
-              {resolvedTheme === "dark" ? ( // ⬅️ and here
+              {resolvedTheme === "dark" ? (
                 <FaSun size={20} className="text-yellow-400" />
               ) : (
                 <FaMoon size={20} className="text-zinc-700" />
