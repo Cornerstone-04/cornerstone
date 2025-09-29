@@ -10,7 +10,7 @@ export default function Header() {
   const pathname = usePathname();
   const [scrollPosition, setScrollPosition] = useState(0);
 
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -27,9 +27,7 @@ export default function Header() {
         scrollPosition > 20 ? "shadow-md" : ""
       }`}
     >
-      {" "}
       <nav className="w-11/12 flex items-center justify-between max-w-4xl py-5 mx-auto">
-        {/* Logo / Name */}
         <Link
           className="block font-semibold text-zinc-900 dark:text-zinc-100 transition-colors"
           href="/"
@@ -37,25 +35,22 @@ export default function Header() {
           Cornerstone E.
         </Link>
 
-        {/* Menu links */}
         <div className="hidden items-center space-x-4 rounded-full py-1.5 px-2 bg-gray-200 bg-opacity-40 dark:bg-gray-800 dark:bg-opacity-40 md:flex">
           {menuitems.map((item) => (
             <Link
               key={item.path}
               href={item.path}
-              className={`block transition ease rounded-2xl px-4 py-1.5 
-                ${
-                  item.path === pathname
-                    ? "bg-white text-blue-500 font-semibold dark:bg-gray-900 dark:text-blue-400"
-                    : "text-zinc-700 dark:text-zinc-300"
-                }`}
+              className={`block transition ease rounded-2xl px-4 py-1.5 ${
+                item.path === pathname
+                  ? "bg-white text-blue-500 font-semibold dark:bg-gray-900 dark:text-blue-400"
+                  : "text-zinc-700 dark:text-zinc-300"
+              }`}
             >
               {item.name}
             </Link>
           ))}
         </div>
 
-        {/* Social links + theme toggle */}
         <div className="flex items-center space-x-2">
           {connect.map((el, index) => {
             const Icon = el.icon;
@@ -80,10 +75,12 @@ export default function Header() {
           {mounted && (
             <button
               className="outline-none p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              onClick={() =>
+                setTheme(resolvedTheme === "dark" ? "light" : "dark")
+              } // ⬅️ use resolvedTheme
               aria-label="Toggle theme"
             >
-              {theme === "dark" ? (
+              {resolvedTheme === "dark" ? ( // ⬅️ and here
                 <FaSun size={20} className="text-yellow-400" />
               ) : (
                 <FaMoon size={20} className="text-zinc-700" />
