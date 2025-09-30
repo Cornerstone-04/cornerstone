@@ -13,9 +13,9 @@ type Testimonial = {
 
 const testimonials: Testimonial[] = [
   {
-    name: "John Doe",
-    role: "Senior Product Manager",
-    company: "TechCorp",
+    name: "Laughter Ephraim",
+    role: "Post-Production Editor",
+    company: "Blink Studios",
     content:
       "Cornerstone is an exceptional frontend engineer. His attention to detail and ability to translate complex designs into pixel-perfect implementations is outstanding. He consistently delivers high-quality work on time.",
   },

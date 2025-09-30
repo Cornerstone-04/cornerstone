@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { LuX, LuExternalLink, LuGithub } from "react-icons/lu";
 import { useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 type ProjectModalProps = {
   isOpen: boolean;
@@ -140,7 +141,7 @@ export default function ProjectModal({
                   {(project.liveUrl || project.githubUrl) && (
                     <div className="flex flex-wrap gap-3 pt-4">
                       {project.liveUrl && (
-                        <a
+                        <Link
                           href={project.liveUrl}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -148,7 +149,7 @@ export default function ProjectModal({
                         >
                           <LuExternalLink size={18} />
                           View Live
-                        </a>
+                        </Link>
                       )}
                       {project.githubUrl && (
                         <a
