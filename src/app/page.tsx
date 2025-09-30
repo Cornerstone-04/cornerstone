@@ -83,7 +83,7 @@ export default function Home() {
 
         <div className="w-3/12 hidden md:contents">
           <Image
-            src="/images/pic.jpg"
+            src="/images/cornerstone.jpg"
             className="rounded-lg ring-1 ring-zinc-200 dark:ring-zinc-800 aspect-square"
             alt="Cornerstone Ephraim avatar"
             width={160}
