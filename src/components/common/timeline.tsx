@@ -18,12 +18,13 @@ interface TimelineProps {
 }
 
 export function Timeline({ active, timeline }: TimelineProps) {
-  const { startDate, endDate, position, company, url, logo, summary } = timeline;
+  const { startDate, endDate, position, company, url, logo, summary } =
+    timeline;
 
   const Company = () =>
     url ? (
       <Link
-        href={url} // PUT COMPANY LINK HERE (optional)
+        href={url}
         rel="noopener noreferrer"
         target="_blank"
         className="underline decoration-blue-500/70 underline-offset-4 text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300"
@@ -33,7 +34,7 @@ export function Timeline({ active, timeline }: TimelineProps) {
     ) : (
       <span
         className="underline decoration-dotted decoration-zinc-400 underline-offset-4 text-zinc-800 dark:text-zinc-200"
-        title="PUT COMPANY LINK HERE"
+        title={company}
       >
         {company}
       </span>
@@ -44,12 +45,15 @@ export function Timeline({ active, timeline }: TimelineProps) {
       {/* Timeline dot */}
       <div className="relative">
         <div
-          className={`absolute top-0 -left-2 h-4 w-4 aspect-square rounded-full
+          className={`absolute top-0 -left-2 h-4 w-4 aspect-square rounded-sm
             ${active ? "bg-blue-500" : "bg-zinc-800 dark:bg-zinc-300"}`}
           aria-hidden
         />
         {active && (
-          <div className="absolute top-0 -left-2 h-4 w-4 aspect-square rounded-full bg-blue-500/60 animate-ping" aria-hidden />
+          <div
+            className="absolute top-0 -left-2 h-4 w-4 aspect-square rounded-sm bg-blue-500/60 animate-ping"
+            aria-hidden
+          />
         )}
       </div>
 

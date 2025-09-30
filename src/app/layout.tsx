@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import Header from "@/components/layout/header";
 import MobileNav from "@/components/layout/mobile-nav";
+import LoadingScreen from "@/components/common/loading-screen";
 
 const inter = Inter({
   weight: ["300", "400", "500", "700", "900"],
@@ -68,7 +69,7 @@ export default function RootLayout({
       </head>
 
       <body
-        className={`${inter.className} text-sm leading-6 transition ease text-gray-700 dark:bg-[#131316]`}
+        className={`${inter.className} text-sm leading-6 transition ease text-gray-700 dark:bg-[#0A0A0A]`}
         suppressHydrationWarning
       >
         <ThemeProvider
@@ -77,6 +78,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <LoadingScreen />
           <Header />
           {children}
           <MobileNav />

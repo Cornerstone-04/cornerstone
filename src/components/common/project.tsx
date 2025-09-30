@@ -145,7 +145,7 @@ export default function Project({
                 aria-label="Open project"
                 className="text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-200 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded"
               >
-                <LuArrowUpRight className="size-4 relative bottom-0.5" />
+                <LuArrowUpRight className="size-5 relative bottom-0.5" />
               </Link>
             ) : (
               <TooltipProvider>

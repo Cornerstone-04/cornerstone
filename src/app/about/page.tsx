@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { timeline, connect } from "@/lib/me";
 import { Container } from "@/components/layout";
-import { Timeline } from "@/components/app";
+import { Timeline } from "@/components/common";
 import { LuArrowUpRight } from "react-icons/lu";
 
 const containerVariants = {
@@ -61,10 +61,7 @@ export default function About() {
 
         <div className="w-full md:w-4/5 ml-0 md:ml-2">
           {timeline.map((tl, index) => (
-            <div
-              key={`timeline-${index}`}
-              // className="border-b border-zinc-200/70 dark:border-zinc-800/70 last:border-0"
-            >
+            <div key={`timeline-${index}`}>
               <Timeline active={tl.endDate == null} timeline={tl} />
             </div>
           ))}
@@ -97,7 +94,7 @@ export default function About() {
                   rel="noopener noreferrer"
                   className="w-full sm:w-[48%] p-4 rounded-lg border transition-colors
                              border-zinc-300 dark:border-zinc-800
-                             hover:bg-zinc-100/70 dark:hover:bg-zinc-800/60
+                             hover:bg-zinc-100/70 dark:hover:bg-[#0f0f0f]
                              focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                   <div className="flex items-center justify-between">

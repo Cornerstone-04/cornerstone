@@ -27,7 +27,7 @@ export default function Home() {
         <div className="w-full md:w-8/12 space-y-10">
           <div className="intro">
             <h2 className="text-3xl md:text-3xl font-medium mb-4 text-zinc-900 dark:text-zinc-100">
-              Hi, I&apos;m <br /> Cornerstone Ephraim.
+              Hello, I&apos;m <br /> Cornerstone Ephraim.
             </h2>
           </div>
 
@@ -75,10 +75,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-3/12 hidden md:block">
+        <div className="w-3/12 hidden md:contents">
           <Image
             src="/images/pic.jpg"
-            className="rounded-full ring-1 ring-zinc-200 dark:ring-zinc-800"
+            className="rounded-lg ring-1 ring-zinc-200 dark:ring-zinc-800 aspect-square"
             alt="Cornerstone Ephraim avatar"
             width={160}
             height={160}

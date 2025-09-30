@@ -77,20 +77,20 @@ export default function ContactPage() {
   };
 
   const baseField =
-    "h-[53px] bg-white text-zinc-900 border-zinc-300 placeholder:text-zinc-400 " +
+    "h-[50px] bg-white text-zinc-900 border-zinc-300 placeholder:text-zinc-400 " +
     "focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:border-blue-500 " +
     "dark:bg-zinc-900 dark:text-zinc-100 dark:border-zinc-700 dark:placeholder:text-zinc-500 " +
-    "dark:focus-visible:ring-blue-400 dark:focus-visible:border-blue-400";
+    "dark:focus-visible:ring-blue-400 dark:focus-visible:border-blue-400 transition-all ease-linear";
 
   const textAreaField =
     "min-h-[140px] bg-white text-zinc-900 border-zinc-300 placeholder:text-zinc-400 " +
     "focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:border-blue-500 " +
     "dark:bg-zinc-900 dark:text-zinc-100 dark:border-zinc-700 dark:placeholder:text-zinc-500 " +
-    "dark:focus-visible:ring-blue-400 dark:focus-visible:border-blue-400";
+    "dark:focus-visible:ring-blue-400 dark:focus-visible:border-blue-400 transition-all ease-linear";
 
   return (
-    <section className="max-w-3xl mx-auto px-4 py-16">
-      <Card className="shadow-lg bg-white dark:bg-zinc-900 border-zinc-200 dark:border-zinc-800">
+    <section className="max-w-2xl mx-auto px-4 py-16">  
+      <Card className="shadow-lg bg-white dark:bg-transparent border-zinc-200 dark:border-zinc-800">
         <CardHeader>
           <CardTitle className="text-2xl font-semibold text-center text-zinc-900 dark:text-zinc-100">
             Get in Touch

@@ -64,8 +64,7 @@ export function Accordion({ handleToggle, active, exp }: AccordionProps) {
         aria-controls={panelId}
         onClick={handleToggle}
         onKeyDown={onKeyDown}
-        className="flex cursor-pointer items-center justify-between rounded-lg p-3 text-xs md:text-sm transition-colors duration-200
-                   hover:bg-zinc-100 dark:hover:bg-zinc-900"
+        className="flex cursor-pointer items-center justify-between rounded-lg p-3 text-xs md:text-sm transition-all ease-linear hover:bg-zinc-100 dark:hover:bg-[#0f0f0f]"
       >
         <h4 className="mb-0 font-medium">
           {position} <span className="opacity-70">@ {company}</span>
@@ -75,8 +74,6 @@ export function Accordion({ handleToggle, active, exp }: AccordionProps) {
           <h5 className="mb-0 whitespace-nowrap text-xs opacity-80">
             {period}
           </h5>
-          {/* chevron */}
-       
         </div>
       </div>
 
@@ -86,7 +83,7 @@ export function Accordion({ handleToggle, active, exp }: AccordionProps) {
         style={{ maxHeight: active ? maxHeight : 0 }}
       >
         <div ref={contentRef} className="p-3">
-          <p className="mb-0 leading-6 text-xs md:text-base">{summary}</p>
+          <p className="mb-0 leading-6 text-xs md:text-sm">{summary}</p>
 
           <div className="mt-4 flex flex-wrap gap-2 text-zinc-900 dark:text-zinc-100">
             {tools.map((tool, index) => (

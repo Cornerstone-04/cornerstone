@@ -74,7 +74,7 @@ export default function Header() {
           {/* Theme toggle */}
           {mounted && (
             <button
-              className="outline-none p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+              className="outline-none p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors cursor-pointer"
               onClick={() =>
                 setTheme(resolvedTheme === "dark" ? "light" : "dark")
               }

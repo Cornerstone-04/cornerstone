@@ -93,7 +93,7 @@ export const projects = [
     type: "shipped",
     works: [
       {
-        title: "Laughter Ephraim — Portfolio",
+        title: "Laughter Ephraim",
         description:
           "Portfolio site built with Next.js focusing on performance, responsive UI, and showcasing post-production work.",
         tech: ["Next.js", "TypeScript", "TailwindCSS"],
@@ -113,7 +113,7 @@ export const projects = [
         url: "https://www.powersafetyboots.com/",
       },
       {
-        title: "CertifyChain — Blockchain Certification System",
+        title: "CertifyChain",
         description:
           "Responsive frontend for decentralized certificate verification with tabbed UX, animations, uploads, and verification history.",
         tech: [
@@ -128,7 +128,7 @@ export const projects = [
         repo: "https://github.com/Cornerstone-04/certifychain-fe",
         image: "/images/projects/certifychain.png",
         gif: "",
-        url: "https://labeeb-fe.vercel.app/",
+        url: "https://certifychain-fe.vercel.app/",
       },
       {
         title: "PeerShelf v1",
@@ -147,7 +147,7 @@ export const projects = [
     type: "building",
     works: [
       {
-        title: "Forever Ephraim — Portfolio",
+        title: "Forever Ephraim",
         description:
           "Writer and product marketer portfolio with blog integration and Substack RSS feed support.",
         tech: ["Next.js", "TailwindCSS", "SubstackRSS", "ShadCN UI"],

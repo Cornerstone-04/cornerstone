@@ -1,4 +1,4 @@
-import Project from "@/components/app/project";
+import Project from "@/components/common/project";
 import { Container } from "@/components/layout";
 import { projects } from "@/lib/me";
 import React from "react";
