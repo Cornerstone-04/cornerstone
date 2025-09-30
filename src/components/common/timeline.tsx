@@ -89,7 +89,7 @@ export function Timeline({ active, timeline }: TimelineProps) {
           <p className="text-zinc-600 dark:text-zinc-400">
             {startDate} - {endDate || "Present"}
           </p>
-          <p>{summary}</p>
+          <p className="text-justify">{summary}</p>
         </div>
       </div>
     </div>

@@ -83,7 +83,7 @@ export function Accordion({ handleToggle, active, exp }: AccordionProps) {
         style={{ maxHeight: active ? maxHeight : 0 }}
       >
         <div ref={contentRef} className="p-3">
-          <p className="mb-0 leading-6 text-xs md:text-sm">{summary}</p>
+          <p className="mb-0 leading-6 text-xs md:text-sm text-justify">{summary}</p>
 
           <div className="mt-4 flex flex-wrap gap-2 text-zinc-900 dark:text-zinc-100">
             {tools.map((tool, index) => (

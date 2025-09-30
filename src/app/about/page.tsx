@@ -7,6 +7,7 @@ import { timeline, connect } from "@/lib/me";
 import { Container } from "@/components/layout";
 import { Timeline } from "@/components/common";
 import { LuArrowUpRight } from "react-icons/lu";
+import TechStack from "@/components/common/tech-stack";
 
 export default function About() {
   return (
@@ -38,7 +39,7 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <div>
-              <p className="leading-relaxed">
+              <p className="leading-relaxed text-justify">
                 I'm a Frontend Engineer with 3 years of experience building
                 scalable, responsive web applications with ReactJS, NextJS, and
                 TypeScript. I enjoy crafting clean, testable code and
@@ -49,7 +50,7 @@ export default function About() {
 
             <div>
               <h5 className="mb-2 font-semibold">Challenge</h5>
-              <p className="leading-relaxed">
+              <p className="leading-relaxed text-justify">
                 For me, every project is a chance to push boundaries. I've
                 worked on everything from UI libraries and e-commerce modules to
                 academic platforms and blockchain integrations. Along the way,
@@ -100,6 +101,8 @@ export default function About() {
           ))}
         </motion.div>
       </motion.div>
+
+      <TechStack />
 
       {/* Connect Section */}
       <motion.div

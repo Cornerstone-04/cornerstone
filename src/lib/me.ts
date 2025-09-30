@@ -3,7 +3,18 @@ import {
   FaLinkedin,
   FaRegEnvelope,
   FaXTwitter,
+  FaHtml5,
+  FaCss3,
+  FaJs,
+  FaGit,
+  FaSass,
+  FaReact,
 } from "react-icons/fa6";
+
+import { RiTailwindCssFill, RiNextjsFill } from "react-icons/ri";
+import { SiTypescript } from "react-icons/si";
+import { LuSearch } from "react-icons/lu";
+// import PlaywrightLogo from "../../public/icons/playwright.svg";
 
 export const timeline = [
   {
@@ -191,3 +202,31 @@ export const projects = [
 ];
 
 export type ProjectTypes = "shipped" | "building";
+
+export const technologies = [
+  { name: "HTML", icon: FaHtml5, color: "from-orange-500 to-red-500" },
+  { name: "CSS", icon: FaCss3, color: "from-blue-500 to-cyan-500" },
+  { name: "JavaScript", icon: FaJs, color: "from-yellow-500 to-orange-500" },
+  {
+    name: "TypeScript",
+    icon: SiTypescript,
+    color: "from-blue-500 to-blue-700",
+  },
+  { name: "React.js", icon: FaReact, color: "from-cyan-500 to-blue-500" },
+  { name: "Next.js", icon: RiNextjsFill, color: "from-gray-900 to-gray-700" },
+  {
+    name: "TailwindCSS",
+    icon: RiTailwindCssFill,
+    color: "from-teal-500 to-cyan-500",
+  },
+  { name: "Sass", icon: FaSass, color: "from-pink-500 to-rose-500" },
+
+  {
+    name: "Playwright",
+    // icon: PlaywrightLogo,
+    color: "from-red-500 to-orange-500",
+  },
+  { name: "Git", icon: FaGit, color: "from-orange-600 to-red-600" },
+  { name: "GitHub", icon: FaGithub, color: "from-gray-700 to-gray-900" },
+  { name: "SEO", icon: LuSearch, color: "from-purple-500 to-indigo-600" },
+];

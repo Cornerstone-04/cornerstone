@@ -13,6 +13,8 @@ import {
 } from "@/components/ui/tooltip";
 import { LuInfo } from "react-icons/lu";
 import { motion } from "framer-motion";
+import ResumeDownloadButton from "@/components/common/resume-download";
+// import Testimonials from "@/components/common/testimonials";
 
 export default function Home() {
   const [active, setActive] = useState<number | null>(0);
@@ -32,7 +34,7 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="text-sm leading-loose space-y-3">
+          <div className="text-sm leading-loose space-y-3 text-justify">
             <p>
               <span className="font-semibold text-blue-600 dark:text-blue-400">
                 Your goto frontend engineer.
@@ -53,26 +55,29 @@ export default function Home() {
               </p> */}
           </div>
 
-          <div className="flex items-center gap-4 my-4">
-            {connect.map((el, index) => {
-              const Icon = el.icon;
-              const href =
-                el.social === "Email"
-                  ? "mailto:fortunecornerstone@gmail.com"
-                  : `https://${el.url}`;
+          <div className="flex flex-col md:flex-row items-center gap-4 my-4">
+            <ResumeDownloadButton />
+            <div className="flex items-center gap-4 my-4">
+              {connect.map((el, index) => {
+                const Icon = el.icon;
+                const href =
+                  el.social === "Email"
+                    ? "mailto:fortunecornerstone@gmail.com"
+                    : `https://${el.url}`;
 
-              return (
-                <Link
-                  key={`connect-${index}`}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-800 hover:opacity-80 dark:text-blue-300 transition-opacity"
-                >
-                  <Icon size={36} />
-                </Link>
-              );
-            })}
+                return (
+                  <Link
+                    key={`connect-${index}`}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-800 hover:opacity-80 dark:text-blue-300 transition-opacity"
+                  >
+                    <Icon size={36} />
+                  </Link>
+                );
+              })}
+            </div>
           </div>
         </div>
 
@@ -87,6 +92,7 @@ export default function Home() {
           />
         </div>
       </div>
+      {/* <Testimonials/> */}
 
       <motion.div
         className="my-6"
