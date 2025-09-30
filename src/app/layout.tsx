@@ -14,8 +14,31 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Cornerstone Ephraim | Frontend Engineer",
-  description: "Frontend engineer | React | Next.js",
+  title: "Cornerstone Ephraim - Frontend Engineer",
+  description:
+    "Frontend Engineer with 3 years experience building scalable, responsive web apps with ReactJS, Next.js, and TypeScript.",
+  metadataBase: new URL("https://cornerstoneephraim.vercel.app/"),
+  openGraph: {
+    title: "Cornerstone Ephraim - Frontend Engineer",
+    description:
+      "Frontend Engineer with 3 years experience building scalable, responsive web apps with ReactJS, Next.js, and TypeScript.",
+    url: "https://cornerstoneephraim.vercel.app/",
+    siteName: "Cornerstone Ephraim",
+    images: ["/images/cornerstone.jpg"],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    creator: "@4th_ephraim",
+    title: "Cornerstone Ephraim - Frontend Engineer",
+    description:
+      "Frontend Engineer with 3 years experience building scalable, responsive web apps with ReactJS, Next.js, and TypeScript.",
+    images: ["/images/cornerstone.jpg"],
+  },
+  keywords:
+    "Frontend engineer, Frontend developer, React Developer, React.js, Next.js, Zustand, Playwright, SEO, JavaScript, TypeScript, Tailwind CSS, HTML, CSS, Web Development, Portfolio",
+  robots: "index, follow",
 };
 
 export default function RootLayout({
@@ -27,45 +50,6 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="author" content="Cornerstone Ephraim" />
-        <title>Cornerstone Ephraim | Frontend Engineer</title>
-        <meta
-          name="description"
-          content="Frontend Engineer with 3 years experience building scalable, responsive web apps with ReactJS, Next.js, and TypeScript."
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="canonical" href="https://cornerstoneephraim.vercel.app/" />
-        <meta
-          property="og:title"
-          content="Cornerstone Ephraim | Frontend Engineer"
-        />
-        <meta
-          property="og:description"
-          content="Frontend Engineer with 3 years experience building scalable, responsive web apps with ReactJS, Next.js, and TypeScript."
-        />
-        <meta
-          name="keywords"
-          content="Frontend engineer, Frontend developer, React Developer, React.js, Next.js, Zustand, Playwright, SEO, JavaScript, TypeScript, Tailwind CSS, HTML, CSS, Web Development, Portfolio"
-        />
-        <meta
-          property="og:url"
-          content="https://cornerstoneephraim.vercel.app"
-        />
-        <meta property="og:image" content="/images/pic.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:creator" content="@4th_ephraim" />
-        <meta
-          name="twitter:title"
-          content="Cornerstone Ephraim | Frontend Engineer"
-        />
-        <meta
-          name="twitter:description"
-          content="Frontend Engineer with 3 years experience building scalable, responsive web apps with ReactJS, Next.js, and TypeScript."
-        />
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="twitter:image" content="/images/pic.jpg" />
-        <meta name="twitter:site" content="@4th_ephraim" />
-        <meta name="robots" content="index, follow" />
       </head>
 
       <body
