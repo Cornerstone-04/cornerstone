@@ -1,7 +1,10 @@
+"use client";
+
 import Project from "@/components/common/project";
 import { Container } from "@/components/layout";
 import { projects } from "@/lib/me";
 import React from "react";
+import { motion } from "framer-motion";
 import {
   Tooltip,
   TooltipContent,
@@ -17,11 +20,14 @@ export default function Projects() {
         {projects.map((project, index) => {
           const works = project.works;
           return (
-            <div
+            <motion.div
               className="w-full flex flex-col md:flex-row align-baseline mt-12 gap-4"
               key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              {/* <div className="flex items-start gap-2> */}
               <h2 className="font-semibold text-lg dark:text-white w-full md:w-1/3 flex items-baseline gap-2">
                 {project.title}
                 <TooltipProvider delayDuration={150}>
@@ -35,18 +41,21 @@ export default function Projects() {
                   </Tooltip>
                 </TooltipProvider>
               </h2>
-              {/* </div> */}
 
               <div className="w-full">
                 {works.map((work, idx) => (
-                  <Project
+                  <motion.div
                     key={`project-${idx}`}
-                    type={project.type}
-                    {...work}
-                  />
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.4, delay: idx * 0.1 }}
+                  >
+                    <Project type={project.type} {...work} />
+                  </motion.div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           );
         })}
       </div>

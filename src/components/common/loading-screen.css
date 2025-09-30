@@ -1,82 +1,79 @@
-/* Container for the two-word title */
-.loader-text {
-  display: inline-flex;
+/* Loader container */
+.loader-container {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 2rem;
+}
+
+/* Main text */
+.loader-name {
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 800;
-  line-height: 1.1;
-  /* responsive-ish size; tweak as you like */
-  font-size: clamp(1.75rem, 4.5vw, 3rem);
-  letter-spacing: 0.02em;
+  letter-spacing: -0.02em;
+  text-align: center;
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
 }
 
-/* Wrap each word column; hide the second line until animation reveals it */
-.word-wrap {
-  position: relative;
-  display: inline-flex;
-  flex-direction: column;
+/* Subtitle */
+.loader-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  animation: fadeInUp 0.6s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+/* Progress bar container */
+.loader-progress {
+  width: 200px;
+  height: 3px;
+  background: rgba(37, 99, 235, 0.2);
+  border-radius: 2px;
   overflow: hidden;
-  /* fix the height to one line so the animation slides inside the window */
-  height: 1.1em; /* matches line-height above for a neat clip */
+  animation: fadeIn 0.6s ease-out 0.4s forwards;
+  opacity: 0;
 }
 
-/* the two states stacked vertically */
-.word {
-  display: block;
-  height: 1.1em;
-  will-change: transform;
+/* Progress bar fill */
+.loader-progress-fill {
+  height: 100%;
+  background: rgb(37, 99, 235);
+  border-radius: 2px;
+  animation: progressFill 2s ease-in-out forwards;
+  transform-origin: left;
 }
 
-/* spacing between the two columns */
-.word-gap {
-  display: inline-block;
-  width: 0.5rem;
-}
-
-/* ===== Animations =====
-   We show the first words for 1.25s,
-   then animate once over ~0.5-0.6s and hold the final state.
-*/
-
-/* Cornerstone -> Frontend (swipe UP after 1.25s) */
-.up .word:nth-child(1) {
-  transform: translateY(0%);
-}
-.up .word:nth-child(2) {
-  transform: translateY(100%);
-}
-.up {
-  /* delay to display initial text, then swap once */
-  animation: slideUpOnce 0.6s ease-out 1.25s forwards;
-}
-
-/* Ephraim -> Engineer (wipe DOWN after 1.25s) */
-.down .word:nth-child(1) {
-  transform: translateY(0%);
-}
-.down .word:nth-child(2) {
-  transform: translateY(-100%);
-}
-.down {
-  animation: slideDownOnce 0.6s ease-out 1.25s forwards;
-}
-
-/* Keyframes: move the pair by one line-height */
-@keyframes slideUpOnce {
+/* Animations */
+@keyframes fadeInUp {
   from {
-    transform: translateY(0%);
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-    transform: translateY(-100%);
-  } /* reveals the 2nd word below */
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-@keyframes slideDownOnce {
+@keyframes fadeIn {
   from {
-    transform: translateY(0%);
+    opacity: 0;
   }
   to {
-    transform: translateY(100%);
-  } /* reveals the 2nd word above */
+    opacity: 1;
+  }
+}
+
+@keyframes progressFill {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
 }

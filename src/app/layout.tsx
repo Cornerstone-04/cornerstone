@@ -5,6 +5,7 @@ import { ThemeProvider } from "next-themes";
 import Header from "@/components/layout/header";
 import MobileNav from "@/components/layout/mobile-nav";
 import LoadingScreen from "@/components/common/loading-screen";
+import Footer from "@/components/layout/footer";
 
 const inter = Inter({
   weight: ["300", "400", "500", "700", "900"],
@@ -81,6 +82,7 @@ export default function RootLayout({
           <LoadingScreen />
           <Header />
           {children}
+          <Footer />
           <MobileNav />
         </ThemeProvider>
       </body>

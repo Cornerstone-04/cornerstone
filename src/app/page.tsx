@@ -12,6 +12,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { LuInfo } from "react-icons/lu";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const [active, setActive] = useState<number | null>(0);
@@ -22,7 +23,7 @@ export default function Home() {
   };
 
   return (
-    <Container className="pt-12 pb-24 text-zinc-800 dark:text-zinc-200">
+    <Container className="pt-12 pb-24 text-zinc-800 dark:text-zinc-200 relative overflow-hidden">
       <div className="flex items-start justify-between">
         <div className="w-full md:w-8/12 space-y-10">
           <div className="intro">
@@ -49,7 +50,7 @@ export default function Home() {
               tools and refining my skills. From experimenting with Playwright
               test suites to exploring state-management patterns, I try learning
               and applying that knowledge to real projects.
-            </p> */}
+              </p> */}
           </div>
 
           <div className="flex items-center gap-4 my-4">
@@ -87,7 +88,13 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="my-6">
+      <motion.div
+        className="my-6"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.5 }}
+      >
         <div className="flex items-center gap-2">
           <h3 className="text-lg font-medium text-zinc-900 dark:text-zinc-100">
             Recent experiences
@@ -115,7 +122,7 @@ export default function Home() {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </Container>
   );
 }
