@@ -82,7 +82,7 @@ export default function Footer() {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-zinc-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                    className="text-zinc-600 dark:text-zinc-400 hover:text-blue-800 dark:hover:text-blue-400 transition-all ease-linear"
                     aria-label={el.social}
                   >
                     <Icon size={24} />

@@ -9,7 +9,7 @@ export default function ResumeDownloadButton() {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/docs/cornerstone-ephraim.pdf"; // Path to your resume in public folder
+    link.href = "/docs/cornerstone-ephraim.pdf";
     link.download = "Cornerstone-Ephraim-Resume.pdf";
     document.body.appendChild(link);
     link.click();
@@ -23,7 +23,7 @@ export default function ResumeDownloadButton() {
   return (
     <motion.button
       onClick={handleDownload}
-      className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700 text-white font-medium transition-all shadow-sm hover:shadow-md w-full md:w-fit justify-center"
+      className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-blue-800 hover:bg-blue-900 dark:bg-blue-400 dark:hover:bg-blue-500 text-white font-medium transition-all ease-linear shadow-sm hover:shadow-md w-full md:w-fit justify-center cursor-pointer"
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
     >

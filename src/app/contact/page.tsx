@@ -11,7 +11,7 @@ export default function ContactPage() {
     <Container className="py-12 text-zinc-800 dark:text-zinc-200">
       {/* Get in Touch */}
       <motion.div
-        className="w-full flex flex-col md:flex-row align-baseline md:space-x-6"
+        className="w-full flex flex-col md:flex-row align-baseline md:space-x-6 gap-4 md:gap-0"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
@@ -24,7 +24,7 @@ export default function ContactPage() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <h2 className="font-semibold text-lg text-zinc-900 dark:text-zinc-100 mb-4">
+          <h2 className="font-semibold text-lg text-zinc-900 dark:text-zinc-100 mb-2">
             Get in Touch
           </h2>
           <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">

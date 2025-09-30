@@ -36,7 +36,7 @@ export default function Home() {
 
           <div className="text-sm leading-loose space-y-3 text-justify">
             <p>
-              <span className="font-semibold text-blue-600 dark:text-blue-400">
+              <span className="font-semibold text-blue-800 dark:text-blue-400">
                 Your goto frontend engineer.
               </span>{" "}
               I’ve worked across startups and large teams, contributing to
@@ -71,7 +71,7 @@ export default function Home() {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-800 hover:opacity-80 dark:text-blue-300 transition-opacity"
+                    className="text-blue-800 hover:opacity-80 dark:text-blue-400 transition-opacity"
                   >
                     <Icon size={36} />
                   </Link>
