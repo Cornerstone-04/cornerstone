@@ -16,12 +16,12 @@ import { LuInfo } from "react-icons/lu";
 export default function Projects() {
   return (
     <Container className="py-12">
-      <div className="w-full">
+      <div className="w-full flex flex-col gap-12">
         {projects.map((project, index) => {
           const works = project.works;
           return (
             <motion.div
-              className="w-full flex flex-col md:flex-row align-baseline mt-12 gap-4"
+              className="w-full flex flex-col md:flex-row align-baseline  gap-4"
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}

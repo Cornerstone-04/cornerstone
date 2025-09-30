@@ -1,4 +1,3 @@
-// app/contact/page.tsx
 "use client";
 
 import { Container } from "@/components/layout";
@@ -9,7 +8,7 @@ import ConnectSection from "@/components/contact/connect-section";
 
 export default function ContactPage() {
   return (
-    <Container className="my-12 text-zinc-800 dark:text-zinc-200">
+    <Container className="py-12 text-zinc-800 dark:text-zinc-200">
       {/* Get in Touch */}
       <motion.div
         className="w-full flex flex-col md:flex-row align-baseline md:space-x-6"

@@ -6,7 +6,7 @@ import { technologies } from "@/lib/me"; // Import from your lib/me file
 export default function TechStack() {
   return (
     <motion.div
-      className="w-full mb-16"
+      className="w-full mb-16 mt-12"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}

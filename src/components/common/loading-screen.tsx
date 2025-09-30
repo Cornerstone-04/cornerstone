@@ -21,8 +21,8 @@ export default function LoadingScreen() {
           transition={{ duration: 0.6, ease: "easeInOut" }}
         >
           <div className="loader-container">
-            <h1 className="loader-name text-blue-600">Cornerstone Ephraim</h1>
-            <p className="loader-subtitle text-blue-600">Frontend Engineer</p>
+            <h1 className="loader-name text-blue-600 dark:text-blue-400">Cornerstone Ephraim</h1>
+            <p className="loader-subtitle text-blue-600 dark:text-blue-400">Frontend Engineer</p>
             <div className="loader-progress">
               <div className="loader-progress-fill"></div>
             </div>
