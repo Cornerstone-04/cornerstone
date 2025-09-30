@@ -36,13 +36,6 @@ export default function ContactForm() {
     setErrors(v);
     if (Object.keys(v).length) return;
 
-    const templateParams = {
-      from_first_name: form.firstName,
-      from_last_name: form.lastName,
-      from_email: form.email,
-      message: form.message,
-    };
-
     try {
       setSubmitting(true);
       await sendContactEmail(form); // ← single call to your helper

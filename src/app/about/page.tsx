@@ -2,11 +2,9 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { timeline, connect } from "@/lib/me";
 import { Container } from "@/components/layout";
 import { Timeline } from "@/components/common";
-import { LuArrowUpRight } from "react-icons/lu";
 import TechStack from "@/components/common/tech-stack";
 import ConnectSection from "@/components/contact/connect-section";
 
