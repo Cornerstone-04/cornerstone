@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { technologies } from "@/lib/me"; // Import from your lib/me file
+import { technologies } from "@/lib/me";
 
 export default function TechStack() {
   return (
@@ -34,9 +34,11 @@ export default function TechStack() {
             Technologies and tools I work with to build modern web applications
           </p>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-4">
             {technologies.map((tech, index) => {
               const Icon = tech.icon;
+              const isPlaywright = tech.name === "Playwright";
+
               return (
                 <motion.div
                   key={index}
@@ -56,32 +58,33 @@ export default function TechStack() {
                   />
 
                   <div className="relative flex flex-col items-center gap-3 text-center">
-                    {/* Icon with gradient on hover */}
-                    <div className="relative">
-                      {Icon && (
-                        <Icon className="text-5xl text-zinc-700 dark:text-zinc-300 transition-all duration-300 group-hover:scale-110" />
-                      )}
+                    {isPlaywright ? (
                       <div
-                        className={`absolute inset-0 bg-gradient-to-br ${tech.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300 mix-blend-overlay`}
+                        title={tech.name}
+                        className="transition-all duration-300 group-hover:scale-110"
                       >
-                        {Icon && <Icon className="text-5xl text-white" />}
+                        <Icon
+                          className="w-12 h-12 text-zinc-700 dark:text-zinc-300"
+                          style={{ width: "48px", height: "48px" }}
+                        />
                       </div>
-                    </div>
-
-                    {/* Name */}
-                    <span className="text-sm font-medium text-zinc-900 dark:text-zinc-100">
-                      {tech.name}
-                    </span>
+                    ) : (
+                      <div title={tech.name} className="relative">
+                        {Icon && (
+                          <Icon className="text-5xl text-zinc-700 dark:text-zinc-300 transition-all duration-300 group-hover:scale-110" />
+                        )}
+                        <div
+                          className={`absolute inset-0 bg-gradient-to-br ${tech.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300 mix-blend-overlay`}
+                        >
+                          {Icon && <Icon className="text-5xl text-white" />}
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </motion.div>
               );
             })}
           </div>
-
-          {/* Optional: Add years of experience or skill note */}
-          {/* <p className="text-xs text-zinc-500 dark:text-zinc-500 mt-6 italic">
-            Hover over each technology to see its accent color
-          </p> */}
         </motion.div>
       </div>
     </motion.div>

@@ -14,7 +14,7 @@ import {
 import { RiTailwindCssFill, RiNextjsFill } from "react-icons/ri";
 import { SiTypescript } from "react-icons/si";
 import { LuSearch } from "react-icons/lu";
-// import PlaywrightLogo from "../../public/icons/playwright.svg";
+import PlaywrightLogo from "../../public/icons/playwright-logo";
 
 export const timeline = [
   {
@@ -22,8 +22,8 @@ export const timeline = [
     endDate: "Oct 2024",
     position: "Frontend Engineering Intern",
     company: "Moniepoint Inc",
-    url: "https://moniepoint.com/", // PUT COMPANY LINK HERE
-    logo: "/images/moniepoint.png", // PUT COMPANY LOGO HERE
+    url: "https://moniepoint.com/",
+    logo: "/images/moniepoint.png",
     tools: ["ReactJS", "TypeScript", "NextJS", "Playwright", "Kamona UI"],
     summary:
       "Contributed to Kamona UI Library by implementing reusable components and ensuring design consistency across the frontend team. Built and executed Playwright test suites for Moniepoint FX, validating user flows and ensuring seamless experiences. Collaborated closely with designers on usability and accessibility standards, and reported/fixed bugs uncovered during testing.",
@@ -33,8 +33,8 @@ export const timeline = [
     endDate: "Apr 2024",
     position: "Frontend Engineer",
     company: "Pysis Technologies",
-    url: "https://pysistech.com/", // PUT COMPANY LINK HERE
-    logo: "/images/fishdey.svg", // PUT COMPANY LOGO HERE
+    url: "https://pysistech.com/",
+    logo: "/images/fishdey.svg",
     tools: ["ReactJS", "Zustand", "TailwindCSS", "Axios", "REST APIs"],
     summary:
       "Built and maintained key modules such as store management, product categories, and user profiles using ReactJS + Zustand. Integrated REST APIs with Axios for seamless data flow, styled responsive interfaces with TailwindCSS, and debugged complex issues to improve stability. Contributed actively to code reviews and team discussions.",
@@ -44,8 +44,8 @@ export const timeline = [
     endDate: "Jun 2022",
     position: "Frontend Developer",
     company: "Stutern",
-    url: "https://stutern.com/", // PUT COMPANY LINK HERE
-    logo: "/images/stutern.png", // PUT COMPANY LOGO HERE
+    url: "https://stutern.com/",
+    logo: "/images/stutern.png",
     tools: ["HTML", "CSS", "Bulma.io", "Figma"],
     summary:
       "Led a complete overhaul of the main landing page with HTML and CSS. Redesigned the graduate accelerator page by integrating custom illustrations for accelerator tracks and updating curriculum content. Converted Figma mockups into functional, user-friendly pages, improving usability and clarity.",
@@ -109,8 +109,8 @@ export const projects = [
           "Portfolio site built with Next.js focusing on performance, responsive UI, and showcasing post-production work.",
         tech: ["Next.js", "TypeScript", "TailwindCSS"],
         repo: "https://github.com/Cornerstone-04/laughter-portfolio", // PUT REPO LINK HERE (if public)
-        image: "/images/projects/laughter.png", // PUT IMAGE HERE
-        gif: "", // OPTIONAL
+        image: "/images/projects/laughter.png",
+        gif: "",
         url: "https://laughterephraim.vercel.app/",
       },
       {
@@ -223,10 +223,8 @@ export const technologies = [
 
   {
     name: "Playwright",
-    // icon: PlaywrightLogo,
-    color: "from-red-500 to-orange-500",
+    icon: PlaywrightLogo,
+    color: "from-green-600 to-orange-500",
   },
-  { name: "Git", icon: FaGit, color: "from-orange-600 to-red-600" },
-  { name: "GitHub", icon: FaGithub, color: "from-gray-700 to-gray-900" },
   { name: "SEO", icon: LuSearch, color: "from-purple-500 to-indigo-600" },
 ];

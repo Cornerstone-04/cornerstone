@@ -15,7 +15,7 @@ export default function MobileNav() {
           <Link
             key={item.path}
             href={item.path}
-            className={`rounded-2xl px-5 py-2 text-sm font-medium transition-colors ${
+            className={`rounded-2xl px-5 py-2 text-sm font-medium transition-all ease-linear ${
               item.path === pathname
                 ? "bg-white text-blue-500 dark:bg-gray-900 dark:text-blue-400"
                 : "text-zinc-700 dark:text-zinc-300 hover:bg-zinc-200 dark:hover:bg-zinc-800"

@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import "./loading-screen.css";
+import "@/styles/loading-screen.css";
 
 export default function LoadingScreen() {
   const [isLoading, setIsLoading] = useState(true);
