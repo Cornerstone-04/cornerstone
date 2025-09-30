@@ -133,7 +133,7 @@ export default function ContactPage() {
           {sent === "err" && (
             <div className="mb-6 p-4 rounded-lg bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800">
               <p className="text-sm text-red-700 dark:text-red-400">
-                Oops—couldn't send your message. Please try again in a moment.
+                Oops—couldn&apos;t send your message. Please try again in a moment.
               </p>
             </div>
           )}
@@ -300,7 +300,7 @@ export default function ContactPage() {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <p className="font-medium text-zinc-900 dark:text-zinc-100">
-            Reach out! I'd love to chat.
+            Reach out! I&apos;d love to chat.
           </p>
 
           <div className="flex flex-wrap gap-4 mt-4">

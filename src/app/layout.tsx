@@ -66,7 +66,6 @@ export default function RootLayout({
         <meta name="twitter:image" content="/images/pic.jpg" />
         <meta name="twitter:site" content="@4th_ephraim" />
         <meta name="robots" content="index, follow" />
-        <link rel="icon" href="favicon.ico" />
       </head>
 
       <body

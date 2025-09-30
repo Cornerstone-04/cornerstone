@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/tooltip";
 import { ProjectTypes } from "@/lib/me";
 import { LuArrowUpRight, LuGithub, LuLink } from "react-icons/lu";
-import ProjectModal from "@/components/common/project-modal"; // <-- import your modal
+import ProjectModal from "@/components/common/project-modal";
 
 type ProjectProps = {
   title: string;
@@ -22,8 +22,8 @@ type ProjectProps = {
   repo?: string;
   image: string;
   type: ProjectTypes | "web" | "mobile" | string;
-  gif?: string; // used as a richer preview if present
-  longDescription?: string; // optional, if you have it
+  gif?: string;
+  longDescription?: string;
   role?: string;
   duration?: string;
 };
@@ -107,14 +107,25 @@ export default function Project({
       title,
       description,
       longDescription,
-      technologies: tech,               // <-- tech -> technologies
-      liveUrl: url || undefined,        // <-- url -> liveUrl
-      githubUrl: repo || undefined,     // <-- repo -> githubUrl
+      technologies: tech, // <-- tech -> technologies
+      liveUrl: url || undefined, // <-- url -> liveUrl
+      githubUrl: repo || undefined, // <-- repo -> githubUrl
       image: (gif || image) ?? undefined, // prefer gif preview if provided
       role,
       duration,
     }),
-    [title, description, longDescription, tech, url, repo, gif, image, role, duration]
+    [
+      title,
+      description,
+      longDescription,
+      tech,
+      url,
+      repo,
+      gif,
+      image,
+      role,
+      duration,
+    ]
   );
 
   const CardBody = (
@@ -174,6 +185,7 @@ export default function Project({
           <p className="text-xs md:text-xs text-zinc-700 dark:text-zinc-300 text-justify">
             {description}
           </p>
+          
         </div>
 
         <div className="flex justify-end items-end gap-3 text-zinc-600 dark:text-zinc-300">
@@ -193,7 +205,9 @@ export default function Project({
         className="w-full text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded"
         aria-haspopup="dialog"
         aria-expanded={open}
-        aria-controls={`project-modal-${title.replace(/\s+/g, "-").toLowerCase()}`}
+        aria-controls={`project-modal-${title
+          .replace(/\s+/g, "-")
+          .toLowerCase()}`}
       >
         {CardBody}
       </button>

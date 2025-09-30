@@ -40,7 +40,7 @@ export default function About() {
           >
             <div>
               <p className="leading-relaxed text-justify">
-                I'm a Frontend Engineer with 3 years of experience building
+                I&apos;m a Frontend Engineer with 3 years of experience building
                 scalable, responsive web applications with ReactJS, NextJS, and
                 TypeScript. I enjoy crafting clean, testable code and
                 implementing modern design systems so that products feel
@@ -51,11 +51,11 @@ export default function About() {
             <div>
               <h5 className="mb-2 font-semibold">Challenge</h5>
               <p className="leading-relaxed text-justify">
-                For me, every project is a chance to push boundaries. I've
+                For me, every project is a chance to push boundaries. I&apos;ve
                 worked on everything from UI libraries and e-commerce modules to
                 academic platforms and blockchain integrations. Along the way,
-                I've deepened my skills with tools like TailwindCSS, Zustand,
-                and Playwright, and I'm now expanding into backend collaboration
+                I&apos;ve deepened my skills with tools like TailwindCSS, Zustand,
+                and Playwright, and I&apos;m now expanding into backend collaboration
                 with .NET to strengthen my full-stack perspective.
               </p>
             </div>
@@ -130,7 +130,7 @@ export default function About() {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <p className="font-medium text-zinc-900 dark:text-zinc-100">
-            Reach out! I'd love to chat.
+            Reach out! I&apos;d love to chat.
           </p>
 
           <div className="flex flex-wrap gap-4 mt-4">
