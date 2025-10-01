@@ -1,9 +1,0 @@
-{
-  "redirects": [
-    {
-      "source": "https://cornerstone-ephraim.vercel.app/(.*)",
-      "destination": "https://cornerstoneephraim.vercel.app/$1",
-      "permanent": true
-    }
-  ]
-}
