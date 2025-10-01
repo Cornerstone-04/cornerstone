@@ -34,10 +34,30 @@ export const metadata: Metadata = {
     title: "Cornerstone Ephraim - Frontend Engineer",
     description:
       "Frontend Engineer with 3 years experience building scalable, responsive web apps with ReactJS, Next.js, and TypeScript.",
-    images: ["/images/cornerstone.jpg"],
+    images: ["/cornerstone.png"],
   },
-  keywords:
-    "Frontend engineer, Frontend developer, React Developer, React.js, Next.js, Zustand, Playwright, SEO, JavaScript, TypeScript, Tailwind CSS, HTML, CSS, Web Development, Portfolio",
+  icons: {
+    icon: "/favicon.ico",
+    // shortcut: "/favicon-32x32.png",
+    // apple: "/apple-touch-icon.png",
+  },
+  keywords: [
+    "Frontend engineer",
+    "Frontend developer",
+    "React Developer",
+    "React.js",
+    "Next.js",
+    "Zustand",
+    "Playwright",
+    "SEO",
+    "JavaScript",
+    "TypeScript",
+    "Tailwind CSS",
+    "HTML",
+    "CSS",
+    "Web Development",
+    "Portfolio",
+  ],
   robots: "index, follow",
 };
 
