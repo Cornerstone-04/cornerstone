@@ -9,6 +9,7 @@ import Footer from "@/components/layout/footer";
 
 const inter = Inter({
   weight: ["300", "400", "500", "700", "900"],
+  variable: "--font-inter",
   subsets: ["latin"],
   adjustFontFallback: false,
 });
@@ -67,7 +68,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${inter.variable} scroll-smooth`}
+      suppressHydrationWarning
+    >
       <head>
         <meta name="author" content="Cornerstone Ephraim" />
       </head>
