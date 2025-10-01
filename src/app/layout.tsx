@@ -24,7 +24,7 @@ export const metadata: Metadata = {
       "Frontend Engineer with 3 years experience building scalable, responsive web apps with ReactJS, Next.js, and TypeScript.",
     url: "https://cornerstoneephraim.vercel.app/",
     siteName: "Cornerstone Ephraim",
-    images: ["/images/cornerstone.jpg"],
+    images: ["/cornerstone.png"],
     locale: "en_US",
     type: "website",
   },
