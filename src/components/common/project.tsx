@@ -54,7 +54,6 @@ export default function Project({
 
   const hasUrl = Boolean(url);
 
-  // small helper to render link icons with placeholder when link is missing
   const LinkIconBtn = ({
     href,
     label,
@@ -101,16 +100,15 @@ export default function Project({
     );
   };
 
-  // Map current props → modal's `project` shape
   const modalProject = useMemo(
     () => ({
       title,
       description,
       longDescription,
-      technologies: tech, // <-- tech -> technologies
-      liveUrl: url || undefined, // <-- url -> liveUrl
-      githubUrl: repo || undefined, // <-- repo -> githubUrl
-      image: (gif || image) ?? undefined, // prefer gif preview if provided
+      technologies: tech,
+      liveUrl: url || undefined,
+      githubUrl: repo || undefined,
+      image: (gif || image) ?? undefined,
       role,
       duration,
     }),
@@ -185,7 +183,6 @@ export default function Project({
           <p className="text-xs md:text-xs text-zinc-700 dark:text-zinc-300 text-justify">
             {description}
           </p>
-          
         </div>
 
         <div className="flex justify-end items-end gap-3 text-zinc-600 dark:text-zinc-300">

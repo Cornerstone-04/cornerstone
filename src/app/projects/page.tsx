@@ -3,7 +3,7 @@
 import Project from "@/components/common/project";
 import { Container } from "@/components/layout";
 import { projects } from "@/lib/me";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
   Tooltip,
@@ -14,6 +14,13 @@ import {
 import { LuInfo } from "react-icons/lu";
 
 export default function Projects() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <Container className="py-12">
       <div className="w-full flex flex-col gap-12">
