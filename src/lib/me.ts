@@ -52,9 +52,9 @@ export const timeline = [
 
 export const connect = [
   {
-    social: "LinkedIn",
-    url: "linkedin.com/in/cornerstone-ephraim",
-    icon: FaLinkedin,
+    social: "Email",
+    url: "fortunecornerstone@gmail.com",
+    icon: FaRegEnvelope,
   },
   {
     social: "Github",
@@ -62,9 +62,9 @@ export const connect = [
     icon: FaGithub,
   },
   {
-    social: "Email",
-    url: "fortunecornerstone@gmail.com",
-    icon: FaRegEnvelope,
+    social: "LinkedIn",
+    url: "linkedin.com/in/cornerstone-ephraim",
+    icon: FaLinkedin,
   },
   {
     social: "Twitter",
