@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { connect, menuitems } from "@/lib/me";
 import { FaMoon, FaSun } from "react-icons/fa6";
 import { useTheme } from "next-themes";
+import { motion, AnimatePresence } from "motion/react";
 
 export default function Header() {
   const pathname = usePathname();
@@ -27,7 +28,12 @@ export default function Header() {
         scrollPosition > 20 ? "shadow-md" : ""
       }`}
     >
-      <nav className="w-11/12 flex items-center justify-between max-w-4xl py-5 mx-auto">
+      <motion.nav
+        className="w-11/12 flex items-center justify-between max-w-4xl py-5 mx-auto"
+        initial={false}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ type: "spring", stiffness: 300, damping: 24 }}
+      >
         <Link
           className="block font-semibold text-zinc-900 dark:text-zinc-100 transition-colors"
           href="/"
@@ -35,20 +41,51 @@ export default function Header() {
           Cornerstone E.
         </Link>
 
-        <div className="hidden items-center space-x-4 rounded-full py-1.5 px-2 bg-gray-200 bg-opacity-40 dark:bg-gray-800 dark:bg-opacity-40 md:flex">
-          {menuitems.map((item) => (
-            <Link
-              key={item.path}
-              href={item.path}
-              className={`block transition ease rounded-2xl px-4 py-1.5 ${
-                item.path === pathname
-                  ? "bg-white text-blue-500 font-semibold dark:bg-gray-900 dark:text-blue-400"
-                  : "text-zinc-700 dark:text-zinc-300"
-              }`}
-            >
-              {item.name}
-            </Link>
-          ))}
+        <div className="hidden md:flex items-center relative">
+          <div className="flex items-center space-x-2 rounded-full py-1.5 px-2 bg-gray-200/40 dark:bg-gray-800/40">
+            {menuitems.map((item) => {
+              const isActive = item.path === pathname;
+              return (
+                <div key={item.path} className="relative">
+                  <AnimatePresence initial={false} mode="popLayout">
+                    {isActive && (
+                      <motion.span
+                        layoutId="nav-active-pill"
+                        className="absolute inset-0 rounded-2xl bg-white dark:bg-gray-900"
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 500,
+                          damping: 40,
+                        }}
+                      />
+                    )}
+                  </AnimatePresence>
+
+                  <Link
+                    href={item.path}
+                    className={`relative block transition-colors ease rounded-2xl px-4 py-1.5 ${
+                      isActive
+                        ? "text-blue-600 dark:text-blue-400 font-semibold"
+                        : "text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-zinc-100"
+                    }`}
+                  >
+                    <motion.span
+                      whileHover={{ y: -1 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 600,
+                        damping: 30,
+                      }}
+                    >
+                      {item.name}
+                    </motion.span>
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
         </div>
 
         <div className="flex items-center space-x-2">
@@ -88,7 +125,7 @@ export default function Header() {
             </button>
           )}
         </div>
-      </nav>
+      </motion.nav>
     </header>
   );
 }
