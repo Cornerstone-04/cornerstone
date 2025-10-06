@@ -6,11 +6,9 @@ import {
   FaHtml5,
   FaCss3,
   FaJs,
-  FaGit,
   FaSass,
   FaReact,
 } from "react-icons/fa6";
-
 import { RiTailwindCssFill, RiNextjsFill } from "react-icons/ri";
 import { SiTypescript } from "react-icons/si";
 import { LuSearch } from "react-icons/lu";
