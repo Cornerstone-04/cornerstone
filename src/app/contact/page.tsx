@@ -1,7 +1,7 @@
 "use client";
 
 import { Container } from "@/components/layout";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { connect } from "@/lib/me";
 import ContactForm from "@/components/contact/contact-form";
 import ConnectSection from "@/components/contact/connect-section";

@@ -4,7 +4,7 @@ import Project from "@/components/common/project";
 import { Container } from "@/components/layout";
 import { projects } from "@/lib/me";
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import {
   Tooltip,
   TooltipContent,

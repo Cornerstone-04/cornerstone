@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { timeline, connect } from "@/lib/me";
 import { Container } from "@/components/layout";
 import { Timeline } from "@/components/common";

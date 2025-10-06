@@ -12,7 +12,8 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { LuInfo } from "react-icons/lu";
-import { motion } from "framer-motion";
+import {motion} from "motion/react"
+// import { motion } from "motion/react";
 import ResumeDownloadButton from "@/components/common/resume-download";
 // import Testimonials from "@/components/common/testimonials";
 

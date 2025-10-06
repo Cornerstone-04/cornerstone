@@ -1,7 +1,7 @@
 "use client";
 
 import React, { ReactNode, useCallback, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { cn } from "@/lib/utils"; // if you don't have cn(), replace cn(...) with a template string
 
 interface ModalProps {
