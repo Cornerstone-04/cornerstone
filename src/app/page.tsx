@@ -26,7 +26,13 @@ export default function Home() {
 
   return (
     <Container className="pt-12 pb-24 text-zinc-800 dark:text-zinc-200 relative overflow-hidden">
-      <div className="flex items-start justify-between">
+      <motion.div
+        className="flex items-start justify-between"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.5 }}
+      >
         <div className="w-full md:w-8/12 space-y-10">
           <div className="intro">
             <h2 className="text-3xl md:text-3xl font-medium mb-4 text-zinc-900 dark:text-zinc-100">
@@ -46,13 +52,6 @@ export default function Home() {
               into the night, I enjoy solving problems that make interfaces feel
               effortless.
             </p>
-            {/* optional second paragraph */}
-            {/* <p className="text-zinc-700 dark:text-zinc-300">
-              Beyond coding, I’m driven by curiosity—constantly digging into new
-              tools and refining my skills. From experimenting with Playwright
-              test suites to exploring state-management patterns, I try learning
-              and applying that knowledge to real projects.
-              </p> */}
           </div>
 
           <div className="flex flex-col md:flex-row items-center gap-4 my-4">
@@ -91,7 +90,7 @@ export default function Home() {
             priority
           />
         </div>
-      </div>
+      </motion.div>
       {/* <Testimonials/> */}
 
       <motion.div
@@ -99,7 +98,7 @@ export default function Home() {
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.7 }}
       >
         <div className="flex items-center gap-2">
           <h3 className="text-lg font-medium text-zinc-900 dark:text-zinc-100">
