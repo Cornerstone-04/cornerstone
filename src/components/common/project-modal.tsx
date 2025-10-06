@@ -5,6 +5,7 @@ import { LuX, LuExternalLink, LuGithub } from "react-icons/lu";
 import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { FaGithub } from "react-icons/fa6";
 
 type ProjectModalProps = {
   isOpen: boolean;
@@ -106,7 +107,7 @@ export default function ProjectModal({
                         src={project.image}
                         alt={project.title}
                         fill
-                        className="object-cover"
+                        className="object-cover object-top"
                         sizes="(max-width: 768px) 100vw, 640px"
                         priority={false}
                       />
@@ -152,15 +153,15 @@ export default function ProjectModal({
                         </Link>
                       )}
                       {project.githubUrl && (
-                        <a
+                        <Link
                           href={project.githubUrl}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-900 dark:text-zinc-100 font-medium transition-colors"
                         >
-                          <LuGithub size={18} />
+                          <FaGithub size={18} />
                           View Code
-                        </a>
+                        </Link>
                       )}
                     </div>
                   )}

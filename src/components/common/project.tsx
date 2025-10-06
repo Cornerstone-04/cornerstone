@@ -11,8 +11,9 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { ProjectTypes } from "@/lib/me";
-import { LuArrowUpRight, LuGithub, LuLink } from "react-icons/lu";
+import { LuArrowUpRight, LuLink } from "react-icons/lu";
 import ProjectModal from "@/components/common/project-modal";
+import { FaGithub } from "react-icons/fa6";
 
 type ProjectProps = {
   title: string;
@@ -43,7 +44,6 @@ export default function Project({
 }: ProjectProps) {
   const [open, setOpen] = useState(false);
 
-  // Close on Escape (your modal also listens, but this keeps local state in sync)
   const handleEscKey = useCallback((e: KeyboardEvent) => {
     if (e.key === "Escape") setOpen(false);
   }, []);
@@ -186,7 +186,7 @@ export default function Project({
         </div>
 
         <div className="flex justify-end items-end gap-3 text-zinc-600 dark:text-zinc-300">
-          <LinkIconBtn href={repo} label="repo" Icon={LuGithub} />
+          <LinkIconBtn href={repo} label="repo" Icon={FaGithub} />
           <LinkIconBtn href={url} label="url" Icon={LuLink} />
         </div>
       </div>
