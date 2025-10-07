@@ -6,6 +6,7 @@ import Header from "@/components/layout/header";
 import MobileNav from "@/components/layout/mobile-nav";
 import LoadingScreen from "@/components/common/loading-screen";
 import Footer from "@/components/layout/footer";
+import StructuredData from "@/components/common/structured-data";
 
 const inter = Inter({
   weight: ["300", "400", "500", "700", "900"],
@@ -75,6 +76,7 @@ export default function RootLayout({
     >
       <head>
         <meta name="author" content="Cornerstone Ephraim" />
+        <StructuredData />
       </head>
 
       <body
