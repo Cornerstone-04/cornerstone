@@ -5,6 +5,7 @@ import { motion } from "motion/react";
 import { connect } from "@/lib/me";
 import ContactForm from "@/components/contact/contact-form";
 import ConnectSection from "@/components/contact/connect-section";
+import BookDiscoveryCall from "@/components/common/book-discovery-call";
 
 export default function ContactPage() {
   return (
@@ -35,6 +36,9 @@ export default function ContactPage() {
         {/* Form */}
         <ContactForm />
       </motion.div>
+
+      {/* schedule meeting */}
+      <BookDiscoveryCall />
 
       {/* Connect */}
       <ConnectSection items={connect} className="mb-16 mt-12" />
