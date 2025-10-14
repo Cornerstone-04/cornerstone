@@ -19,13 +19,9 @@ type AccordionProps = {
 export function Accordion({ handleToggle, active, exp }: AccordionProps) {
   const { startDate, endDate, position, company, summary, tools } = exp;
 
-  // Split summary by full stops and filter out empty strings
-  const bulletPoints = useMemo(
-    () =>
-      summary
-        .split(".")
-        .map((point) => point.trim())
-        .filter((point) => point.length > 0),
+  // Split summary into sentences for line breaks
+  const sentences = useMemo(
+    () => summary.split(/(?<=\.)\s*/).filter((s) => s.trim().length > 0),
     [summary]
   );
 
@@ -42,7 +38,7 @@ export function Accordion({ handleToggle, active, exp }: AccordionProps) {
     setMaxHeight(el.scrollHeight);
 
     return () => ro.disconnect();
-  }, [summary, tools, bulletPoints]);
+  }, [summary, tools, sentences]);
 
   const period = useMemo(
     () => `${startDate} - ${endDate || "Present"}`,
@@ -93,12 +89,15 @@ export function Accordion({ handleToggle, active, exp }: AccordionProps) {
         style={{ maxHeight: active ? maxHeight : 0 }}
       >
         <div ref={contentRef} className="p-3">
-          {/* Bullet Points */}
-          <ul className="list-disc list-inside space-y-1.5 text-xs md:text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed text-justify">
-            {bulletPoints.map((point, index) => (
-              <li key={index}>{point}</li>
+          {/* Summary with line breaks */}
+          <p className="text-xs md:text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed text-justify">
+            {sentences.map((sentence, index) => (
+              <React.Fragment key={index}>
+                {sentence}
+                {index < sentences.length - 1 && <br />}
+              </React.Fragment>
             ))}
-          </ul>
+          </p>
 
           <div className="mt-4 flex flex-wrap gap-2 text-zinc-900 dark:text-zinc-100">
             {tools.map((tool, index) => (

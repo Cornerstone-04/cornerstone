@@ -44,20 +44,9 @@ export default function Project({
 }: ProjectProps) {
   const [open, setOpen] = useState(false);
 
-  // Split description into bullet points
-  const descriptionBullets = useMemo(
-    () =>
-      description
-        .split(".")
-        .map((point) => point.trim())
-        .filter((point) => point.length > 0),
-    [description]
-  );
-
   const handleEscKey = useCallback((e: KeyboardEvent) => {
     if (e.key === "Escape") setOpen(false);
   }, []);
-  
   useEffect(() => {
     window.addEventListener("keydown", handleEscKey);
     return () => window.removeEventListener("keydown", handleEscKey);
@@ -191,14 +180,9 @@ export default function Project({
             )}
           </div>
 
-          {/* Bullet Points */}
-          <ul className="list-disc list-inside space-y-1 text-xs md:text-xs text-zinc-700 dark:text-zinc-300">
-            {descriptionBullets.map((point, index) => (
-              <li key={index} className="leading-relaxed">
-                {point}
-              </li>
-            ))}
-          </ul>
+          <p className="text-xs md:text-xs text-zinc-700 dark:text-zinc-300 text-justify">
+            {description}
+          </p>
         </div>
 
         <div className="flex justify-end items-end gap-3 text-zinc-600 dark:text-zinc-300">
@@ -225,7 +209,7 @@ export default function Project({
         {CardBody}
       </button>
 
-      {/* Technologies row below the card */}
+      {/* Technologies row below the card (optional, keep or remove) */}
       <div className="flex flex-wrap gap-2 -mt-6 mb-8">
         {tech.map((t, i) => (
           <Badge variant="secondary" key={`${t}-${i}`}>
@@ -234,7 +218,7 @@ export default function Project({
         ))}
       </div>
 
-      {/* Your modal */}
+      {/* Your modal (fixed-position; no portal required) */}
       <ProjectModal
         isOpen={open}
         onClose={() => setOpen(false)}
