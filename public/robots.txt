@@ -1,0 +1,14 @@
+# *
+User-agent: *
+Allow: /
+
+# *
+User-agent: *
+Disallow: /api
+Disallow: /404
+
+# Host
+Host: https://cornerstoneephraim.vercel.app
+
+# Sitemaps
+Sitemap: https://cornerstoneephraim.vercel.app/sitemap.xml
