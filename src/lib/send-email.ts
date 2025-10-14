@@ -1,6 +1,6 @@
 import emailjs from "@emailjs/browser";
 import { PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID } from "@/lib/constants";
-import type { FormState } from "@/lib/contact-types";
+import type { FormState } from "@/lib/types";
 
 export async function sendContactEmail(form: FormState) {
   const templateParams = {

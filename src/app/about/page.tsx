@@ -7,6 +7,7 @@ import { Container } from "@/components/layout";
 import { Timeline } from "@/components/common";
 import TechStack from "@/components/common/tech-stack";
 import ConnectSection from "@/components/contact/connect-section";
+import { aboutMe } from "@/lib/me";
 
 export default function About() {
   return (
@@ -47,42 +48,11 @@ export default function About() {
               </p>
             </div>
 
-            <div>
-              <p className="leading-relaxed text-justify">
-                I&apos;ve worked with startups and teams to build scalable,
-                user-focused products using React, Next.js, TailwindCSS, and
-                Git. What I enjoy most about frontend engineering is how it
-                blends logic with creativity &#8212; every project is a puzzle
-                waiting to be solved with code that not only works well but
-                looks great.
-              </p>
-            </div>
-
-            <div>
-              <p className="leading-relaxed text-justify">
-                My love for the web started young, fueled by curiosity about how
-                websites actually worked. That curiosity turned into a drive to
-                build interfaces that feel natural to use. One of my proudest
-                moments was developing a web app for a master&apos;s student
-                that was later selected among the best in her class.
-              </p>
-            </div>
-
-            <div>
-              <p className="leading-relaxed text-justify">
-                When I&apos;m not coding, you&apos;ll probably find me watching
-                Liverpool (YNWA), playing Scrabble (still undefeated), or
-                listening to lo-fi beats while working through my next idea.
-              </p>
-            </div>
-
-            <div>
-              <p className="leading-relaxed text-justify">
-                So… if you&apos;re looking for a frontend developer who builds
-                clean, scalable, and user-friendly experiences &#8212;
-                let&apos;s create something great together.
-              </p>
-            </div>
+            {aboutMe.map(({ id, text }) => (
+              <div key={id}>
+                <p className="leading-relaxed text-justify">{text}</p>
+              </div>
+            ))}
           </motion.div>
         </div>
       </motion.div>

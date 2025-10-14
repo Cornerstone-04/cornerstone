@@ -1,4 +1,4 @@
-import { FormState } from "./contact-types";
+import { FormState } from "./types";
 
 export const validateContactForm = (data: FormState) => {
   const next: Partial<FormState> = {};

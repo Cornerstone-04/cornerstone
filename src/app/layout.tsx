@@ -18,12 +18,12 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Cornerstone Ephraim | Frontend Engineer",
   description:
-    "Frontend Engineer with 3 years experience building scalable, responsive web apps with ReactJS, Next.js, and TypeScript.",
+    "Your Frontend Developer for Clean, Scalable, and Intuitive Interfaces.",
   metadataBase: new URL("https://cornerstoneephraim.vercel.app/"),
   openGraph: {
     title: "Cornerstone Ephraim | Frontend Engineer",
     description:
-      "Frontend Engineer with 3 years experience building scalable, responsive web apps with ReactJS, Next.js, and TypeScript.",
+      "Your Frontend Developer for Clean, Scalable, and Intuitive Interfaces.",
     url: "https://cornerstoneephraim.vercel.app/",
     siteName: "Cornerstone Ephraim",
     images: ["/cornerstone.png"],
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     creator: "@4th_ephraim",
     title: "Cornerstone Ephraim | Frontend Engineer",
     description:
-      "Frontend Engineer with 3 years experience building scalable, responsive web apps with ReactJS, Next.js, and TypeScript.",
+      "Your Frontend Developer for Clean, Scalable, and Intuitive Interfaces.",
     images: ["/cornerstone.png"],
   },
   icons: {

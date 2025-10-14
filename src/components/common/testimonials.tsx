@@ -1,39 +1,8 @@
 "use client";
 
+import { testimonials } from "@/lib/me";
 import { motion } from "motion/react";
 import { LuQuote } from "react-icons/lu";
-
-type Testimonial = {
-  name: string;
-  role: string;
-  company: string;
-  content: string;
-  image?: string;
-};
-
-const testimonials: Testimonial[] = [
-  {
-    name: "Laughter Ephraim",
-    role: "Film Editor",
-    company: "Blink Studios",
-    content:
-      "Cornerstone is an exceptional frontend engineer. His attention to detail and ability to translate complex designs into pixel-perfect implementations is outstanding. He consistently delivers high-quality work on time.",
-  },
-  {
-    name: "Jane Smith",
-    role: "Lead Designer",
-    company: "DesignHub",
-    content:
-      "Working with Cornerstone has been a pleasure. He bridges the gap between design and development seamlessly, always asking the right questions and suggesting improvements that enhance the user experience.",
-  },
-  {
-    name: "Michael Chen",
-    role: "CTO",
-    company: "StartupXYZ",
-    content:
-      "Cornerstone's technical skills are impressive, but what sets him apart is his problem-solving approach. He doesn't just write code; he thinks about scalability, performance, and maintainability from day one.",
-  },
-];
 
 export default function Testimonials() {
   return (

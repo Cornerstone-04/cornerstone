@@ -7,7 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { motion } from "motion/react";
 import { validateContactForm } from "@/lib/contact-validation";
-import type { FormState } from "@/lib/contact-types";
+import type { FormState } from "@/lib/types";
 import { sendContactEmail } from "@/lib/send-email";
 
 export default function ContactForm() {

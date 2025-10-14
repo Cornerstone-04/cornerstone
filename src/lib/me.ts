@@ -13,6 +13,26 @@ import { RiTailwindCssFill, RiNextjsFill } from "react-icons/ri";
 import { SiTypescript } from "react-icons/si";
 import { LuSearch } from "react-icons/lu";
 import PlaywrightLogo from "../../public/icons/playwright-logo";
+import { Testimonial } from "./types";
+
+export const aboutMe = [
+  {
+    id: 1,
+    text: "I've worked with startups and teams to build scalable, user-focused products using React, Next.js, TailwindCSS, and Git. What I enjoy most about frontend engineering is how it blends logic with creativity — every project is a puzzle waiting to be solved with code that not only works well but looks great.",
+  },
+  {
+    id: 2,
+    text: "My love for the web started young, fueled by curiosity about how websites actually worked. That curiosity turned into a drive to build interfaces that feel natural to use. One of my proudest moments was developing a web app for a masters student that was later selected among the best in her class.",
+  },
+  {
+    id: 3,
+    text: "When I'm not coding, you'll probably find me watching Liverpool (YNWA), playing Scrabble (still undefeated), or listening to music while working through my next idea.",
+  },
+  {
+    id: 4,
+    text: "So… if you're looking for a frontend developer who builds clean, scalable, and user-friendly experiences — let's create something great together.",
+  },
+];
 
 export const timeline = [
   {
@@ -225,4 +245,28 @@ export const technologies = [
     color: "from-green-600 to-orange-500",
   },
   { name: "SEO", icon: LuSearch, color: "from-purple-500 to-indigo-600" },
+];
+
+export const testimonials: Testimonial[] = [
+  {
+    name: "Laughter Ephraim",
+    role: "Film Editor",
+    company: "Blink Studios",
+    content:
+      "Cornerstone is an exceptional frontend engineer. His attention to detail and ability to translate complex designs into pixel-perfect implementations is outstanding. He consistently delivers high-quality work on time.",
+  },
+  {
+    name: "Jane Smith",
+    role: "Lead Designer",
+    company: "DesignHub",
+    content:
+      "Working with Cornerstone has been a pleasure. He bridges the gap between design and development seamlessly, always asking the right questions and suggesting improvements that enhance the user experience.",
+  },
+  {
+    name: "Michael Chen",
+    role: "CTO",
+    company: "StartupXYZ",
+    content:
+      "Cornerstone's technical skills are impressive, but what sets him apart is his problem-solving approach. He doesn't just write code; he thinks about scalability, performance, and maintainability from day one.",
+  },
 ];
