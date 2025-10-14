@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "motion/react";
-import { LuX, LuExternalLink, LuGithub } from "react-icons/lu";
+import { LuX, LuExternalLink } from "react-icons/lu";
 import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -68,7 +68,7 @@ export default function ProjectModal({
           <div className="fixed inset-0 z-50 overflow-y-auto">
             <div className="flex min-h-full items-center justify-center p-4">
               <motion.div
-                className="relative w-full max-w-2xl bg-white dark:bg-zinc-900 rounded-xl shadow-2xl border border-zinc-200 dark:border-zinc-800"
+                className="relative w-full max-w-4xl bg-white dark:bg-zinc-900 rounded-xl shadow-2xl border border-zinc-200 dark:border-zinc-800"
                 initial={{ opacity: 0, scale: 0.95, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: 20 }}
@@ -85,9 +85,9 @@ export default function ProjectModal({
                 </button>
 
                 {/* Content */}
-                <div className="p-6 md:p-8 space-y-6 max-h-[85vh] overflow-y-auto">
+                <div className="p-6 md:p-8 max-h-[85vh] overflow-y-auto">
                   {/* Header */}
-                  <div>
+                  <div className="mb-6">
                     <h2 className="text-2xl md:text-3xl font-bold text-zinc-900 dark:text-zinc-100 mb-2 pr-10">
                       {project.title}
                     </h2>
@@ -100,71 +100,79 @@ export default function ProjectModal({
                     )}
                   </div>
 
-                  {/* Image (if available) */}
-                  {project.image && (
-                    <div className="w-full aspect-video rounded-lg overflow-hidden bg-zinc-100 dark:bg-zinc-800 relative">
-                      <Image
-                        src={project.image}
-                        alt={project.title}
-                        fill
-                        className="object-cover object-top"
-                        sizes="(max-width: 768px) 100vw, 640px"
-                        priority={false}
-                      />
-                    </div>
-                  )}
+                  {/* Main Content Grid - Image beside content on desktop */}
+                  <div className="flex flex-col md:flex-row gap-6">
+                    {/* Image - Top on mobile, Left on desktop */}
+                    {project.image && (
+                      <div className="w-full md:w-2/5 flex-shrink-0">
+                        <div className="aspect-square rounded-lg overflow-hidden bg-zinc-100 dark:bg-zinc-800 relative top-0">
+                          <Image
+                            src={project.image}
+                            alt={project.title}
+                            fill
+                            className="object-cover object-top"
+                            sizes="(max-width: 768px) 100vw, 40vw"
+                            priority={false}
+                          />
+                        </div>
+                      </div>
+                    )}
 
-                  {/* Description */}
-                  <div className="space-y-3">
-                    <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed">
-                      {project.longDescription || project.description}
-                    </p>
-                  </div>
+                    {/* Content - Bottom on mobile, Right on desktop */}
+                    <div className="flex-1 space-y-6">
+                      {/* Description */}
+                      <div>
+                        <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed">
+                          {project.longDescription || project.description}
+                        </p>
+                      </div>
 
-                  {/* Technologies */}
-                  <div>
-                    <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100 mb-3 uppercase tracking-wider">
-                      Technologies Used
-                    </h3>
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech, index) => (
-                        <span
-                          key={index}
-                          className="px-3 py-1 text-xs font-medium rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+                      {/* Technologies */}
+                      <div>
+                        <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100 mb-3 uppercase tracking-wider">
+                          Technologies Used
+                        </h3>
+                        <div className="flex flex-wrap gap-2">
+                          {project.technologies.map((tech, index) => (
+                            <span
+                              key={index}
+                              className="px-3 py-1 text-xs font-medium rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
 
-                  {/* Action Buttons */}
-                  {(project.liveUrl || project.githubUrl) && (
-                    <div className="flex flex-wrap gap-3 pt-4">
-                      {project.liveUrl && (
-                        <Link
-                          href={project.liveUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-medium transition-colors"
-                        >
-                          <LuExternalLink size={18} />
-                          View Live
-                        </Link>
+                      {/* Action Buttons */}
+                      {(project.liveUrl || project.githubUrl) && (
+                        <div className="flex flex-wrap gap-3 pt-2">
+                          {project.liveUrl && (
+                            <Link
+                              href={project.liveUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-medium transition-colors"
+                            >
+                              <LuExternalLink size={18} />
+                              View Live
+                            </Link>
+                          )}
+                          {project.githubUrl && (
+                            <Link
+                              href={project.githubUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-900 dark:text-zinc-100 font-medium transition-colors"
+                            >
+                              <FaGithub size={18} />
+                              View Code
+                            </Link>
+                          )}
+                        </div>
                       )}
-                      {project.githubUrl && (
-                        <Link
-                          href={project.githubUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-900 dark:text-zinc-100 font-medium transition-colors"
-                        >
-                          <FaGithub size={18} />
-                          View Code
-                        </Link>
-                      )}
                     </div>
-                  )}
+                  </div>
                 </div>
               </motion.div>
             </div>

@@ -43,14 +43,14 @@ export default function Home() {
           <div className="text-sm leading-loose space-y-3 text-justify">
             <p>
               <span className="font-semibold text-blue-800 dark:text-blue-400">
-                Your goto frontend engineer.
-              </span>{" "}
-              I’ve worked across startups and large teams, contributing to
-              design systems, building reusable UI components, and automating
-              testing pipelines to keep products stable and scalable. Whether
-              collaborating with designers, mentoring peers, or debugging late
-              into the night, I enjoy solving problems that make interfaces feel
-              effortless.
+                Your Frontend Developer for Clean, Scalable, and Intuitive
+                Interfaces.&nbsp;
+              </span>
+              I&apos;m passionate about turning design ideas into seamless user
+              experiences. I&apos;ve built scalable products for startups and teams
+              using React, Next.js, and TailwindCSS. Whether collaborating with
+              designers or debugging late into the night, I love crafting
+              solutions that make the web feel effortless.
             </p>
           </div>
 

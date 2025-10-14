@@ -39,23 +39,48 @@ export default function About() {
           >
             <div>
               <p className="leading-relaxed text-justify">
-                I&apos;m a Frontend Engineer with 3 years of experience building
-                scalable, responsive web applications with ReactJS, NextJS, and
-                TypeScript. I enjoy crafting clean, testable code and
-                implementing modern design systems so that products feel
-                seamless, accessible, and performant.
+                Hi, I’m Cornerstone, and I’ve always been the guy who can’t
+                stand clunky websites. So, I decided to build better ones:{" "}
+                <span className="font-semibold text-blue-800 dark:text-blue-400">
+                  fast, intuitive, and easy to use.
+                </span>
               </p>
             </div>
 
             <div>
-              <h5 className="mb-2 font-semibold">Challenge</h5>
               <p className="leading-relaxed text-justify">
-                For me, every project is a chance to push boundaries. I&apos;ve
-                worked on everything from UI libraries and e-commerce modules to
-                academic platforms and blockchain integrations. Along the way,
-                I&apos;ve deepened my skills with tools like TailwindCSS,
-                Zustand, and Playwright, and I&apos;m now expanding into backend
-                collaboration with .NET to strengthen my full-stack perspective.
+                I&apos;ve worked with startups and teams to build scalable,
+                user-focused products using React, Next.js, TailwindCSS, and
+                Git. What I enjoy most about frontend engineering is how it
+                blends logic with creativity &#8212; every project is a puzzle
+                waiting to be solved with code that not only works well but
+                looks great.
+              </p>
+            </div>
+
+            <div>
+              <p className="leading-relaxed text-justify">
+                My love for the web started young, fueled by curiosity about how
+                websites actually worked. That curiosity turned into a drive to
+                build interfaces that feel natural to use. One of my proudest
+                moments was developing a web app for a master&apos;s student
+                that was later selected among the best in her class.
+              </p>
+            </div>
+
+            <div>
+              <p className="leading-relaxed text-justify">
+                When I&apos;m not coding, you&apos;ll probably find me watching
+                Liverpool (YNWA), playing Scrabble (still undefeated), or
+                listening to lo-fi beats while working through my next idea.
+              </p>
+            </div>
+
+            <div>
+              <p className="leading-relaxed text-justify">
+                So… if you&apos;re looking for a frontend developer who builds
+                clean, scalable, and user-friendly experiences &#8212;
+                let&apos;s create something great together.
               </p>
             </div>
           </motion.div>

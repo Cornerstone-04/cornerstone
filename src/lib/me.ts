@@ -104,9 +104,9 @@ export const projects = [
       {
         title: "Laughter Ephraim",
         description:
-          "Portfolio site built with Next.js focusing on performance, responsive UI, and showcasing post-production work.",
+          "A professional portfolio showcasing creative work and post-production expertise. Features fast loading times and seamless navigation across all devices, helping visitors quickly understand capabilities and view project highlights.",
         tech: ["Next.js", "TypeScript", "TailwindCSS"],
-        repo: "https://github.com/Cornerstone-04/laughter-portfolio", // PUT REPO LINK HERE (if public)
+        repo: "https://github.com/Cornerstone-04/laughter-portfolio",
         image: "/images/projects/laughter.png",
         gif: "",
         url: "https://laughterephraim.vercel.app/",
@@ -114,7 +114,7 @@ export const projects = [
       {
         title: "Power Safety Boots",
         description:
-          "Product website with multi-tab catalog, dynamic galleries, and CTAs. Modular components, smooth animations, and SEO-focused metadata.",
+          "An e-commerce platform for industrial safety footwear with organized product categories, detailed specifications, and image galleries. Guides customers from product discovery to purchase with clear calls-to-action while ensuring easy search engine visibility.",
         tech: ["Next.js", "TypeScript", "TailwindCSS", "Framer Motion", "SEO"],
         repo: "https://github.com/Cornerstone-04/powerbooth",
         image: "/images/projects/pb-logo.png",
@@ -124,7 +124,7 @@ export const projects = [
       {
         title: "CertifyChain",
         description:
-          "Responsive frontend for decentralized certificate verification with tabbed UX, animations, uploads, and verification history.",
+          "A blockchain-based platform for secure certificate verification. Users can upload certificates, verify authenticity instantly, and maintain complete verification history. Eliminates certificate fraud by providing tamper-proof verification for employers, universities, and certification bodies.",
         tech: [
           "React",
           "TypeScript",
@@ -142,7 +142,7 @@ export const projects = [
       {
         title: "PeerShelf v1",
         description:
-          "v1 with React + Firebase for auth, profiles, uploads, and downloads; redesigning v2 on a .NET backend for chat and real-time notifications.",
+          "A student platform for sharing academic resources within university communities. Students create profiles, upload study materials, request resources, and download peer-shared content. Version 2 (in development) adds real-time messaging and notifications for better collaboration.",
         tech: ["React", "Firebase Auth/Storage", "Responsive UI", "Cypress"],
         repo: "https://github.com/Cornerstone-04/peershelf-fe/",
         image: "/images/projects/peershelf.png",
@@ -158,7 +158,7 @@ export const projects = [
       {
         title: "Forever Ephraim",
         description:
-          "Writer and product marketer portfolio with blog integration and Substack RSS feed support.",
+          "A content portfolio for a writer and product marketer, consolidating articles, case studies, and thought leadership pieces. Automatically syncs with external blogs to showcase the latest content and establish credibility with clients and employers.",
         tech: ["Next.js", "TailwindCSS", "SubstackRSS", "ShadCN UI"],
         repo: "",
         image: "/images/projects/forever.png",
@@ -168,7 +168,7 @@ export const projects = [
       {
         title: "TixCore",
         description:
-          "Ticketing platform for event organizers and attendees, supporting booking, payments, and real-time updates.",
+          "An event management solution simplifying ticket sales for organizers and purchasing for attendees. Organizers can set up events, manage inventory, and track sales in real-time. Attendees get smooth booking with instant confirmations and secure payments.",
         tech: ["Next.js", "Node.js", "TailwindCSS", "Zustand", "Axios"],
         repo: "",
         image: "/images/projects/tixcore.png",
@@ -178,7 +178,7 @@ export const projects = [
       {
         title: "TextMi",
         description:
-          "Minimalist texting application with a focus on speed, simplicity, and modern authentication.",
+          "A streamlined messaging app designed for users who value simplicity and speed. Eliminates unnecessary features to focus on core messaging with fast delivery and minimal distractions. Secure authentication protects privacy while maintaining ease of access.",
         tech: ["Next.js", "TypeScript", "Zustand", "TailwindCSS", "Supabase"],
         repo: "",
         image: "/images/projects/textmi.png",
@@ -188,7 +188,7 @@ export const projects = [
       {
         title: "PeerShelf v2",
         description:
-          "Rebuilt version of PeerShelf with .NET backend, real-time notifications, and expanded features.",
+          "An enhanced academic resource-sharing platform with improved collaboration features. Beyond file sharing, students can now communicate through integrated chat, receive instant notifications for requested resources, and track community contributions. Scales to support larger student populations.",
         tech: ["React", "Next.js", "TypeScript", "TailwindCSS", "Zustand"],
         repo: "",
         image: "/images/projects/peershelf.png",

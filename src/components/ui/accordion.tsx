@@ -19,6 +19,16 @@ type AccordionProps = {
 export function Accordion({ handleToggle, active, exp }: AccordionProps) {
   const { startDate, endDate, position, company, summary, tools } = exp;
 
+  // Split summary by full stops and filter out empty strings
+  const bulletPoints = useMemo(
+    () =>
+      summary
+        .split(".")
+        .map((point) => point.trim())
+        .filter((point) => point.length > 0),
+    [summary]
+  );
+
   // measure content height for smooth transitions
   const contentRef = useRef<HTMLDivElement>(null);
   const [maxHeight, setMaxHeight] = useState<number>(0);
@@ -32,7 +42,7 @@ export function Accordion({ handleToggle, active, exp }: AccordionProps) {
     setMaxHeight(el.scrollHeight);
 
     return () => ro.disconnect();
-  }, [summary, tools]);
+  }, [summary, tools, bulletPoints]);
 
   const period = useMemo(
     () => `${startDate} - ${endDate || "Present"}`,
@@ -83,7 +93,12 @@ export function Accordion({ handleToggle, active, exp }: AccordionProps) {
         style={{ maxHeight: active ? maxHeight : 0 }}
       >
         <div ref={contentRef} className="p-3">
-          <p className="mb-0 leading-6 text-xs md:text-sm text-justify">{summary}</p>
+          {/* Bullet Points */}
+          <ul className="list-disc list-inside space-y-1.5 text-xs md:text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed">
+            {bulletPoints.map((point, index) => (
+              <li key={index}>{point}</li>
+            ))}
+          </ul>
 
           <div className="mt-4 flex flex-wrap gap-2 text-zinc-900 dark:text-zinc-100">
             {tools.map((tool, index) => (
