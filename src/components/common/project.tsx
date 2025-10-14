@@ -143,7 +143,7 @@ export default function Project({
                  hover:border-zinc-300 dark:hover:border-zinc-700
                  shadow-sm hover:shadow-[0_2px_4px_rgba(0,0,0,0.05)]
                  bg-white dark:bg-zinc-900
-                 p-5 transition-all ease-in-out group mb-8"
+                 p-5 transition-all ease-in-out group mb-8 cursor-pointer"
     >
       <div className="w-full flex justify-between items-start min-h-16 gap-5">
         <div className="hidden w-1/12 md:block">
