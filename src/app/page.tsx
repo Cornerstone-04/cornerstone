@@ -47,9 +47,9 @@ export default function Home() {
                 Interfaces.&nbsp;
               </span>
               I&apos;m passionate about turning design ideas into seamless user
-              experiences. I&apos;ve built scalable products for startups and teams
-              using React, Next.js, and TailwindCSS. Whether collaborating with
-              designers or debugging late into the night, I love crafting
+              experiences. I&apos;ve built scalable products for startups and
+              teams using React, Next.js, and TailwindCSS. Whether collaborating
+              with designers or debugging late into the night, I love crafting
               solutions that make the web feel effortless.
             </p>
           </div>
@@ -91,6 +91,7 @@ export default function Home() {
           />
         </div>
       </motion.div>
+
       {/* <Testimonials/> */}
 
       <motion.div

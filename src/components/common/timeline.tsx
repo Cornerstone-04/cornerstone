@@ -99,7 +99,7 @@ export function Timeline({ active, timeline }: TimelineProps) {
           {/* Bullet Points */}
           <ul className="list-disc list-inside space-y-1.5 text-zinc-700 dark:text-zinc-300">
             {bulletPoints.map((point, index) => (
-              <li key={index} className="leading-relaxed">
+              <li key={index} className="leading-relaxed text-justify">
                 {point}
               </li>
             ))}

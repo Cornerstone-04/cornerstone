@@ -94,7 +94,7 @@ export function Accordion({ handleToggle, active, exp }: AccordionProps) {
       >
         <div ref={contentRef} className="p-3">
           {/* Bullet Points */}
-          <ul className="list-disc list-inside space-y-1.5 text-xs md:text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed">
+          <ul className="list-disc list-inside space-y-1.5 text-xs md:text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed text-justify">
             {bulletPoints.map((point, index) => (
               <li key={index}>{point}</li>
             ))}
