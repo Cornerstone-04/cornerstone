@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
-import Header from "@/components/layout/header";
 import MobileNav from "@/components/layout/mobile-nav";
 import LoadingScreen from "@/components/common/loading-screen";
 import Footer from "@/components/layout/footer";
 import StructuredData from "@/components/common/structured-data";
+import Navbar from "@/components/layout/navbar";
 
 const inter = Inter({
   weight: ["300", "400", "500", "700", "900"],
@@ -90,7 +90,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <LoadingScreen />
-          <Header />
+          <Navbar />
           {children}
           <Footer />
           <MobileNav />

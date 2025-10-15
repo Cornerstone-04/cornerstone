@@ -46,6 +46,7 @@ export default function Home() {
                 Your Frontend Developer for Clean, Scalable, and Intuitive
                 Interfaces.&nbsp;
               </span>
+              <br className="hidden md:inline-block" />
               I&apos;m passionate about turning design ideas into seamless user
               experiences. I&apos;ve built scalable products for startups and
               teams using React, Next.js, and TailwindCSS. Whether collaborating

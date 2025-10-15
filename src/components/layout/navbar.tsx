@@ -7,7 +7,7 @@ import { FaMoon, FaSun } from "react-icons/fa6";
 import { useTheme } from "next-themes";
 import { motion, AnimatePresence } from "motion/react";
 
-export default function Header() {
+export default function Navbar() {
   const pathname = usePathname();
   const [scrollPosition, setScrollPosition] = useState(0);
 
