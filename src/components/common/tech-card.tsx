@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import { Tech } from "@/lib/types";
 
 export function TechCard({ tech, index }: { tech: Tech; index: number }) {
-  const Icon = tech.icon as any;
+  const Icon = tech.icon;
   const isPlaywright = tech.name === "Playwright";
   const [hovered, setHovered] = useState(false);
 

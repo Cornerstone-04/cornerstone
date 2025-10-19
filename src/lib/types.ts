@@ -15,6 +15,6 @@ export type Testimonial = {
 
 export type Tech = {
   name: string;
-  icon?: React.ComponentType<any>;
+  icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   color?: string;
 };

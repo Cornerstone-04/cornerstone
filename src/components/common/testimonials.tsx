@@ -2,8 +2,7 @@
 
 import { testimonials } from "@/lib/me";
 import { motion } from "motion/react";
-import { useState } from "react";
-import { LuChevronDown, LuQuote } from "react-icons/lu";
+import { LuQuote } from "react-icons/lu";
 
 export default function Testimonials() {
   return (
