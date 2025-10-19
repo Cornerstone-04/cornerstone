@@ -256,17 +256,17 @@ export const testimonials: Testimonial[] = [
       "Cornerstone is an exceptional frontend engineer. His attention to detail and ability to translate complex designs into pixel-perfect implementations is outstanding. He consistently delivers high-quality work on time.",
   },
   {
-    name: "Jane Smith",
-    role: "Lead Designer",
-    company: "DesignHub",
+    name: "Olusegun Joe-Alabi",
+    role: "Founder",
+    company: "Makkan Innovation",
     content:
-      "Working with Cornerstone has been a pleasure. He bridges the gap between design and development seamlessly, always asking the right questions and suggesting improvements that enhance the user experience.",
+      "Cornerstone is a talented frontend developer with great attention to detail and a strong sense of design. It's always a pleasure working with him.",
   },
   {
-    name: "Michael Chen",
-    role: "CTO",
-    company: "StartupXYZ",
+    name: "Oluwatobi Abayomi",
+    role: "Software Developer",
+    company: "Datalytix",
     content:
-      "Cornerstone's technical skills are impressive, but what sets him apart is his problem-solving approach. He doesn't just write code; he thinks about scalability, performance, and maintainability from day one.",
+      "As someone who has worked with Cornerstone before, I can say he is a very delightful person to work with. His meticulousness and attention to detail means he always does a thorough job, he writes clean and intuitive code that is easy to pick up and his penchant for staying up to date with new technologies and best practices means there is always something to learn from him. Overall, I'll recommend working with Cornerstone.",
   },
 ];

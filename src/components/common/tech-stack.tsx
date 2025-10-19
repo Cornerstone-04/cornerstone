@@ -2,6 +2,8 @@
 
 import { motion } from "motion/react";
 import { technologies } from "@/lib/me";
+import { TechCard } from "./tech-card";
+import { Tech } from "@/lib/types";
 
 export default function TechStack() {
   return (
@@ -35,55 +37,9 @@ export default function TechStack() {
           </p>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-4">
-            {technologies.map((tech, index) => {
-              const Icon = tech.icon;
-              const isPlaywright = tech.name === "Playwright";
-
-              return (
-                <motion.div
-                  key={index}
-                  className="group relative p-5 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50 hover:shadow-lg dark:hover:shadow-zinc-900/50 transition-all cursor-pointer overflow-hidden"
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{
-                    duration: 0.3,
-                    delay: 0.3 + index * 0.03,
-                  }}
-                  whileHover={{ y: -4 }}
-                >
-                  {/* Gradient background on hover */}
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-br ${tech.color} opacity-0 group-hover:opacity-10 dark:group-hover:opacity-20 transition-opacity duration-300`}
-                  />
-
-                  <div className="relative flex flex-col items-center gap-3 text-center">
-                    {isPlaywright ? (
-                      <div
-                        title={tech.name}
-                        className="transition-all duration-300 group-hover:scale-110"
-                      >
-                        <Icon
-                          className="w-12 h-12 text-zinc-700 dark:text-zinc-300"
-                          style={{ width: "48px", height: "48px" }}
-                        />
-                      </div>
-                    ) : (
-                      <div title={tech.name} className="relative">
-                        {Icon && (
-                          <Icon className="text-5xl text-zinc-700 dark:text-zinc-300 transition-all duration-300 group-hover:scale-110" />
-                        )}
-                        <div
-                          className={`absolute inset-0 bg-gradient-to-br ${tech.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300 mix-blend-overlay`}
-                        >
-                          {Icon && <Icon className="text-5xl text-white" />}
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                </motion.div>
-              );
-            })}
+            {technologies.map((tech: Tech, index: number) => (
+              <TechCard tech={tech} index={index} key={tech.name ?? index} />
+            ))}
           </div>
         </motion.div>
       </div>

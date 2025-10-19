@@ -14,7 +14,7 @@ import {
 import { LuInfo } from "react-icons/lu";
 import { motion } from "motion/react";
 import ResumeDownloadButton from "@/components/common/resume-download";
-// import Testimonials from "@/components/common/testimonials";
+import Testimonials from "@/components/common/testimonials";
 
 export default function Home() {
   const [active, setActive] = useState<number | null>(0);
@@ -93,7 +93,7 @@ export default function Home() {
         </div>
       </motion.div>
 
-      {/* <Testimonials/> */}
+      <Testimonials/>
 
       <motion.div
         className="my-6"

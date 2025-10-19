@@ -12,3 +12,9 @@ export type Testimonial = {
   content: string;
   image?: string;
 };
+
+export type Tech = {
+  name: string;
+  icon?: React.ComponentType<any>;
+  color?: string;
+};
