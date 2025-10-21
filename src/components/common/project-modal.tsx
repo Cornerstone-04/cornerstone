@@ -85,7 +85,7 @@ export default function ProjectModal({
                 </button>
 
                 {/* Content */}
-                <div className="p-6 md:p-8 max-h-[85vh] overflow-y-auto">
+                <div className="p-6 md:p-8 max-h-[90vh] overflow-y-auto">
                   {/* Header */}
                   <div className="mb-6">
                     <h2 className="text-2xl md:text-3xl font-bold text-zinc-900 dark:text-zinc-100 mb-2 pr-10">

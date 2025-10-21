@@ -24,13 +24,13 @@ export const aboutMe = [
     id: 2,
     text: "My love for the web started young, fueled by curiosity about how websites actually worked. That curiosity turned into a drive to build interfaces that feel natural to use. One of my proudest moments was developing a web app for a masters student that was later selected among the best in her class.",
   },
-  {
-    id: 3,
-    text: "When I'm not coding, you'll probably find me watching Liverpool (YNWA), playing Scrabble (still undefeated), or listening to music while working through my next idea.",
-  },
+  // {
+  //   id: 3,
+  //   text: "When I'm not coding, you'll probably find me watching Liverpool (YNWA), playing Scrabble (still undefeated), or listening to music while working through my next idea.",
+  // },
   {
     id: 4,
-    text: "So… if you're looking for a frontend developer who builds clean, scalable, and user-friendly experiences — let's create something great together.",
+    text: "So, if you're looking for a frontend developer who builds clean, scalable, and user-friendly experiences — let's create something great together.",
   },
 ];
 

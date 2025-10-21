@@ -25,7 +25,7 @@ export default function Home() {
   };
 
   return (
-    <Container className="pt-12 pb-24 text-zinc-800 dark:text-zinc-200 relative overflow-hidden">
+    <Container className="py-12 text-zinc-800 dark:text-zinc-200 relative overflow-hidden">
       <motion.div
         className="flex items-start justify-between"
         initial={{ opacity: 0, y: 30 }}

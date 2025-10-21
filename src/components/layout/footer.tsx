@@ -105,9 +105,6 @@ export default function Footer() {
             <p className="text-sm text-zinc-600 dark:text-zinc-400">
               © {currentYear} Cornerstone Ephraim. All rights reserved.
             </p>
-            <p className="text-sm text-zinc-600 dark:text-zinc-400">
-              Built with Next.js & TailwindCSS
-            </p>
           </div>
         </motion.div>
       </div>
