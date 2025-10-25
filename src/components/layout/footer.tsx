@@ -28,7 +28,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100 mb-2">
               Cornerstone Ephraim
             </h3>
-            <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+            <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed text-justify">
               Frontend Engineer building scalable, responsive web applications
               with React, Next.js, and TypeScript.
             </p>

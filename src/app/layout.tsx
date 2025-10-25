@@ -14,6 +14,12 @@ const inter = Inter({
   subsets: ["latin"],
   adjustFontFallback: false,
 });
+// const geist_mono = Geist_Mono({
+//   weight: ["300", "400", "500", "700", "900"],
+//   variable: "--font-geist-mono",
+//   subsets: ["latin"],
+//   adjustFontFallback: false,
+// });
 
 export const metadata: Metadata = {
   title: "Cornerstone Ephraim | Frontend Engineer",
@@ -71,7 +77,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} scroll-smooth`}
+      className={`${inter.variable}  scroll-smooth`}
       suppressHydrationWarning
     >
       <head>

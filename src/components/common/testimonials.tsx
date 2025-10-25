@@ -32,7 +32,7 @@ export default function Testimonials() {
         </motion.h2>
 
         <motion.div
-          className="w-full md:w-4/5 space-y-2"
+          className="w-full md:w-4/5 space-y-4"
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
