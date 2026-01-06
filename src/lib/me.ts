@@ -18,7 +18,7 @@ import { Testimonial } from "./types";
 export const aboutMe = [
   {
     id: 1,
-    text: "I've worked with startups and teams to build scalable, user-focused products using React, Next.js, TailwindCSS, and Git. What I enjoy most about frontend engineering is how it blends logic with creativity — every project is a puzzle waiting to be solved with code that not only works well but looks great.",
+    text: "I've worked with startups and teams to build scalable, user-focused products using TypeScript, React, Next.js, and TailwindCSS. What I enjoy most about frontend engineering is how it blends logic with creativity — every project is a puzzle waiting to be solved with code that not only works well but looks great.",
   },
   {
     id: 2,

@@ -12,6 +12,7 @@ type TimelineItem = {
   summary: string;
 };
 
+// const myFunction = function(){}
 interface TimelineProps {
   active: boolean;
   timeline: TimelineItem;
