@@ -122,6 +122,22 @@ export const projects = [
     type: "shipped",
     works: [
       {
+        title: "Forever Ephraim",
+        description:
+          "A content portfolio for a writer and product marketer, consolidating articles, case studies, and thought leadership pieces. Automatically syncs with external blogs to showcase the latest content and establish credibility with clients and employers.",
+        tech: [
+          "Next.js",
+          "TypeScript",
+          "TailwindCSS",
+          "Framer Motion",
+          "SubstackRSS",
+        ],
+        repo: "https://github.com/Cornerstone-04/forever-portfolio",
+        image: "/images/projects/forever.png",
+        gif: "",
+        url: "https://foreverephraim.vercel.app/",
+      },
+      {
         title: "Laughter Ephraim",
         description:
           "A professional portfolio showcasing creative work and post-production expertise. Features fast loading times and seamless navigation across all devices, helping visitors quickly understand capabilities and view project highlights.",
@@ -176,12 +192,12 @@ export const projects = [
     type: "building",
     works: [
       {
-        title: "Forever Ephraim",
+        title: "PeerShelf v2",
         description:
-          "A content portfolio for a writer and product marketer, consolidating articles, case studies, and thought leadership pieces. Automatically syncs with external blogs to showcase the latest content and establish credibility with clients and employers.",
-        tech: ["Next.js", "TailwindCSS", "SubstackRSS", "ShadCN UI"],
+          "An enhanced academic resource-sharing platform with improved collaboration features. Beyond file sharing, students can now communicate through integrated chat, receive instant notifications for requested resources, and track community contributions. Scales to support larger student populations.",
+        tech: ["React", "Next.js", "TypeScript", "TailwindCSS", "Zustand"],
         repo: "",
-        image: "/images/projects/forever.png",
+        image: "/images/projects/peershelf.png",
         gif: "",
         url: "",
       },
@@ -202,16 +218,6 @@ export const projects = [
         tech: ["Next.js", "TypeScript", "Zustand", "TailwindCSS", "Supabase"],
         repo: "",
         image: "/images/projects/textmi.png",
-        gif: "",
-        url: "",
-      },
-      {
-        title: "PeerShelf v2",
-        description:
-          "An enhanced academic resource-sharing platform with improved collaboration features. Beyond file sharing, students can now communicate through integrated chat, receive instant notifications for requested resources, and track community contributions. Scales to support larger student populations.",
-        tech: ["React", "Next.js", "TypeScript", "TailwindCSS", "Zustand"],
-        repo: "",
-        image: "/images/projects/peershelf.png",
         gif: "",
         url: "",
       },
