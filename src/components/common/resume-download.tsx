@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
-import { LuDownload, LuCheck } from "react-icons/lu";
 import { motion } from "motion/react";
+import { useState } from "react";
+import { LuCheck, LuDownload } from "react-icons/lu";
 
 export default function ResumeDownloadButton() {
   const [downloaded, setDownloaded] = useState(false);

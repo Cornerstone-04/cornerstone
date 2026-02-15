@@ -1,10 +1,10 @@
 "use client";
 
-import Link from "next/link";
-import { motion } from "motion/react";
-import { Container } from "@/components/layout";
-import { LuArrowLeft } from "react-icons/lu";
 import { Home } from "lucide-react";
+import { motion } from "motion/react";
+import Link from "next/link";
+import { LuArrowLeft } from "react-icons/lu";
+import { Container } from "@/components/layout";
 
 export default function NotFound() {
   return (
@@ -37,8 +37,8 @@ export default function NotFound() {
             Page Not Found
           </h2>
           <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
-            Oops! The page you&apos;re looking for doesn&apos;t exist. It might have been
-            moved or deleted.
+            Oops! The page you&apos;re looking for doesn&apos;t exist. It might
+            have been moved or deleted.
           </p>
         </motion.div>
 
@@ -57,6 +57,7 @@ export default function NotFound() {
             Go Home
           </Link>
           <button
+            type="button"
             onClick={() => window.history.back()}
             className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-900 dark:text-zinc-100 font-medium transition-colors"
           >

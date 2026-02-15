@@ -1,11 +1,11 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { connect, menuitems } from "@/lib/me";
-import { FaMoon, FaSun } from "react-icons/fa6";
 import { useTheme } from "next-themes";
-import { motion, AnimatePresence } from "motion/react";
+import { useEffect, useState } from "react";
+import { FaMoon, FaSun } from "react-icons/fa6";
+import { connect, menuitems } from "@/lib/me";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -111,6 +111,7 @@ export default function Navbar() {
           {/* Theme toggle */}
           {mounted && (
             <button
+              type="button"
               className="outline-none p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors cursor-pointer"
               onClick={() =>
                 setTheme(resolvedTheme === "dark" ? "light" : "dark")

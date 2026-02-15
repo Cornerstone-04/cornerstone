@@ -1,10 +1,9 @@
 "use client";
 
-import React from "react";
+import { AnimatePresence, motion } from "motion/react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { menuitems } from "@/lib/me";
-import Link from "next/link";
-import { motion, AnimatePresence } from "motion/react";
 
 export default function MobileNav() {
   const pathname = usePathname();

@@ -1,8 +1,12 @@
 "use client";
 
-import React, { useCallback, useEffect, useMemo, useState } from "react";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import type React from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { FaGithub } from "react-icons/fa6";
+import { LuArrowUpRight, LuLink } from "react-icons/lu";
+import ProjectModal from "@/components/common/project-modal";
 import { Badge } from "@/components/ui/badge";
 import {
   Tooltip,
@@ -10,10 +14,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { ProjectTypes } from "@/lib/me";
-import { LuArrowUpRight, LuLink } from "react-icons/lu";
-import ProjectModal from "@/components/common/project-modal";
-import { FaGithub } from "react-icons/fa6";
+import type { ProjectTypes } from "@/lib/me";
 
 type ProjectProps = {
   title: string;
@@ -123,7 +124,7 @@ export default function Project({
       image,
       role,
       duration,
-    ]
+    ],
   );
 
   const CardBody = (

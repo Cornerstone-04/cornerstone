@@ -1,6 +1,6 @@
-import { useState } from "react";
 import { motion } from "motion/react";
-import { Tech } from "@/lib/types";
+import { useState } from "react";
+import type { Tech } from "@/lib/types";
 
 export function TechCard({ tech, index }: { tech: Tech; index: number }) {
   const Icon = tech.icon;

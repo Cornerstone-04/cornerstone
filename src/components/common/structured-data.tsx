@@ -1,4 +1,4 @@
-// src/components/common/structured-data.tsx
+import DOMPurify from "dompurify";
 import Script from "next/script";
 
 interface StructuredDataProps {
@@ -53,12 +53,14 @@ export default function StructuredData({
   };
 
   const schema = type === "person" ? personSchema : websiteSchema;
+  const data = JSON.stringify(schema);
+  const sanitizedData = DOMPurify.sanitize(data);
 
   return (
     <Script
       id="structured-data"
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(sanitizedData) }}
     />
   );
 }

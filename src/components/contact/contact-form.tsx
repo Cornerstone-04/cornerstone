@@ -1,14 +1,14 @@
 "use client";
 
-import { useState } from "react";
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
 import { motion } from "motion/react";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 import { validateContactForm } from "@/lib/contact-validation";
-import type { FormState } from "@/lib/types";
 import { sendContactEmail } from "@/lib/send-email";
+import type { FormState } from "@/lib/types";
 
 export default function ContactForm() {
   const [form, setForm] = useState<FormState>({
@@ -22,7 +22,7 @@ export default function ContactForm() {
   const [sent, setSent] = useState<null | "ok" | "err">(null);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setForm((s) => ({ ...s, [e.target.name]: e.target.value }));
     setErrors((eObj) => ({ ...eObj, [e.target.name]: undefined }));

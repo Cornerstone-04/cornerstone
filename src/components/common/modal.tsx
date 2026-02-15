@@ -1,15 +1,16 @@
 "use client";
 
-import React, { ReactNode, useCallback, useEffect } from "react";
-import { motion, AnimatePresence } from "motion/react";
-import { cn } from "@/lib/utils"; // if you don't have cn(), replace cn(...) with a template string
+import { AnimatePresence, motion } from "motion/react";
+import type React from "react";
+import { type ReactNode, useCallback, useEffect } from "react";
+import { cn } from "@/lib/utils";
 
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   children: ReactNode;
   className?: string;
-  titleId?: string; // optional: id of a heading inside for aria-labelledby
+  titleId?: string;
 }
 
 export function Modal({
@@ -27,10 +28,9 @@ export function Modal({
     (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
     },
-    [onClose]
+    [onClose],
   );
 
-  // lock body scroll + esc handling
   useEffect(() => {
     if (!isOpen) return;
     const prev = document.body.style.overflow;
@@ -67,7 +67,7 @@ export function Modal({
               "rounded-lg border shadow-xl p-6 sm:p-8",
               "bg-white text-zinc-900 border-zinc-200",
               "dark:bg-zinc-900 dark:text-zinc-100 dark:border-zinc-800",
-              className
+              className,
             )}
           >
             <button

@@ -1,11 +1,11 @@
 "use client";
 
-import { motion, AnimatePresence } from "motion/react";
-import { LuX, LuExternalLink } from "react-icons/lu";
-import { useEffect } from "react";
+import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 import { FaGithub } from "react-icons/fa6";
+import { LuExternalLink, LuX } from "react-icons/lu";
 
 type ProjectModalProps = {
   isOpen: boolean;
@@ -77,6 +77,7 @@ export default function ProjectModal({
               >
                 {/* Close Button */}
                 <button
+                  type="button"
                   onClick={onClose}
                   className="absolute top-4 right-4 p-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors z-10"
                   aria-label="Close modal"

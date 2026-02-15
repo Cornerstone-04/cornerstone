@@ -1,6 +1,6 @@
 "use client";
+import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
 import "@/styles/loading-screen.css";
 
 export default function LoadingScreen() {

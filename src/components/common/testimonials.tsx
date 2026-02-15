@@ -1,9 +1,9 @@
 "use client";
 
-import { testimonials } from "@/lib/me";
 import { motion } from "motion/react";
-import { LuQuote, LuChevronDown } from "react-icons/lu";
-import { useState, useRef, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
+import { LuChevronDown, LuQuote } from "react-icons/lu";
+import { testimonials } from "@/lib/me";
 
 export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState<number | null>(0); // First one open by default
@@ -80,7 +80,7 @@ function TestimonialAccordion({
     setMaxHeight(el.scrollHeight);
 
     return () => ro.disconnect();
-  }, [testimonial.content]);
+  }, []);
 
   return (
     <motion.div
@@ -92,6 +92,7 @@ function TestimonialAccordion({
     >
       {/* Accordion Trigger */}
       <button
+        type="button"
         onClick={onToggle}
         className="w-full flex items-center justify-between gap-3 p-4 text-left hover:bg-zinc-100 dark:hover:bg-zinc-800/50 transition-colors rounded-lg cursor-pointer"
         aria-expanded={isActive}

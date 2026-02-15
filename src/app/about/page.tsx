@@ -1,13 +1,11 @@
 "use client";
 
-import React from "react";
 import { motion } from "motion/react";
-import { timeline, connect } from "@/lib/me";
-import { Container } from "@/components/layout";
 import { Timeline } from "@/components/common";
 import TechStack from "@/components/common/tech-stack";
 import ConnectSection from "@/components/contact/connect-section";
-import { aboutMe } from "@/lib/me";
+import { Container } from "@/components/layout";
+import { aboutMe, connect, timeline } from "@/lib/me";
 
 export default function About() {
   return (

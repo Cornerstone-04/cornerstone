@@ -1,11 +1,11 @@
 "use client";
 
-import { Container } from "@/components/layout";
 import { motion } from "motion/react";
-import { connect } from "@/lib/me";
-import ContactForm from "@/components/contact/contact-form";
-import ConnectSection from "@/components/contact/connect-section";
 import BookDiscoveryCall from "@/components/common/book-discovery-call";
+import ConnectSection from "@/components/contact/connect-section";
+import ContactForm from "@/components/contact/contact-form";
+import { Container } from "@/components/layout";
+import { connect } from "@/lib/me";
 
 export default function ContactPage() {
   return (

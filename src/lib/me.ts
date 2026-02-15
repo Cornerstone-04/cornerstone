@@ -1,19 +1,19 @@
 import {
-  FaGithub,
-  FaLinkedin,
-  FaRegEnvelope,
-  FaXTwitter,
-  FaHtml5,
   FaCss3,
+  FaGithub,
+  FaHtml5,
   FaJs,
-  FaSass,
+  FaLinkedin,
   FaReact,
+  FaRegEnvelope,
+  FaSass,
+  FaXTwitter,
 } from "react-icons/fa6";
-import { RiTailwindCssFill, RiNextjsFill } from "react-icons/ri";
-import { SiTypescript } from "react-icons/si";
 import { LuSearch } from "react-icons/lu";
+import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
+import { SiTypescript } from "react-icons/si";
 import PlaywrightLogo from "../../public/icons/playwright-logo";
-import { Testimonial } from "./types";
+import type { Testimonial } from "./types";
 
 export const aboutMe = [
   {
@@ -72,21 +72,25 @@ export const timeline = [
 
 export const connect = [
   {
+    id: 1,
     social: "Email",
     url: "fortunecornerstone@gmail.com",
     icon: FaRegEnvelope,
   },
   {
+    id: 2,
     social: "Github",
     url: "github.com/Cornerstone-04",
     icon: FaGithub,
   },
   {
+    id: 3,
     social: "LinkedIn",
     url: "linkedin.com/in/cornerstone-ephraim",
     icon: FaLinkedin,
   },
   {
+    id: 4,
     social: "Twitter",
     url: "x.com/4th_ephraim",
     icon: FaXTwitter,

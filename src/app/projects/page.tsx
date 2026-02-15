@@ -1,17 +1,17 @@
 "use client";
 
+import { motion } from "motion/react";
+import { useEffect, useState } from "react";
+import { LuInfo } from "react-icons/lu";
 import Project from "@/components/common/project";
 import { Container } from "@/components/layout";
-import { projects } from "@/lib/me";
-import React, { useEffect, useState } from "react";
-import { motion } from "motion/react";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { LuInfo } from "react-icons/lu";
+import { projects } from "@/lib/me";
 
 export default function Projects() {
   const [loading, setLoading] = useState(true);

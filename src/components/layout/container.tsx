@@ -1,4 +1,4 @@
-import React from "react";
+import type React from "react";
 
 interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;

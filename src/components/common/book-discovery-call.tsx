@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "motion/react";
-import { LuCalendar, LuClock, LuVideo, LuArrowUpRight } from "react-icons/lu";
 import Link from "next/link";
+import { LuArrowUpRight, LuCalendar, LuClock, LuVideo } from "react-icons/lu";
 
 export default function BookDiscoveryCall() {
   const appointmentUrl = "https://calendar.app.google/yYN9v7aAhbpiV9uG8";

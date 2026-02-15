@@ -1,8 +1,11 @@
 "use client";
+import { motion } from "motion/react";
 import Image from "next/image";
-import { connect, timeline } from "@/lib/me";
 import Link from "next/link";
 import { useState } from "react";
+import { LuInfo } from "react-icons/lu";
+import ResumeDownloadButton from "@/components/common/resume-download";
+import Testimonials from "@/components/common/testimonials";
 import { Container } from "@/components/layout";
 import { Accordion } from "@/components/ui";
 import {
@@ -11,10 +14,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { LuInfo } from "react-icons/lu";
-import { motion } from "motion/react";
-import ResumeDownloadButton from "@/components/common/resume-download";
-import Testimonials from "@/components/common/testimonials";
+import { connect, timeline } from "@/lib/me";
 
 export default function Home() {
   const [active, setActive] = useState<number | null>(0);
@@ -58,16 +58,16 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center gap-4 my-4">
             <ResumeDownloadButton />
             <div className="flex items-center gap-4 my-4">
-              {connect.map((el, index) => {
-                const Icon = el.icon;
+              {connect.map(({ id, social, icon, url }) => {
+                const Icon = icon;
                 const href =
-                  el.social === "Email"
+                  social === "Email"
                     ? "mailto:fortunecornerstone@gmail.com"
-                    : `https://${el.url}`;
+                    : `https://${url}`;
 
                 return (
                   <Link
-                    key={`connect-${index}`}
+                    key={`connect-${id}`}
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -93,7 +93,7 @@ export default function Home() {
         </div>
       </motion.div>
 
-      <Testimonials/>
+      <Testimonials />
 
       <motion.div
         className="my-6"
@@ -120,7 +120,7 @@ export default function Home() {
 
         <div className="my-4">
           {trunkExp.map((exp, index) => (
-            <div key={index} className="py-2">
+            <div key={exp.company} className="py-2">
               <Accordion
                 active={active === index}
                 handleToggle={() => handleToggle(index)}

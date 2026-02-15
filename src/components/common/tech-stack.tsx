@@ -2,8 +2,8 @@
 
 import { motion } from "motion/react";
 import { technologies } from "@/lib/me";
+import type { Tech } from "@/lib/types";
 import { TechCard } from "./tech-card";
-import { Tech } from "@/lib/types";
 
 export default function TechStack() {
   return (

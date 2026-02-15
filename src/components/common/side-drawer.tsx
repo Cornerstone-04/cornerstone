@@ -1,7 +1,8 @@
 "use client";
 
-import React, { ReactNode, useEffect, useCallback } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
+import type React from "react";
+import { type ReactNode, useCallback, useEffect } from "react";
 
 interface SideDrawerProps {
   isOpen: boolean;
@@ -24,7 +25,7 @@ export function SideDrawer({
     (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
     },
-    [onClose]
+    [onClose],
   );
 
   // lock scroll + esc handling
@@ -62,6 +63,7 @@ export function SideDrawer({
           >
             <div className="sticky top-0 z-10 flex justify-end gap-2 p-3 bg-white/80 dark:bg-zinc-900/80 backdrop-blur border-b border-zinc-200 dark:border-zinc-800">
               <button
+                type="button"
                 onClick={onClose}
                 className="text-zinc-600 dark:text-zinc-300 text-sm px-3 py-1.5 rounded-md hover:bg-zinc-100 dark:hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
