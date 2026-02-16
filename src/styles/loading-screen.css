@@ -28,6 +28,16 @@
     opacity: 0;
 }
 
+/* Progress wrapper with number */
+.loader-progress-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    animation: fadeIn 0.6s ease-out 0.4s forwards;
+    opacity: 0;
+}
+
 /* Progress bar container */
 .loader-progress {
     width: 200px;
@@ -35,8 +45,6 @@
     background: rgba(37, 99, 235, 0.2);
     border-radius: 2px;
     overflow: hidden;
-    animation: fadeIn 0.6s ease-out 0.4s forwards;
-    opacity: 0;
 }
 
 /* Progress bar fill */
@@ -46,6 +54,14 @@
     border-radius: 2px;
     animation: progressFill 2s ease-in-out forwards;
     transform-origin: left;
+}
+
+/* Progress number */
+.loader-progress-number {
+    font-size: 1rem;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums; /* Prevents number width jumping */
+    letter-spacing: 0.05em;
 }
 
 /* Animations */

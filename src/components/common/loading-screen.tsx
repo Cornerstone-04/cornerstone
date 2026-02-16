@@ -5,10 +5,31 @@ import "@/styles/loading-screen.css";
 
 export default function LoadingScreen() {
   const [isLoading, setIsLoading] = useState(true);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
+    const duration = 2000; // 2 seconds
+    const interval = 20; // Update every 20ms
+    const steps = duration / interval;
+    const increment = 100 / steps;
+
+    let currentProgress = 0;
+    const progressInterval = setInterval(() => {
+      currentProgress += increment;
+      if (currentProgress >= 100) {
+        setProgress(100);
+        clearInterval(progressInterval);
+      } else {
+        setProgress(Math.floor(currentProgress));
+      }
+    }, interval);
+
     const t = setTimeout(() => setIsLoading(false), 2500);
-    return () => clearTimeout(t);
+
+    return () => {
+      clearTimeout(t);
+      clearInterval(progressInterval);
+    };
   }, []);
 
   return (
@@ -27,8 +48,13 @@ export default function LoadingScreen() {
             <p className="loader-subtitle text-blue-600 dark:text-blue-400">
               Frontend Engineer
             </p>
-            <div className="loader-progress">
-              <div className="loader-progress-fill"></div>
+            <div className="loader-progress-wrapper">
+              <div className="loader-progress">
+                <div className="loader-progress-fill"></div>
+              </div>
+              <span className="loader-progress-number text-blue-600 dark:text-blue-400">
+                {progress}%
+              </span>
             </div>
           </div>
         </motion.div>
