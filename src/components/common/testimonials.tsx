@@ -43,7 +43,7 @@ export default function Testimonials() {
 
             return (
               <TestimonialAccordion
-                key={index}
+                key={testimonial.id}
                 testimonial={testimonial}
                 isActive={isActive}
                 onToggle={() => toggleAccordion(index)}

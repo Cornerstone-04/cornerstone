@@ -24,10 +24,6 @@ export const aboutMe = [
     id: 2,
     text: "My love for the web started young, fueled by curiosity about how websites actually worked. That curiosity turned into a drive to build interfaces that feel natural to use. One of my proudest moments was developing a web app for a masters student that was later selected among the best in her class.",
   },
-  // {
-  //   id: 3,
-  //   text: "When I'm not coding, you'll probably find me watching Liverpool (YNWA), playing Scrabble (still undefeated), or listening to music while working through my next idea.",
-  // },
   {
     id: 4,
     text: "So, if you're looking for a frontend developer who builds clean, scalable, and user-friendly experiences — let's create something great together.",
@@ -36,6 +32,7 @@ export const aboutMe = [
 
 export const timeline = [
   {
+    id: 1,
     startDate: "May 2024",
     endDate: "Oct 2024",
     position: "Frontend Engineering Intern",
@@ -47,6 +44,7 @@ export const timeline = [
       "Contributed to Kamona UI Library by implementing reusable components and ensuring design consistency across the frontend team. Built and executed Playwright test suites for Moniepoint FX, validating user flows and ensuring seamless experiences. Collaborated closely with designers on usability and accessibility standards, and reported/fixed bugs uncovered during testing.",
   },
   {
+    id: 2,
     startDate: "Nov 2023",
     endDate: "Apr 2024",
     position: "Frontend Engineer",
@@ -58,6 +56,7 @@ export const timeline = [
       "Built and maintained key modules such as store management, product categories, and user profiles using ReactJS + Zustand. Integrated REST APIs with Axios for seamless data flow, styled responsive interfaces with TailwindCSS, and debugged complex issues to improve stability. Contributed actively to code reviews and team discussions.",
   },
   {
+    id: 3,
     startDate: "Apr 2022",
     endDate: "Jun 2022",
     position: "Frontend Developer",
@@ -98,34 +97,20 @@ export const connect = [
 ];
 
 export const menuitems = [
-  {
-    name: "Home",
-    path: "/",
-    delay: "150ms",
-  },
-  {
-    name: "About",
-    path: "/about",
-    delay: "175ms",
-  },
-  {
-    name: "Projects",
-    path: "/projects",
-    delay: "200ms",
-  },
-  {
-    name: "Contact",
-    path: "/contact",
-    delay: "225ms",
-  },
+  { id: 1, name: "Home", path: "/", delay: "150ms" },
+  { id: 2, name: "About", path: "/about", delay: "175ms" },
+  { id: 3, name: "Projects", path: "/projects", delay: "200ms" },
+  { id: 4, name: "Contact", path: "/contact", delay: "225ms" },
 ];
 
 export const projects = [
   {
+    id: 1,
     title: "Shipped & Live",
     type: "shipped",
     works: [
       {
+        id: 1,
         title: "Forever Ephraim",
         description:
           "A content portfolio for a writer and product marketer, consolidating articles, case studies, and thought leadership pieces. Automatically syncs with external blogs to showcase the latest content and establish credibility with clients and employers.",
@@ -142,6 +127,7 @@ export const projects = [
         url: "https://foreverephraim.vercel.app/",
       },
       {
+        id: 2,
         title: "Laughter Ephraim",
         description:
           "A professional portfolio showcasing creative work and post-production expertise. Features fast loading times and seamless navigation across all devices, helping visitors quickly understand capabilities and view project highlights.",
@@ -152,9 +138,10 @@ export const projects = [
         url: "https://laughterephraim.vercel.app/",
       },
       {
+        id: 3,
         title: "Power Safety Boots",
         description:
-          "An e-commerce platform for industrial safety footwear with organized product categories, detailed specifications, and image galleries. Guides customers from product discovery to purchase with clear calls-to-action while ensuring easy search engine visibility.",
+          "An e-commerce platform for industrial safety footwear with organized product categories, detailed specifications, and image galleries.",
         tech: ["Next.js", "TypeScript", "TailwindCSS", "Framer Motion", "SEO"],
         repo: "https://github.com/Cornerstone-04/powerbooth",
         image: "/images/projects/pb-logo.png",
@@ -162,9 +149,10 @@ export const projects = [
         url: "https://www.powersafetyboots.com/",
       },
       {
+        id: 4,
         title: "CertifyChain",
         description:
-          "A blockchain-based platform for secure certificate verification. Users can upload certificates, verify authenticity instantly, and maintain complete verification history. Eliminates certificate fraud by providing tamper-proof verification for employers, universities, and certification bodies.",
+          "A blockchain-based platform for secure certificate verification.",
         tech: [
           "React",
           "TypeScript",
@@ -180,9 +168,10 @@ export const projects = [
         url: "https://certifychain-fe.vercel.app/",
       },
       {
+        id: 5,
         title: "PeerShelf v1",
         description:
-          "A student platform for sharing academic resources within university communities. Students create profiles, upload study materials, request resources, and download peer-shared content. Version 2 (in development) adds real-time messaging and notifications for better collaboration.",
+          "A student platform for sharing academic resources within university communities.",
         tech: ["React", "Firebase Auth/Storage", "Responsive UI", "Cypress"],
         repo: "https://github.com/Cornerstone-04/peershelf-fe/",
         image: "/images/projects/peershelf.png",
@@ -192,13 +181,15 @@ export const projects = [
     ],
   },
   {
+    id: 2,
     title: "In the Lab",
     type: "building",
     works: [
       {
+        id: 1,
         title: "PeerShelf v2",
         description:
-          "An enhanced academic resource-sharing platform with improved collaboration features. Beyond file sharing, students can now communicate through integrated chat, receive instant notifications for requested resources, and track community contributions. Scales to support larger student populations.",
+          "An enhanced academic resource-sharing platform with improved collaboration features.",
         tech: ["React", "Next.js", "TypeScript", "TailwindCSS", "Zustand"],
         repo: "",
         image: "/images/projects/peershelf.png",
@@ -206,9 +197,9 @@ export const projects = [
         url: "",
       },
       {
+        id: 2,
         title: "TixCore",
-        description:
-          "An event management solution simplifying ticket sales for organizers and purchasing for attendees. Organizers can set up events, manage inventory, and track sales in real-time. Attendees get smooth booking with instant confirmations and secure payments.",
+        description: "An event management solution simplifying ticket sales.",
         tech: ["Next.js", "Node.js", "TailwindCSS", "Zustand", "Axios"],
         repo: "",
         image: "/images/projects/tixcore.png",
@@ -216,9 +207,9 @@ export const projects = [
         url: "",
       },
       {
+        id: 3,
         title: "TextMi",
-        description:
-          "A streamlined messaging app designed for users who value simplicity and speed. Eliminates unnecessary features to focus on core messaging with fast delivery and minimal distractions. Secure authentication protects privacy while maintaining ease of access.",
+        description: "A streamlined messaging app designed for simplicity.",
         tech: ["Next.js", "TypeScript", "Zustand", "TailwindCSS", "Supabase"],
         repo: "",
         image: "/images/projects/textmi.png",
@@ -232,51 +223,76 @@ export const projects = [
 export type ProjectTypes = "shipped" | "building";
 
 export const technologies = [
-  { name: "HTML", icon: FaHtml5, color: "from-orange-500 to-red-500" },
-  { name: "CSS", icon: FaCss3, color: "from-blue-500 to-cyan-500" },
-  { name: "JavaScript", icon: FaJs, color: "from-yellow-500 to-orange-500" },
+  { id: 1, name: "HTML", icon: FaHtml5, color: "from-orange-500 to-red-500" },
+  { id: 2, name: "CSS", icon: FaCss3, color: "from-blue-500 to-cyan-500" },
   {
+    id: 3,
+    name: "JavaScript",
+    icon: FaJs,
+    color: "from-yellow-500 to-orange-500",
+  },
+  {
+    id: 4,
     name: "TypeScript",
     icon: SiTypescript,
     color: "from-blue-500 to-blue-700",
   },
-  { name: "React.js", icon: FaReact, color: "from-cyan-500 to-blue-500" },
-  { name: "Next.js", icon: RiNextjsFill, color: "from-gray-900 to-gray-700" },
   {
+    id: 5,
+    name: "React.js",
+    icon: FaReact,
+    color: "from-cyan-500 to-blue-500",
+  },
+  {
+    id: 6,
+    name: "Next.js",
+    icon: RiNextjsFill,
+    color: "from-gray-900 to-gray-700",
+  },
+  {
+    id: 7,
     name: "TailwindCSS",
     icon: RiTailwindCssFill,
     color: "from-teal-500 to-cyan-500",
   },
-  { name: "Sass", icon: FaSass, color: "from-pink-500 to-rose-500" },
-
+  { id: 8, name: "Sass", icon: FaSass, color: "from-pink-500 to-rose-500" },
   {
+    id: 9,
     name: "Playwright",
     icon: PlaywrightLogo,
     color: "from-green-600 to-orange-500",
   },
-  { name: "SEO", icon: LuSearch, color: "from-purple-500 to-indigo-600" },
+  {
+    id: 10,
+    name: "SEO",
+    icon: LuSearch,
+    color: "from-purple-500 to-indigo-600",
+  },
 ];
 
 export const testimonials: Testimonial[] = [
   {
+    id: 1,
     name: "Laughter Ephraim",
     role: "Film Editor",
     company: "Blink Studios",
     content:
-      "Cornerstone is an exceptional frontend engineer. His attention to detail and ability to translate complex designs into pixel-perfect implementations is outstanding. He consistently delivers high-quality work on time.",
+      "Cornerstone is an exceptional frontend engineer. His attention to detail is outstanding.",
   },
   {
+    id: 2,
     name: "Olusegun Joe-Alabi",
     role: "Founder",
     company: "Makkan Innovation",
     content:
-      "Cornerstone is a talented frontend developer with great attention to detail and a strong sense of design. It's always a pleasure working with him.",
+      "Cornerstone is a talented frontend developer with great attention to detail.",
   },
   {
+    id: 3,
     name: "Oluwatobi Abayomi",
     role: "Software Developer",
     company: "Datalytix",
     content:
-      "As someone who has worked with Cornerstone before, I can say he is a very delightful person to work with. His meticulousness and attention to detail means he always does a thorough job, he writes clean and intuitive code that is easy to pick up and his penchant for staying up to date with new technologies and best practices means there is always something to learn from him. Overall, I'll recommend working with Cornerstone.",
+      "Cornerstone is a delightful person to work with. He writes clean and intuitive code.",
   },
 ];

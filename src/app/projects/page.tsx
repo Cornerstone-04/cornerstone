@@ -29,7 +29,7 @@ export default function Projects() {
           return (
             <motion.div
               className="w-full flex flex-col md:flex-row align-baseline  gap-4"
-              key={index}
+              key={project.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -52,7 +52,7 @@ export default function Projects() {
               <div className="w-full">
                 {works.map((work, idx) => (
                   <motion.div
-                    key={`project-${idx}`}
+                    key={`project-${work.id}`}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, margin: "-50px" }}

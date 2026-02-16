@@ -89,11 +89,11 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center space-x-2">
-          {connect.map((el, index) => {
+          {connect.map((el) => {
             const Icon = el.icon;
             return (
               <Link
-                key={`connect-${index}`}
+                key={`connect-${el.id}`}
                 href={
                   el.social === "Email"
                     ? "mailto:fortunecornerstone@gmail.com"

@@ -210,19 +210,17 @@ export default function Project({
         {CardBody}
       </button>
 
-      {/* Technologies row below the card (optional, keep or remove) */}
       <div className="flex flex-wrap gap-2 -mt-6 mb-8">
-        {tech.map((t, i) => (
-          <Badge variant="secondary" key={`${t}-${i}`}>
+        {tech.map((t) => (
+          <Badge variant="secondary" key={`${title}-${t}`}>
             {t}
           </Badge>
         ))}
       </div>
 
-      {/* Your modal (fixed-position; no portal required) */}
       <ProjectModal
         isOpen={open}
-        onClose={() => setOpen(false)}
+        closeAction={() => setOpen(false)}
         project={modalProject}
       />
     </>

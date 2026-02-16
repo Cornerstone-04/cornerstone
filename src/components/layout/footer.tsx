@@ -69,7 +69,7 @@ export default function Footer() {
               Connect
             </h4>
             <div className="flex gap-4">
-              {connect.map((el, index) => {
+              {connect.map((el) => {
                 const Icon = el.icon;
                 const href =
                   el.social === "Email"
@@ -78,7 +78,7 @@ export default function Footer() {
 
                 return (
                   <Link
-                    key={`footer-connect-${index}`}
+                    key={`footer-connect-${el.id}`}
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"

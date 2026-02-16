@@ -2,12 +2,14 @@
 
 import { motion } from "motion/react";
 import Link from "next/link";
+import type { ComponentType } from "react";
 import { LuArrowUpRight } from "react-icons/lu";
 
 type ConnectItem = {
+  id: number;
   social: string;
   url: string;
-  icon: React.ComponentType<{ size?: number }>;
+  icon: ComponentType<{ size?: number }>;
 };
 
 export default function ConnectSection({
@@ -56,7 +58,7 @@ export default function ConnectSection({
 
             return (
               <motion.div
-                key={`connect-${index}`}
+                key={`connect-${el.id}`}
                 className="w-full sm:w-[48%]"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}

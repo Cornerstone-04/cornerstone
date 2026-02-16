@@ -9,7 +9,7 @@ import { LuExternalLink, LuX } from "react-icons/lu";
 
 type ProjectModalProps = {
   isOpen: boolean;
-  onClose: () => void;
+  closeAction: () => void;
   project: {
     title: string;
     description: string;
@@ -25,7 +25,7 @@ type ProjectModalProps = {
 
 export default function ProjectModal({
   isOpen,
-  onClose,
+  closeAction,
   project,
 }: ProjectModalProps) {
   // Prevent body scroll when modal is open
@@ -43,13 +43,13 @@ export default function ProjectModal({
   // Close on escape key
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
+      if (e.key === "Escape") closeAction();
     };
     if (isOpen) {
       window.addEventListener("keydown", handleEscape);
     }
     return () => window.removeEventListener("keydown", handleEscape);
-  }, [isOpen, onClose]);
+  }, [isOpen, closeAction]);
 
   return (
     <AnimatePresence>
@@ -61,7 +61,7 @@ export default function ProjectModal({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={onClose}
+            onClick={closeAction}
           />
 
           {/* Modal */}
@@ -78,7 +78,7 @@ export default function ProjectModal({
                 {/* Close Button */}
                 <button
                   type="button"
-                  onClick={onClose}
+                  onClick={closeAction}
                   className="absolute top-4 right-4 p-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors z-10"
                   aria-label="Close modal"
                 >
@@ -134,9 +134,9 @@ export default function ProjectModal({
                           Technologies Used
                         </h3>
                         <div className="flex flex-wrap gap-2">
-                          {project.technologies.map((tech, index) => (
+                          {project.technologies.map((tech) => (
                             <span
-                              key={index}
+                              key={`${project.title}-${tech}`}
                               className="px-3 py-1 text-xs font-medium rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300"
                             >
                               {tech}

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useId } from "react";
 
 type TimelineItem = {
   startDate: string;
@@ -20,6 +20,7 @@ interface TimelineProps {
 export function Timeline({ active, timeline }: TimelineProps) {
   const { startDate, endDate, position, company, url, logo, summary } =
     timeline;
+  const id = useId();
 
   // Split summary into sentences for line breaks
   const sentences = summary
@@ -95,7 +96,7 @@ export function Timeline({ active, timeline }: TimelineProps) {
           {/* Summary with line breaks */}
           <p className="leading-relaxed text-justify text-zinc-700 dark:text-zinc-300">
             {sentences.map((sentence, index) => (
-              <React.Fragment key={index}>
+              <React.Fragment key={id}>
                 {sentence}
                 {index < sentences.length - 1 && <br />}
               </React.Fragment>

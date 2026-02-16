@@ -82,7 +82,7 @@ export default function About() {
         >
           {timeline.map((tl, index) => (
             <motion.div
-              key={`timeline-${index}`}
+              key={`timeline-${tl.id}`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
