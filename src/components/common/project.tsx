@@ -89,7 +89,7 @@ export default function Project({
     }
     return (
       <Link
-        href={href!}
+        href={href}
         target="_blank"
         rel="noopener noreferrer"
         onClick={(e) => e.stopPropagation()}
@@ -143,6 +143,7 @@ export default function Project({
             width={60}
             height={60}
             className="rounded ring-1 ring-zinc-200 dark:ring-zinc-800"
+            priority
           />
         </div>
 

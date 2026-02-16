@@ -73,6 +73,7 @@ export function Timeline({ active, timeline }: TimelineProps) {
               width={60}
               height={60}
               className="rounded ring-1 ring-zinc-200 dark:ring-zinc-800"
+              priority
             />
           ) : (
             <div className="h-[60px] w-[60px] rounded bg-zinc-100 dark:bg-zinc-800 ring-1 ring-zinc-200 dark:ring-zinc-800 grid place-items-center text-xs text-zinc-500">
