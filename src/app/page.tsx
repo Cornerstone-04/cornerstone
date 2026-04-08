@@ -3,17 +3,9 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { LuInfo } from "react-icons/lu";
 import ResumeDownloadButton from "@/components/common/resume-download";
-import Testimonials from "@/components/common/testimonials";
 import { Container } from "@/components/layout";
 import { Accordion } from "@/components/ui";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 import { connect, timeline } from "@/lib/me";
 
 export default function Home() {
@@ -25,110 +17,163 @@ export default function Home() {
   };
 
   return (
-    <Container className="py-12 text-zinc-800 dark:text-zinc-200 relative overflow-hidden">
+    <Container className="py-16 relative overflow-hidden">
+      {/* Hero Section */}
       <motion.div
-        className="flex items-start justify-between"
-        initial={{ opacity: 0, y: 30 }}
+        className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20"
+        initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.6 }}
       >
-        <div className="w-full md:w-8/12 space-y-10">
-          <div className="intro">
-            <h2 className="text-3xl md:text-3xl font-medium mb-4 text-zinc-900 dark:text-zinc-100">
-              Hello, I&apos;m <br /> Cornerstone Ephraim.
+        <div className="flex flex-col justify-start">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.1 }}
+            className="mb-8"
+          >
+            <h1 className="font-black text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tight text-foreground mb-4">
+              Cornerstone
+            </h1>
+            <h2 className="font-bold text-2xl md:text-3xl tracking-wider text-accent">
+              Frontend Engineer
             </h2>
-          </div>
+          </motion.div>
 
-          <div className="text-sm leading-loose space-y-3 text-justify">
-            <p>
-              <span className="font-semibold text-blue-800 dark:text-blue-400">
-                Your Frontend Developer for Clean, Scalable, and Intuitive
-                Interfaces.&nbsp;
-              </span>
-              {/* <br className="hidden md:inline-block" /> */}
-              I&apos;m passionate about turning design ideas into seamless user
-              experiences. I&apos;ve built scalable products for startups and
-              teams using React, Next.js, and TailwindCSS. Whether collaborating
-              with designers or debugging late into the night, I love crafting
-              solutions that make the web feel effortless.
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="border-l-4 border-accent pl-6 mb-12 space-y-4"
+          >
+            <p className="text-base leading-relaxed max-w-md text-foreground/80">
+              I build <span className="font-bold">clean, scalable interfaces</span> that people actually enjoy using. Specializing in React, Next.js, and modern web architecture.
             </p>
-          </div>
+            <p className="text-sm leading-relaxed max-w-md text-foreground/70 font-mono">
+              Performance-focused • Accessibility-first • Code quality obsessed
+            </p>
+          </motion.div>
 
-          <div className="flex flex-col md:flex-row items-center gap-4 my-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="flex flex-col sm:flex-row gap-4"
+          >
             <ResumeDownloadButton />
-            <div className="flex items-center gap-4 my-4">
-              {connect.map(({ id, social, icon, url }) => {
-                const Icon = icon;
-                const href =
-                  social === "Email"
-                    ? "mailto:fortunecornerstone@gmail.com"
-                    : `https://${url}`;
+            <Link
+              href="/projects"
+              className="font-bold tracking-wider uppercase text-sm px-6 py-3 border-2 border-foreground hover:bg-foreground hover:text-background transition-colors"
+            >
+              View Work
+            </Link>
+          </motion.div>
 
-                return (
-                  <Link
-                    key={`connect-${id}`}
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-800 hover:opacity-80 dark:text-blue-400 transition-opacity"
-                  >
-                    <Icon size={36} />
-                  </Link>
-                );
-              })}
-            </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            className="flex gap-6 mt-12"
+          >
+            {connect.slice(0, 4).map(({ id, social, icon, url }) => {
+              const Icon = icon;
+              const href =
+                social === "Email"
+                  ? "mailto:fortunecornerstone@gmail.com"
+                  : `https://${url}`;
+
+              return (
+                <Link
+                  key={`connect-${id}`}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-foreground hover:text-accent transition-colors border border-foreground hover:border-accent p-3"
+                  aria-label={social}
+                >
+                  <Icon size={20} />
+                </Link>
+              );
+            })}
+          </motion.div>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.3 }}
+          className="flex items-center justify-center lg:justify-end"
+        >
+          <div className="border-4 border-foreground p-1">
+            <Image
+              src="/images/cornerstone.jpg"
+              className="aspect-square object-cover"
+              alt="Cornerstone Ephraim"
+              width={280}
+              height={280}
+              priority
+            />
           </div>
-        </div>
-
-        <div className="w-3/12 hidden md:contents">
-          <Image
-            src="/images/cornerstone.jpg"
-            className="rounded-lg ring-1 ring-zinc-200 dark:ring-zinc-800 aspect-square"
-            alt="Cornerstone Ephraim avatar"
-            width={160}
-            height={160}
-            priority
-          />
-        </div>
+        </motion.div>
       </motion.div>
 
-      <Testimonials />
+      {/* Divider */}
+      <div className="h-1 bg-foreground my-20" />
 
+      {/* Experience Section */}
       <motion.div
-        className="my-6"
+        className="mb-20"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.7 }}
+        transition={{ duration: 0.6 }}
       >
-        <div className="flex items-center gap-2">
-          <h3 className="text-lg font-medium text-zinc-900 dark:text-zinc-100">
-            Recent experiences
+        <div className="flex items-baseline gap-4 mb-12">
+          <h3 className="font-black text-4xl md:text-5xl tracking-tight text-foreground">
+            Experience
           </h3>
-          <TooltipProvider delayDuration={150}>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <LuInfo className="w-4 h-4 text-zinc-500 cursor-help" />
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>Click a box to see more</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
+          <span className="text-accent font-mono text-sm">— Recent roles</span>
         </div>
 
-        <div className="my-4">
+        <div className="space-y-4">
           {trunkExp.map((exp, index) => (
-            <div key={exp.company} className="py-2">
+            <motion.div
+              key={exp.company}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ delay: index * 0.1 }}
+            >
               <Accordion
                 active={active === index}
                 handleToggle={() => handleToggle(index)}
                 exp={exp}
               />
-            </div>
+            </motion.div>
           ))}
         </div>
+      </motion.div>
+
+      {/* CTA Section */}
+      <motion.div
+        className="border-2 border-foreground p-12 bg-accent/5"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+      >
+        <h4 className="font-black text-3xl mb-4 text-foreground">
+          Let&apos;s build something great
+        </h4>
+        <p className="text-foreground/80 mb-6 max-w-lg leading-relaxed">
+          Whether you need a pixel-perfect frontend, performance optimization, or a complete design system, I&apos;m ready to collaborate.
+        </p>
+        <Link
+          href="/contact"
+          className="inline-block font-bold tracking-wider uppercase text-sm px-8 py-4 bg-foreground text-background hover:bg-foreground/90 transition-colors border border-foreground"
+        >
+          Get In Touch
+        </Link>
       </motion.div>
     </Container>
   );

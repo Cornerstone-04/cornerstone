@@ -60,7 +60,7 @@ export function Accordion({ handleToggle, active, exp }: AccordionProps) {
 
   return (
     <div
-      className="mb-2 rounded-lg border border-zinc-200 text-zinc-700 transition-all duration-300 dark:border-zinc-800 dark:text-zinc-200"
+      className="mb-1 border border-foreground text-foreground transition-all duration-300"
       data-state={active ? "open" : "closed"}
     >
       <div
@@ -70,27 +70,31 @@ export function Accordion({ handleToggle, active, exp }: AccordionProps) {
         aria-controls={panelId}
         onClick={handleToggle}
         onKeyDown={onKeyDown}
-        className="flex cursor-pointer items-center justify-between rounded-lg p-3 text-xs md:text-sm transition-all ease-linear hover:bg-zinc-100 dark:hover:bg-[#0f0f0f]"
+        className="flex cursor-pointer items-center justify-between p-4 text-sm md:text-base transition-all ease-linear hover:bg-foreground/5 group"
       >
-        <h4 className="mb-0 font-medium">
-          {position} <span className="opacity-70">@ {company}</span>
+        <h4 className="mb-0 font-bold tracking-tight group-hover:text-accent transition-colors">
+          {position}
+          <span className="font-normal text-foreground/60 ml-2">@ {company}</span>
         </h4>
 
-        <div className="flex items-center gap-3">
-          <h5 className="mb-0 whitespace-nowrap text-xs opacity-80">
+        <div className="flex items-center gap-4">
+          <h5 className="mb-0 whitespace-nowrap text-xs font-mono text-foreground/70">
             {period}
           </h5>
+          <span className="font-bold text-accent text-lg">
+            {active ? "−" : "+"}
+          </span>
         </div>
       </div>
 
       <div
         id={panelId}
-        className="overflow-hidden transition-[max-height] duration-300 ease-in-out"
+        className="overflow-hidden transition-[max-height] duration-300 ease-in-out border-t border-foreground"
         style={{ maxHeight: active ? maxHeight : 0 }}
       >
-        <div ref={contentRef} className="p-3">
+        <div ref={contentRef} className="p-4 space-y-4">
           {/* Summary with line breaks */}
-          <p className="text-xs md:text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed text-justify">
+          <p className="text-sm text-foreground/80 leading-relaxed">
             {sentences.map((sentence, index) => (
               <React.Fragment key={index}>
                 {sentence}
@@ -99,11 +103,11 @@ export function Accordion({ handleToggle, active, exp }: AccordionProps) {
             ))}
           </p>
 
-          <div className="mt-4 flex flex-wrap gap-2 text-zinc-900 dark:text-zinc-100">
+          <div className="flex flex-wrap gap-2">
             {tools.map((tool, index) => (
               <span
                 key={`${tool}-${index}`}
-                className="text-xs font-medium underline underline-offset-4"
+                className="text-xs font-mono font-bold text-accent border border-accent px-3 py-1 bg-accent/5"
               >
                 {tool}
               </span>

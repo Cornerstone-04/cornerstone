@@ -50,16 +50,14 @@ export default function ContactForm() {
   };
 
   const baseField =
-    "h-[50px] bg-white text-zinc-900 border-zinc-300 placeholder:text-zinc-400 " +
-    "focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:border-blue-500 " +
-    "dark:bg-zinc-900 dark:text-zinc-100 dark:border-zinc-700 dark:placeholder:text-zinc-500 " +
-    "dark:focus-visible:ring-blue-400 dark:focus-visible:border-blue-400 transition-all";
+    "h-12 bg-background text-foreground border-2 border-foreground placeholder:text-foreground/50 " +
+    "focus-visible:ring-2 focus-visible:ring-accent focus-visible:border-accent " +
+    "transition-all font-mono text-sm";
 
   const textAreaField =
-    "min-h-[140px] bg-white text-zinc-900 border-zinc-300 placeholder:text-zinc-400 " +
-    "focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:border-blue-500 " +
-    "dark:bg-zinc-900 dark:text-zinc-100 dark:border-zinc-700 dark:placeholder:text-zinc-500 " +
-    "dark:focus-visible:ring-blue-400 dark:focus-visible:border-blue-400 transition-all";
+    "min-h-[140px] bg-background text-foreground border-2 border-foreground placeholder:text-foreground/50 " +
+    "focus-visible:ring-2 focus-visible:ring-accent focus-visible:border-accent " +
+    "transition-all font-mono text-sm resize-none";
 
   return (
     <motion.div
@@ -70,16 +68,16 @@ export default function ContactForm() {
       transition={{ duration: 0.5, delay: 0.2 }}
     >
       {sent === "ok" && (
-        <div className="mb-6 p-4 rounded-lg bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800">
-          <p className="text-sm text-green-700 dark:text-green-400">
-            Thanks! Your message has been sent successfully.
+        <div className="mb-6 p-4 border-2 border-accent bg-accent/5">
+          <p className="text-sm text-accent font-bold">
+            ✓ Message sent! I&apos;ll get back to you soon.
           </p>
         </div>
       )}
       {sent === "err" && (
-        <div className="mb-6 p-4 rounded-lg bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800">
-          <p className="text-sm text-red-700 dark:text-red-400">
-            Oops—couldn&apos;t send your message. Please try again in a moment.
+        <div className="mb-6 p-4 border-2 border-foreground bg-foreground/5">
+          <p className="text-sm text-foreground font-bold">
+            ✗ Oops—couldn&apos;t send your message. Please try again.
           </p>
         </div>
       )}
@@ -89,7 +87,7 @@ export default function ContactForm() {
           <div className="flex flex-col gap-2">
             <Label
               htmlFor="firstName"
-              className="text-zinc-900 dark:text-zinc-100"
+              className="text-foreground font-bold text-sm"
             >
               First Name
             </Label>
@@ -121,7 +119,7 @@ export default function ContactForm() {
           <div className="flex flex-col gap-2">
             <Label
               htmlFor="lastName"
-              className="text-zinc-900 dark:text-zinc-100"
+              className="text-foreground font-bold text-sm"
             >
               Last Name
             </Label>
@@ -150,7 +148,7 @@ export default function ContactForm() {
         </div>
 
         <div className="flex flex-col gap-2">
-          <Label htmlFor="email" className="text-zinc-900 dark:text-zinc-100">
+          <Label htmlFor="email" className="text-foreground font-bold text-sm">
             Email
           </Label>
           <Input
@@ -177,7 +175,7 @@ export default function ContactForm() {
         </div>
 
         <div className="flex flex-col gap-2">
-          <Label htmlFor="message" className="text-zinc-900 dark:text-zinc-100">
+          <Label htmlFor="message" className="text-foreground font-bold text-sm">
             Message
           </Label>
           <Textarea
@@ -204,7 +202,7 @@ export default function ContactForm() {
         <Button
           type="submit"
           disabled={submitting}
-          className="px-8 font-medium bg-blue-600 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700 text-white disabled:opacity-60 transition-colors"
+          className="px-8 py-3 font-bold uppercase tracking-wider bg-foreground text-background hover:bg-foreground/90 disabled:opacity-60 transition-colors border-2 border-foreground text-sm"
         >
           {submitting ? "Sending..." : "Send Message"}
         </Button>

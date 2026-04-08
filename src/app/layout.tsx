@@ -86,7 +86,7 @@ export default function RootLayout({
       </head>
 
       <body
-        className={`${inter.className} text-sm leading-6 transition ease text-gray-700 dark:bg-[#0A0A0A]`}
+        className={`${inter.className} text-sm leading-6 transition ease text-foreground bg-background dark:bg-background`}
         suppressHydrationWarning
       >
         <ThemeProvider

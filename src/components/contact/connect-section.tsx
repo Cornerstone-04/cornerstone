@@ -3,7 +3,6 @@
 import { motion } from "motion/react";
 import Link from "next/link";
 import type { ComponentType } from "react";
-import { LuArrowUpRight } from "react-icons/lu";
 
 type ConnectItem = {
   id: number;
@@ -21,34 +20,35 @@ export default function ConnectSection({
 }) {
   return (
     <motion.div
-      className={`w-full flex flex-col md:flex-row align-baseline md:space-x-6 ${className}`}
+      className={`w-full ${className}`}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5 }}
     >
       <motion.h2
-        className="w-full md:w-1/5 font-semibold text-lg text-zinc-900 dark:text-zinc-100"
+        className="w-full font-black text-4xl text-foreground mb-12 border-b-2 border-accent pb-4 flex items-baseline gap-3"
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.5, delay: 0.1 }}
       >
+        <span className="font-mono text-accent">—</span>
         Connect
       </motion.h2>
 
       <motion.div
-        className="w-full md:w-4/5"
+        className="w-full"
         initial={{ opacity: 0, x: 20 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        <p className="font-medium text-zinc-900 dark:text-zinc-100">
+        <p className="font-bold text-lg text-foreground mb-8">
           Reach out! I&apos;d love to chat.
         </p>
 
-        <div className="flex flex-wrap gap-4 mt-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {items.map((el, index) => {
             const Icon = el.icon;
             const href =
@@ -59,7 +59,6 @@ export default function ConnectSection({
             return (
               <motion.div
                 key={`connect-${el.id}`}
-                className="w-full sm:w-[48%]"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
@@ -69,20 +68,16 @@ export default function ConnectSection({
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block p-4 rounded-lg border transition-colors
-                             border-zinc-300 dark:border-zinc-800
-                             hover:bg-zinc-100/70 dark:hover:bg-[#0f0f0f]
-                             focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="block p-6 border-2 border-foreground transition-all
+                             hover:bg-foreground hover:text-background
+                             focus:outline-none focus:ring-2 focus:ring-accent"
                 >
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-x-3 text-blue-800 dark:text-blue-400">
-                      <Icon size={40} />
-                      <span className="font-medium">{el.social}</span>
+                  <div className="flex items-center gap-4">
+                    <Icon size={32} className="flex-shrink-0" />
+                    <div className="flex-1">
+                      <span className="font-bold text-base block">{el.social}</span>
+                      <span className="text-xs font-mono text-foreground/70">→</span>
                     </div>
-                    <LuArrowUpRight
-                      className="text-blue-800 dark:text-blue-400"
-                      size={20}
-                    />
                   </div>
                 </Link>
               </motion.div>
