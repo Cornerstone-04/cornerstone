@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { LuInfo } from "react-icons/lu";
 import ResumeDownloadButton from "@/components/common/resume-download";
-import Testimonials from "@/components/common/testimonials";
+// import Testimonials from "@/components/common/testimonials";
 import { Container } from "@/components/layout";
 import { Accordion } from "@/components/ui";
 import {
@@ -93,7 +93,7 @@ export default function Home() {
         </div>
       </motion.div>
 
-      <Testimonials />
+      {/*<Testimonials />*/}
 
       <motion.div
         className="my-6"
