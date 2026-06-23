@@ -39,7 +39,6 @@ export default function Project({
   image,
   tech,
   gif,
-  type,
   role,
   duration,
 }: ProjectProps) {

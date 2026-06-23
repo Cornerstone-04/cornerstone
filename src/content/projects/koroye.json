@@ -1,0 +1,35 @@
+{
+  "slug": "koroye",
+  "title": "Koroye",
+  "category": "Client Work",
+  "industry": "Industrial Design",
+  "website": "https://www.koroye.com",
+  "status": "Live",
+  "role": "Frontend Engineer",
+  "summary": "Portfolio platform for Keniye Koroye, an industrial designer, researcher, product strategist, and innovation leader.",
+  "shortDescription": "A digital platform showcasing multidisciplinary design, research, and innovation work.",
+  "responsibilities": [
+    "Frontend development",
+    "Content architecture",
+    "Experience design",
+    "Responsive implementation"
+  ],
+  "highlights": [
+    "Industrial design",
+    "Product strategy",
+    "Research",
+    "Innovation"
+  ],
+  "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+  "featured": true,
+  "order": 3,
+  "cover": {
+    "image": "/images/projects/koroye.png",
+    "alt": "Koroye project cover",
+    "tone": "paper"
+  },
+  "seo": {
+    "title": "Koroye | Cornerstone Ephraim",
+    "description": "A digital platform showcasing multidisciplinary design, research, and innovation work."
+  }
+}

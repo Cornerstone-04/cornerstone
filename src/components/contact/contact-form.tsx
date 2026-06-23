@@ -10,7 +10,11 @@ import { validateContactForm } from "@/lib/contact-validation";
 import { sendContactEmail } from "@/lib/send-email";
 import type { FormState } from "@/lib/types";
 
-export default function ContactForm() {
+export default function ContactForm({
+  submitLabel = "Send message",
+}: {
+  submitLabel?: string;
+}) {
   const [form, setForm] = useState<FormState>({
     firstName: "",
     lastName: "",
@@ -50,46 +54,40 @@ export default function ContactForm() {
   };
 
   const baseField =
-    "h-[50px] bg-white text-zinc-900 border-zinc-300 placeholder:text-zinc-400 " +
-    "focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:border-blue-500 " +
-    "dark:bg-zinc-900 dark:text-zinc-100 dark:border-zinc-700 dark:placeholder:text-zinc-500 " +
-    "dark:focus-visible:ring-blue-400 dark:focus-visible:border-blue-400 transition-all";
+    "h-14 rounded-xl border-0 bg-surface-muted px-4 text-ink-primary shadow-none placeholder:text-ink-secondary focus-visible:ring-2 focus-visible:ring-brand-accent";
 
   const textAreaField =
-    "min-h-[140px] bg-white text-zinc-900 border-zinc-300 placeholder:text-zinc-400 " +
-    "focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:border-blue-500 " +
-    "dark:bg-zinc-900 dark:text-zinc-100 dark:border-zinc-700 dark:placeholder:text-zinc-500 " +
-    "dark:focus-visible:ring-blue-400 dark:focus-visible:border-blue-400 transition-all";
+    "min-h-44 rounded-xl border-0 bg-surface-muted p-4 text-ink-primary shadow-none placeholder:text-ink-secondary focus-visible:ring-2 focus-visible:ring-brand-accent";
 
   return (
     <motion.div
-      className="w-full md:w-4/5"
+      className="mt-10 w-full"
       initial={{ opacity: 0, x: 20 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5, delay: 0.2 }}
     >
       {sent === "ok" && (
-        <div className="mb-6 p-4 rounded-lg bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800">
-          <p className="text-sm text-green-700 dark:text-green-400">
+        <div className="mb-6 rounded-xl bg-green-50 p-4">
+          <p className="text-sm text-green-700">
             Thanks! Your message has been sent successfully.
           </p>
         </div>
       )}
       {sent === "err" && (
-        <div className="mb-6 p-4 rounded-lg bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800">
-          <p className="text-sm text-red-700 dark:text-red-400">
-            Oops—couldn&apos;t send your message. Please try again in a moment.
+        <div className="mb-6 rounded-xl bg-red-50 p-4">
+          <p className="text-sm text-red-700">
+            I could not send your message. Please try again in a moment.
           </p>
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="space-y-6" noValidate>
+      <form onSubmit={handleSubmit} className="space-y-5" noValidate>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="flex flex-col gap-2">
             <Label
               htmlFor="firstName"
-              className="text-zinc-900 dark:text-zinc-100"
+              className="font-mono text-[10px] uppercase tracking-[0.1em] text-ink-muted"
             >
               First Name
             </Label>
@@ -98,7 +96,7 @@ export default function ContactForm() {
               name="firstName"
               type="text"
               autoComplete="given-name"
-              placeholder="John"
+              placeholder="First name"
               value={form.firstName}
               onChange={handleChange}
               required
@@ -111,7 +109,7 @@ export default function ContactForm() {
             {errors.firstName && (
               <p
                 id="firstName-error"
-                className="text-xs text-red-600 dark:text-red-400"
+                className="text-xs text-red-600"
               >
                 {errors.firstName}
               </p>
@@ -121,7 +119,7 @@ export default function ContactForm() {
           <div className="flex flex-col gap-2">
             <Label
               htmlFor="lastName"
-              className="text-zinc-900 dark:text-zinc-100"
+              className="font-mono text-[10px] uppercase tracking-[0.1em] text-ink-muted"
             >
               Last Name
             </Label>
@@ -130,7 +128,7 @@ export default function ContactForm() {
               name="lastName"
               type="text"
               autoComplete="family-name"
-              placeholder="Doe"
+              placeholder="Last name"
               value={form.lastName}
               onChange={handleChange}
               required
@@ -141,7 +139,7 @@ export default function ContactForm() {
             {errors.lastName && (
               <p
                 id="lastName-error"
-                className="text-xs text-red-600 dark:text-red-400"
+                className="text-xs text-red-600"
               >
                 {errors.lastName}
               </p>
@@ -150,7 +148,7 @@ export default function ContactForm() {
         </div>
 
         <div className="flex flex-col gap-2">
-          <Label htmlFor="email" className="text-zinc-900 dark:text-zinc-100">
+          <Label htmlFor="email" className="font-mono text-[10px] uppercase tracking-[0.1em] text-ink-muted">
             Email
           </Label>
           <Input
@@ -169,7 +167,7 @@ export default function ContactForm() {
           {errors.email && (
             <p
               id="email-error"
-              className="text-xs text-red-600 dark:text-red-400"
+              className="text-xs text-red-600"
             >
               {errors.email}
             </p>
@@ -177,13 +175,13 @@ export default function ContactForm() {
         </div>
 
         <div className="flex flex-col gap-2">
-          <Label htmlFor="message" className="text-zinc-900 dark:text-zinc-100">
+          <Label htmlFor="message" className="font-mono text-[10px] uppercase tracking-[0.1em] text-ink-muted">
             Message
           </Label>
           <Textarea
             id="message"
             name="message"
-            placeholder="Write your message here..."
+            placeholder="Tell me about your project"
             value={form.message}
             onChange={handleChange}
             required
@@ -194,7 +192,7 @@ export default function ContactForm() {
           {errors.message && (
             <p
               id="message-error"
-              className="text-xs text-red-600 dark:text-red-400"
+              className="text-xs text-red-600"
             >
               {errors.message}
             </p>
@@ -204,9 +202,9 @@ export default function ContactForm() {
         <Button
           type="submit"
           disabled={submitting}
-          className="px-8 font-medium bg-blue-600 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700 text-white disabled:opacity-60 transition-colors"
+          className="h-13 rounded-xl bg-canvas-dark px-7 text-ink-inverse hover:bg-border-dark"
         >
-          {submitting ? "Sending..." : "Send Message"}
+          {submitting ? "Sending..." : submitLabel}
         </Button>
       </form>
     </motion.div>

@@ -1,113 +1,80 @@
-"use client";
-
-import { motion } from "motion/react";
 import Link from "next/link";
-import { connect } from "@/lib/me";
+import { Container } from "@/components/layout/container";
+import type { ContactContent, NavigationContent } from "@/lib/types";
 
-export default function Footer() {
-  const currentYear = new Date().getFullYear();
-
-  const navigation = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Projects", href: "/projects" },
-    { name: "Contact", href: "/contact" },
-  ];
-
+export default function Footer({
+  navigation,
+  contact,
+}: {
+  navigation: NavigationContent;
+  contact: ContactContent;
+}) {
   return (
-    <footer className="border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-[#0A0A0A]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:justify-items-center">
-          {/* Brand Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100 mb-2">
-              Cornerstone Ephraim
-            </h3>
-            <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed text-justify">
-              Frontend Engineer building scalable, responsive web applications
-              with React, Next.js, and TypeScript.
-            </p>
-          </motion.div>
-
-          {/* Quick Links */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
-            <h4 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100 mb-4 uppercase tracking-wider">
-              Quick Links
-            </h4>
-            <ul className="space-y-2">
-              {navigation.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all ease-linear"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-
-          {/* Social Links */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <h4 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100 mb-4 uppercase tracking-wider">
-              Connect
-            </h4>
-            <div className="flex gap-4">
-              {connect.map((el) => {
-                const Icon = el.icon;
-                const href =
-                  el.social === "Email"
-                    ? "mailto:fortunecornerstone@gmail.com"
-                    : `https://${el.url}`;
-
-                return (
-                  <Link
-                    key={`footer-connect-${el.id}`}
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-zinc-600 dark:text-zinc-400 hover:text-blue-800 dark:hover:text-blue-400 transition-all ease-linear"
-                    aria-label={el.social}
-                  >
-                    <Icon size={24} />
-                  </Link>
-                );
-              })}
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Bottom Bar */}
-        <motion.div
-          className="mt-8 pt-8 border-t border-zinc-200 dark:border-zinc-800"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-        >
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-zinc-600 dark:text-zinc-400">
-              © {currentYear} Cornerstone Ephraim. All rights reserved.
+    <footer className="bg-canvas-dark py-16 text-ink-inverse sm:py-20">
+      <Container>
+        <div className="grid gap-12 border-b border-ink-inverse/15 pb-16 md:grid-cols-4">
+          <div>
+            <p className="text-xl font-semibold tracking-[-0.04em]">{navigation.brand}</p>
+            <p className="mt-4 max-w-xs text-sm leading-6 text-ink-inverse/50">
+              {navigation.footerDescription}
             </p>
           </div>
-        </motion.div>
-      </div>
+          <div>
+            <p className="footer-label">Navigation</p>
+            <div className="mt-5 flex flex-col gap-3">
+              {navigation.items.map((item) => (
+                <Link key={item.href} href={item.href} className="text-sm text-ink-inverse/70 hover:text-ink-inverse">
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div>
+            <p className="footer-label">Connect</p>
+            <div className="mt-5 flex flex-col gap-3">
+              {contact.socials.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  target="_blank"
+                  className="text-sm text-ink-inverse/70 hover:text-ink-inverse"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div>
+            <p className="footer-label">Email</p>
+            <Link
+              href={`mailto:${contact.email}`}
+              className="mt-5 block break-all text-sm text-ink-inverse/70 hover:text-ink-inverse"
+            >
+              {contact.email}
+            </Link>
+            <Link
+              href={contact.resume.href}
+              target="_blank"
+              download="Cornerstone_Ephraim_Resume.pdf"
+              className="mt-3 block text-sm text-ink-inverse/70 hover:text-ink-inverse"
+            >
+              {contact.resume.label}
+            </Link>
+            <Link
+              href={contact.scheduler.href}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-3 block text-sm text-ink-inverse/70 hover:text-ink-inverse"
+            >
+              {contact.scheduler.label}
+            </Link>
+          </div>
+        </div>
+        <div className="flex flex-col gap-3 pt-7 font-mono text-[10px] uppercase tracking-[0.1em] text-ink-inverse/35 sm:flex-row sm:justify-between">
+          <span>© {new Date().getFullYear()} Cornerstone Ephraim</span>
+          <span>Designed and built with intention</span>
+        </div>
+      </Container>
     </footer>
   );
 }

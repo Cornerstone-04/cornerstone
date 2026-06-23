@@ -1,0 +1,36 @@
+{
+  "slug": "knk-labs",
+  "title": "KNK Labs",
+  "category": "Client Work",
+  "industry": "Wearable Technology",
+  "website": "https://www.knklabs.co.uk",
+  "status": "Live",
+  "role": "Frontend Engineer",
+  "summary": "KNK Labs is a human-interface technology company building intelligent wearable systems and smart apparel. The company develops sensor-equipped clothing and wearable hardware that bridges physical apparel and digital technology.",
+  "shortDescription": "A digital experience for a wearable technology company building intelligent smart apparel and human-interface systems.",
+  "responsibilities": [
+    "Frontend development",
+    "Information architecture",
+    "Responsive implementation",
+    "Design implementation",
+    "User experience development"
+  ],
+  "highlights": [
+    "Smart apparel",
+    "Wearable technology",
+    "Human-interface systems",
+    "Technical storytelling"
+  ],
+  "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+  "featured": true,
+  "order": 1,
+  "cover": {
+    "image": "/images/projects/knklabs.png",
+    "alt": "KNK Labs project cover",
+    "tone": "oxide"
+  },
+  "seo": {
+    "title": "KNK Labs | Cornerstone Ephraim",
+    "description": "A digital experience for a wearable technology company building intelligent smart apparel and human-interface systems."
+  }
+}

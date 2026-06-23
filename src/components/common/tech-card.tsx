@@ -1,11 +1,9 @@
 import { motion } from "motion/react";
-import { useState } from "react";
 import type { Tech } from "@/lib/types";
 
 export function TechCard({ tech, index }: { tech: Tech; index: number }) {
   const Icon = tech.icon;
   const isPlaywright = tech.name === "Playwright";
-  const [hovered, setHovered] = useState(false);
 
   return (
     <motion.div
@@ -18,10 +16,6 @@ export function TechCard({ tech, index }: { tech: Tech; index: number }) {
       transition={{ duration: 0.3, delay: 0.3 + index * 0.03 }}
       whileHover={{ y: -4 }}
       tabIndex={0}
-      onHoverStart={() => setHovered(true)}
-      onHoverEnd={() => setHovered(false)}
-      onFocus={() => setHovered(true)}
-      onBlur={() => setHovered(false)}
       aria-describedby={`tech-${index}`}
     >
       {/* Subtle gradient wash on hover */}

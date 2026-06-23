@@ -1,0 +1,57 @@
+{
+  "seo": {
+    "title": "Cornerstone Ephraim | Product-minded Frontend Engineer",
+    "description": "Frontend engineer building modern interfaces, digital products, and experiences for startups, technology companies, and ambitious founders."
+  },
+  "hero": {
+    "eyebrow": "Frontend engineer",
+    "title": ["Building products,", "platforms, and digital", "experiences."],
+    "description": "Frontend engineer building modern interfaces, digital products, and experiences for startups, technology companies, and ambitious founders.",
+    "primaryAction": { "label": "View projects", "href": "/projects" },
+    "secondaryAction": {
+      "label": "Download resume",
+      "href": "/docs/CORNERSTONE_EPHRAIM_RESUME.pdf",
+      "external": true
+    },
+    "portrait": "/cornerstone.jpg",
+    "portraitAlt": "Cornerstone Ephraim"
+  },
+  "selectedWork": {
+    "label": "Selected work",
+    "heading": "Digital products and experiences built with clarity.",
+    "projectSlugs": ["knk-labs", "kelvar-industries", "koroye"]
+  },
+  "clientWork": {
+    "label": "Client work",
+    "heading": "Helping ambitious teams explain and ship complex ideas."
+  },
+  "products": {
+    "label": "Products",
+    "heading": "Exploring useful tools for learning and trust."
+  },
+  "experience": {
+    "label": "Experience",
+    "heading": "Engineering, product craft, and an early foundation in growth."
+  },
+  "process": {
+    "label": "Process",
+    "heading": "A practical process for moving from ambiguity to a useful product.",
+    "steps": [
+      { "title": "Understand", "description": "Understand the problem." },
+      { "title": "Design", "description": "Design the experience." },
+      { "title": "Build", "description": "Build the system." },
+      { "title": "Ship", "description": "Ship and improve." }
+    ]
+  },
+  "contact": {
+    "label": "Contact",
+    "heading": "Let’s build something meaningful.",
+    "description": "Whether you are building a product, launching an idea, or improving an existing experience, I would love to hear about it.",
+    "action": { "label": "Start a conversation", "href": "/contact" },
+    "scheduler": {
+      "label": "Book a call",
+      "href": "https://calendar.app.google/AUVVLpgcJnVH1Nd57",
+      "external": true
+    }
+  }
+}

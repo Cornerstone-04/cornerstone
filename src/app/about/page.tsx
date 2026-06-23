@@ -1,100 +1,118 @@
-"use client";
+import type { Metadata } from "next";
+import { Download } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { Container } from "@/components/layout/container";
+import { ExperienceSection } from "@/components/sections/experience-section";
+import { ContactSection } from "@/components/sections/contact-section";
+import { Reveal } from "@/components/ui/reveal";
+import { SectionLabel } from "@/components/ui/section-label";
+import {
+  getAboutContent,
+  getExperienceContent,
+  getHomeContent,
+} from "@/lib/content";
 
-import { motion } from "motion/react";
-import { Timeline } from "@/components/common";
-import TechStack from "@/components/common/tech-stack";
-import ConnectSection from "@/components/contact/connect-section";
-import { Container } from "@/components/layout";
-import { aboutMe, connect, timeline } from "@/lib/me";
+const content = getAboutContent();
 
-export default function About() {
+export const metadata: Metadata = {
+  title: content.seo.title,
+  description: content.seo.description,
+};
+
+export default function AboutPage() {
+  const home = getHomeContent();
+
   return (
-    <Container className="my-12 text-zinc-800 dark:text-zinc-200">
-      {/* About Me Section */}
-      <motion.div
-        className="w-full mb-16"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.5 }}
-      >
-        <div className="w-full flex flex-col md:flex-row align-baseline md:space-x-6">
-          <motion.h2
-            className="w-full md:w-1/5 font-semibold text-lg text-zinc-900 dark:text-zinc-100"
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
-            About me
-          </motion.h2>
-
-          <motion.div
-            className="w-full md:w-4/5 space-y-6"
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <div>
-              <p className="leading-relaxed text-justify">
-                Hi, I’m Cornerstone, and I’ve always been the guy who can’t
-                stand clunky websites. So, I decided to build better ones:{" "}
-                <span className="font-semibold text-blue-800 dark:text-blue-400">
-                  fast, intuitive, and easy to use.
-                </span>
-              </p>
-            </div>
-
-            {aboutMe.map(({ id, text }) => (
-              <div key={id}>
-                <p className="leading-relaxed text-justify">{text}</p>
+    <>
+      <section className="bg-canvas-dark py-20 text-ink-inverse sm:py-28">
+        <Container>
+          <SectionLabel className="text-ink-inverse/60">{content.label}</SectionLabel>
+          <Reveal>
+            <h1 className="mt-16 max-w-6xl text-[clamp(4rem,9vw,9rem)] font-medium leading-[0.86] tracking-[-0.07em]">
+              {content.heading}
+            </h1>
+          </Reveal>
+          <div className="mt-20 grid gap-10 lg:grid-cols-[1fr_1.5fr] lg:items-end">
+            <Reveal>
+              <div className="relative aspect-[4/5] overflow-hidden rounded-[28px] bg-surface-dark">
+                <Image
+                  src={content.portrait}
+                  alt={content.portraitAlt}
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-cover object-top grayscale"
+                />
               </div>
+            </Reveal>
+            <Reveal className="space-y-6 pb-2">
+              {content.introduction.map((paragraph) => (
+                <p
+                  key={paragraph}
+                  className="max-w-3xl text-xl leading-9 text-ink-inverse/65 sm:text-2xl sm:leading-10"
+                >
+                  {paragraph}
+                </p>
+              ))}
+              <Link
+                href={content.resume.href}
+                target="_blank"
+                download="Cornerstone_Ephraim_Resume.pdf"
+                className="button button-ghost-dark motion-link mt-4"
+              >
+                {content.resume.label}
+                <Download />
+              </Link>
+            </Reveal>
+          </div>
+        </Container>
+      </section>
+
+      <section className="bg-canvas-light py-24 sm:py-32">
+        <Container>
+          <div className="section-heading">
+            <SectionLabel>Principles</SectionLabel>
+            <Reveal>
+              <h2>How I approach the work.</h2>
+            </Reveal>
+          </div>
+          <div className="grid border-t border-ink-primary/15 md:grid-cols-3">
+            {content.principles.map((principle, index) => (
+              <Reveal key={principle.title} delay={index * 0.06}>
+                <article className="min-h-64 border-b border-ink-primary/15 py-8 md:border-b-0 md:border-r md:px-8 first:pl-0 last:border-r-0">
+                  <p className="font-mono text-[10px] text-ink-secondary">
+                    {String(index + 1).padStart(2, "0")}
+                  </p>
+                  <h3 className="mt-14 text-3xl font-medium tracking-[-0.04em]">
+                    {principle.title}
+                  </h3>
+                  <p className="mt-4 max-w-sm leading-7 text-ink-muted">
+                    {principle.description}
+                  </p>
+                </article>
+              </Reveal>
             ))}
-          </motion.div>
-        </div>
-      </motion.div>
+          </div>
+          <Reveal className="mt-20 flex flex-wrap gap-3 border-t border-ink-primary/15 pt-8">
+            {content.tools.map((tool) => (
+              <span
+                key={tool}
+                className="rounded-full border border-ink-primary/15 px-4 py-2 font-mono text-[11px] uppercase tracking-[0.08em]"
+              >
+                {tool}
+              </span>
+            ))}
+          </Reveal>
+        </Container>
+      </section>
 
-      {/* Experience Section */}
-      <motion.div
-        className="w-full flex flex-col md:flex-row align-baseline md:space-x-6"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.5 }}
-      >
-        <motion.h2
-          className="w-full md:w-1/5 font-semibold text-lg text-zinc-900 dark:text-zinc-100"
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-        >
-          Experience
-        </motion.h2>
-
-        <motion.div
-          className="w-full md:w-4/5 ml-0 md:ml-2"
-          initial={{ opacity: 0, x: 20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          {timeline.map((tl, index) => (
-            <motion.div
-              key={`timeline-${tl.id}`}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-            >
-              <Timeline active={tl.endDate == null} timeline={tl} />
-            </motion.div>
-          ))}
-        </motion.div>
-      </motion.div>
-      <TechStack />
-      <ConnectSection items={connect} className="mb-16 mt-12" />
-    </Container>
+      <ExperienceSection
+        label={home.experience.label}
+        heading={home.experience.heading}
+        experience={getExperienceContent()}
+      />
+      <ContactSection content={home.contact} />
+    </>
   );
 }
