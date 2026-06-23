@@ -1,0 +1,35 @@
+{
+  "slug": "kelvar-industries",
+  "title": "Kelvar Industries",
+  "category": "Client Work",
+  "industry": "Aerospace & Defense",
+  "website": "https://www.kelvarindustries.com",
+  "status": "Live",
+  "role": "Frontend Engineer",
+  "summary": "Kelvar Industries develops autonomous surveillance systems powered by artificial intelligence. The company focuses on intelligent situational awareness and modern defense technologies.",
+  "shortDescription": "Digital experiences designed to communicate advanced AI surveillance and autonomous technologies.",
+  "responsibilities": [
+    "Frontend development",
+    "Product communication",
+    "Experience design",
+    "Responsive implementation"
+  ],
+  "highlights": [
+    "Autonomous systems",
+    "Artificial intelligence",
+    "Defense technology",
+    "Surveillance platforms"
+  ],
+  "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+  "featured": true,
+  "order": 2,
+  "cover": {
+    "image": "/images/projects/kelvar.png",
+    "alt": "Kelvar Industries project cover",
+    "tone": "signal"
+  },
+  "seo": {
+    "title": "Kelvar Industries | Cornerstone Ephraim",
+    "description": "Digital experiences designed to communicate advanced AI surveillance and autonomous technologies."
+  }
+}

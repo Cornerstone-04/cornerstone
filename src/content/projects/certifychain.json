@@ -1,0 +1,39 @@
+{
+  "slug": "certifychain",
+  "title": "CertifyChain",
+  "category": "Product",
+  "industry": "Blockchain",
+  "status": "Personal Project",
+  "role": "Frontend Engineer",
+  "summary": "CertifyChain explores secure digital credential verification using modern web technologies and decentralized principles.",
+  "shortDescription": "A certificate verification platform exploring secure digital credentials.",
+  "responsibilities": [
+    "Frontend development",
+    "State management",
+    "API integration"
+  ],
+  "highlights": [
+    "Digital credentials",
+    "Verification systems",
+    "Blockchain concepts"
+  ],
+  "technologies": [
+    "React",
+    "TypeScript",
+    "Zustand",
+    "ShadCN UI",
+    "Framer Motion",
+    "Tailwind CSS"
+  ],
+  "featured": false,
+  "order": 8,
+  "cover": {
+    "image": "/images/projects/certifychain.png",
+    "alt": "CertifyChain project identity",
+    "tone": "blue"
+  },
+  "seo": {
+    "title": "CertifyChain | Cornerstone Ephraim",
+    "description": "A certificate verification platform exploring secure digital credentials."
+  }
+}

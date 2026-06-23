@@ -1,0 +1,28 @@
+{
+  "slug": "laughter-ephraim",
+  "title": "Laughter Ephraim",
+  "category": "Digital Experience",
+  "industry": "Creative Media",
+  "status": "Client Work",
+  "role": "Frontend Engineer",
+  "summary": "A creative portfolio showcasing visual storytelling, multimedia work, and artistic projects.",
+  "shortDescription": "A creative portfolio focused on storytelling through visual and multimedia experiences.",
+  "responsibilities": [
+    "Frontend development",
+    "Experience design",
+    "Content presentation"
+  ],
+  "highlights": ["Creative work", "Multimedia", "Visual storytelling"],
+  "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+  "featured": false,
+  "order": 6,
+  "cover": {
+    "image": "/images/projects/laughter.png",
+    "alt": "Laughter Ephraim project identity",
+    "tone": "amber"
+  },
+  "seo": {
+    "title": "Laughter Ephraim | Cornerstone Ephraim",
+    "description": "A creative portfolio focused on storytelling through visual and multimedia experiences."
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "slug": "forever-ephraim",
+  "title": "Forever Ephraim",
+  "category": "Digital Experience",
+  "industry": "Content & Marketing",
+  "status": "Client Work",
+  "role": "Frontend Engineer",
+  "summary": "A content-focused portfolio experience designed to showcase writing, marketing, and digital storytelling.",
+  "shortDescription": "A digital experience built around content, storytelling, and personal publishing.",
+  "responsibilities": [
+    "Frontend development",
+    "Content presentation",
+    "Experience design"
+  ],
+  "highlights": ["Content strategy", "Writing portfolio", "Digital publishing"],
+  "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+  "featured": false,
+  "order": 5,
+  "cover": {
+    "image": "/images/projects/forever.png",
+    "alt": "Forever Ephraim project identity",
+    "tone": "rose"
+  },
+  "seo": {
+    "title": "Forever Ephraim | Cornerstone Ephraim",
+    "description": "A digital experience built around content, storytelling, and personal publishing."
+  }
+}

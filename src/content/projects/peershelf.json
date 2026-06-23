@@ -1,0 +1,33 @@
+{
+  "slug": "peershelf",
+  "title": "PeerShelf",
+  "category": "Product",
+  "industry": "Education Technology",
+  "status": "Personal Project",
+  "role": "Product Designer & Frontend Engineer",
+  "summary": "PeerShelf is an academic collaboration platform designed to help students discover, share, and access educational resources.",
+  "shortDescription": "An academic collaboration platform focused on knowledge sharing and accessible learning.",
+  "responsibilities": [
+    "Product design",
+    "Frontend development",
+    "User experience",
+    "Product strategy"
+  ],
+  "highlights": [
+    "Student collaboration",
+    "Resource sharing",
+    "Educational technology"
+  ],
+  "technologies": ["React", "TypeScript", "Tailwind CSS", "ShadCN UI", "Zustand"],
+  "featured": false,
+  "order": 7,
+  "cover": {
+    "image": "/images/projects/peershelf.png",
+    "alt": "PeerShelf project identity",
+    "tone": "violet"
+  },
+  "seo": {
+    "title": "PeerShelf | Cornerstone Ephraim",
+    "description": "An academic collaboration platform focused on knowledge sharing and accessible learning."
+  }
+}

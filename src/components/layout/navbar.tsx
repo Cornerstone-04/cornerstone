@@ -1,132 +1,94 @@
 "use client";
-import { AnimatePresence, motion } from "motion/react";
+
+import { ArrowRight, Menu } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { FaMoon, FaSun } from "react-icons/fa6";
-import { connect, menuitems } from "@/lib/me";
+import type { NavigationContent } from "@/lib/types";
+import MobileNav from "./mobile-nav";
 
-export default function Navbar() {
+export default function Navbar({ content }: { content: NavigationContent }) {
   const pathname = usePathname();
-  const [scrollPosition, setScrollPosition] = useState(0);
-
-  const { resolvedTheme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
-    const updatePosition = () => setScrollPosition(window.pageYOffset);
-    window.addEventListener("scroll", updatePosition);
-    updatePosition();
-    return () => window.removeEventListener("scroll", updatePosition);
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const scrollingDown = currentScrollY > lastScrollY;
+
+      setHidden(scrollingDown && currentScrollY > 96);
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const activeHref = (href: string) =>
+    href === "/"
+      ? pathname === "/"
+      : pathname === href || pathname.startsWith(`${href}/`);
 
   return (
     <header
-      className={`backdrop-blur-md w-full sticky top-0 z-10 transition ease-in-out ${
-        scrollPosition > 20 ? "shadow-md" : ""
+      className={`sticky top-0 z-50 border-b border-ink-inverse/10 bg-canvas-dark text-ink-inverse backdrop-blur transition-transform duration-300 ease-out ${
+        hidden && !open ? "-translate-y-full" : "translate-y-0"
       }`}
     >
-      <motion.nav
-        className="w-11/12 flex items-center justify-between max-w-4xl py-5 mx-auto"
-        initial={false}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ type: "spring", stiffness: 300, damping: 24 }}
-      >
+      <nav className="mx-auto flex h-20 w-full items-center justify-between px-5 sm:px-8 lg:px-12">
         <Link
-          className="block font-semibold text-zinc-900 dark:text-zinc-100 transition-colors"
           href="/"
+          className="text-lg font-semibold tracking-[-0.035em]"
+          onClick={() => setOpen(false)}
         >
-          Cornerstone E.
+          {content.brand}
         </Link>
 
-        <div className="hidden md:flex items-center relative">
-          <div className="flex items-center space-x-2 rounded-full py-1.5 px-2 bg-gray-200/40 dark:bg-gray-800/40">
-            {menuitems.map((item) => {
-              const isActive = item.path === pathname;
-              return (
-                <div key={item.path} className="relative">
-                  <AnimatePresence initial={false} mode="popLayout">
-                    {isActive && (
-                      <motion.span
-                        layoutId="nav-active-pill"
-                        className="absolute inset-0 rounded-2xl bg-white dark:bg-gray-900"
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{
-                          type: "spring",
-                          stiffness: 500,
-                          damping: 40,
-                        }}
-                      />
-                    )}
-                  </AnimatePresence>
-
-                  <Link
-                    href={item.path}
-                    className={`relative block transition-colors ease rounded-2xl px-4 py-1.5 ${
-                      isActive
-                        ? "text-blue-600 dark:text-blue-400 font-semibold"
-                        : "text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-zinc-100"
-                    }`}
-                  >
-                    <motion.span
-                      whileHover={{ y: -1 }}
-                      transition={{
-                        type: "spring",
-                        stiffness: 600,
-                        damping: 30,
-                      }}
-                    >
-                      {item.name}
-                    </motion.span>
-                  </Link>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        <div className="flex items-center space-x-2">
-          {connect.map((el) => {
-            const Icon = el.icon;
+        <div className="hidden items-center gap-8 md:flex">
+          {content.items.map((item) => {
+            const active = activeHref(item.href);
             return (
               <Link
-                key={`connect-${el.id}`}
-                href={
-                  el.social === "Email"
-                    ? "mailto:fortunecornerstone@gmail.com"
-                    : `https://${el.url}`
-                }
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-zinc-700 hover:opacity-80 dark:text-zinc-300 dark:hover:opacity-80 transition-colors"
+                key={item.href}
+                href={item.href}
+                className={`text-sm transition-colors hover:text-ink-inverse ${
+                  active ? "text-ink-inverse" : "text-ink-inverse/55"
+                }`}
               >
-                <Icon size={20} />
+                {item.label}
               </Link>
             );
           })}
-
-          {/* Theme toggle */}
-          {mounted && (
-            <button
-              type="button"
-              className="outline-none p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors cursor-pointer"
-              onClick={() =>
-                setTheme(resolvedTheme === "dark" ? "light" : "dark")
-              }
-              aria-label="Toggle theme"
-            >
-              {resolvedTheme === "dark" ? (
-                <FaSun size={20} className="text-yellow-400" />
-              ) : (
-                <FaMoon size={20} className="text-zinc-700" />
-              )}
-            </button>
-          )}
         </div>
-      </motion.nav>
+
+        <Link
+          className="hidden min-h-10 items-center justify-center gap-2 rounded-[14px] bg-surface-light px-4 text-sm font-medium text-ink-primary transition-transform duration-200 hover:-translate-y-0.5 lg:inline-flex"
+          href={content.cta.href}
+        >
+          {content.cta.label}
+          <ArrowRight className="size-4" />
+        </Link>
+
+        <button
+          type="button"
+          aria-label={open ? "Close navigation" : "Open navigation"}
+          aria-expanded={open}
+          onClick={() => setOpen((value) => !value)}
+          className="grid size-11 place-items-center rounded-full border border-ink-inverse/20 md:hidden"
+        >
+          <Menu className="size-5" />
+        </button>
+      </nav>
+
+      <MobileNav
+        content={content}
+        open={open}
+        onCloseAction={() => setOpen(false)}
+      />
     </header>
   );
 }

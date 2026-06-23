@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "company": "Moniepoint",
+      "role": "Frontend Engineer",
+      "description": "Contributed to Kamona, Moniepoint's internal design system, building accessible and reusable components used across products.",
+      "url": "https://moniepoint.com/",
+      "logo": "/images/moniepoint.png"
+    },
+    {
+      "company": "Pysis",
+      "role": "Frontend Engineer",
+      "description": "Built modern interfaces and product experiences while collaborating closely with design and product teams.",
+      "logo": "/images/pysis-2.png"
+    },
+    {
+      "company": "Stutern",
+      "role": "Frontend Developer",
+      "description": "Led growth initiatives, campaigns, and educational programs that connected talent with opportunities.",
+      "url": "https://stutern.com/",
+      "logo": "/images/stutern-2.png"
+    }
+  ]
+}

@@ -1,106 +1,71 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import { ThemeProvider } from "next-themes";
-import LoadingScreen from "@/components/common/loading-screen";
-import StructuredData from "@/components/common/structured-data";
+import { Geist, Geist_Mono } from "next/font/google";
 import Footer from "@/components/layout/footer";
-import MobileNav from "@/components/layout/mobile-nav";
 import Navbar from "@/components/layout/navbar";
+import ScrollProgress from "@/components/layout/scroll-progress";
+import StructuredData from "@/components/common/structured-data";
+import {
+  getContactContent,
+  getHomeContent,
+  getNavigationContent,
+} from "@/lib/content";
+import "./globals.css";
 
-const inter = Inter({
-  weight: ["300", "400", "500", "700", "900"],
-  variable: "--font-inter",
+const geist = Geist({
+  variable: "--font-geist-sans",
   subsets: ["latin"],
-  adjustFontFallback: false,
 });
-// const geist_mono = Geist_Mono({
-//   weight: ["300", "400", "500", "700", "900"],
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-//   adjustFontFallback: false,
-// });
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const home = getHomeContent();
 
 export const metadata: Metadata = {
-  title: "Cornerstone Ephraim | Frontend Engineer",
-  description:
-    "Your Frontend Developer for Clean, Scalable, and Intuitive Interfaces.",
-  metadataBase: new URL("https://cornerstoneephraim.vercel.app/"),
+  title: home.seo.title,
+  description: home.seo.description,
+  metadataBase: new URL("https://cornerstoneephraim.vercel.app"),
   openGraph: {
-    title: "Cornerstone Ephraim | Frontend Engineer",
-    description:
-      "Your Frontend Developer for Clean, Scalable, and Intuitive Interfaces.",
-    url: "https://cornerstoneephraim.vercel.app/",
+    title: home.seo.title,
+    description: home.seo.description,
+    url: "/",
     siteName: "Cornerstone Ephraim",
-    images: ["/cornerstone.png"],
+    images: ["/cornerstone.jpg"],
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     creator: "@4th_ephraim",
-    title: "Cornerstone Ephraim | Frontend Engineer",
-    description:
-      "Your Frontend Developer for Clean, Scalable, and Intuitive Interfaces.",
-    images: ["/cornerstone.png"],
+    title: home.seo.title,
+    description: home.seo.description,
+    images: ["/cornerstone.jpg"],
   },
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon-32x32.png",
     apple: "/apple-touch-icon.png",
   },
-  keywords: [
-    "Frontend engineer",
-    "Frontend developer",
-    "React Developer",
-    "React.js",
-    "Next.js",
-    "Zustand",
-    "Playwright",
-    "SEO",
-    "JavaScript",
-    "TypeScript",
-    "Tailwind CSS",
-    "HTML",
-    "CSS",
-    "Web Development",
-    "Portfolio",
-  ],
-  robots: "index, follow",
+  robots: { index: true, follow: true },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const navigation = getNavigationContent();
+  const contact = getContactContent();
+
   return (
-    <html
-      lang="en"
-      className={`${inter.variable}  scroll-smooth`}
-      suppressHydrationWarning
-    >
+    <html lang="en" className={`${geist.variable} ${geistMono.variable}`}>
       <head>
         <meta name="author" content="Cornerstone Ephraim" />
         <StructuredData />
       </head>
-
-      <body
-        className={`${inter.className} text-sm leading-6 transition ease text-gray-700 dark:bg-[#0A0A0A]`}
-        suppressHydrationWarning
-      >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <LoadingScreen />
-          <Navbar />
-          {children}
-          <Footer />
-          <MobileNav />
-        </ThemeProvider>
+      <body>
+        <ScrollProgress />
+        <Navbar content={navigation} />
+        <main>{children}</main>
+        <Footer navigation={navigation} contact={contact} />
       </body>
     </html>
   );

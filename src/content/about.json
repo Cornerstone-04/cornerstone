@@ -1,0 +1,38 @@
+{
+  "seo": {
+    "title": "About | Cornerstone Ephraim",
+    "description": "Frontend engineer working at the intersection of engineering, product thinking, and user experience."
+  },
+  "label": "About",
+  "heading": "I build products that feel simple, thoughtful, and reliable.",
+  "introduction": [
+    "I am a frontend engineer who enjoys building products that feel simple, thoughtful, and reliable.",
+    "Over the past few years, I have worked across fintech, education, consulting, industrial technology, and digital products. My work sits at the intersection of engineering, product thinking, and user experience.",
+    "I care about clean interfaces, scalable systems, and solving problems that matter."
+  ],
+  "portrait": "/cornerstone.jpg",
+  "portraitAlt": "Portrait of Cornerstone Ephraim",
+  "principles": [
+    {
+      "title": "Clarity first",
+      "description": "Make complex products easier to understand and use."
+    },
+    {
+      "title": "Systems over patches",
+      "description": "Build reusable foundations that help products grow coherently."
+    },
+    {
+      "title": "Product awareness",
+      "description": "Connect engineering decisions to user needs and business context."
+    }
+  ],
+  "tools": [
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "Zustand",
+    "Playwright",
+    "PostgreSQL"
+  ]
+}

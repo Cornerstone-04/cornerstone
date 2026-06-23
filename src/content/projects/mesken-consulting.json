@@ -1,0 +1,34 @@
+{
+  "slug": "mesken-consulting",
+  "title": "Mesken Consulting",
+  "category": "Client Work",
+  "industry": "Education",
+  "website": "https://meskenconsult.com",
+  "status": "Live",
+  "role": "Frontend Engineer",
+  "summary": "Mesken Consulting supports students pursuing international education opportunities by connecting them with overseas institutions.",
+  "shortDescription": "An educational consultancy platform focused on trust, clarity, and student conversion.",
+  "responsibilities": [
+    "Frontend development",
+    "Information architecture",
+    "Conversion-focused design",
+    "Responsive implementation"
+  ],
+  "highlights": [
+    "Educational consulting",
+    "International education",
+    "Student recruitment"
+  ],
+  "technologies": ["Next.js", "TypeScript", "Framer Motion", "Tailwind CSS"],
+  "featured": false,
+  "order": 4,
+  "cover": {
+    "image": "/images/projects/mesken.png",
+    "alt": "Mesken Consulting project cover",
+    "tone": "sage"
+  },
+  "seo": {
+    "title": "Mesken Consulting | Cornerstone Ephraim",
+    "description": "An educational consultancy platform focused on trust, clarity, and student conversion."
+  }
+}

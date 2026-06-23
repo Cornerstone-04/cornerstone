@@ -1,103 +1,34 @@
-"use client";
-
-import { Home } from "lucide-react";
-import { motion } from "motion/react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { LuArrowLeft } from "react-icons/lu";
-import { Container } from "@/components/layout";
+import { Container } from "@/components/layout/container";
+import { SectionLabel } from "@/components/ui/section-label";
 
 export default function NotFound() {
   return (
-    <Container className="min-h-[70vh] flex items-center justify-center text-zinc-800 dark:text-zinc-200">
-      <motion.div
-        className="text-center space-y-6 max-w-md"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        {/* 404 Number */}
-        <motion.div
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          <h1 className="text-8xl md:text-9xl font-bold text-blue-600 dark:text-blue-400">
-            404
-          </h1>
-        </motion.div>
-
-        {/* Message */}
-        <motion.div
-          className="space-y-3"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-        >
-          <h2 className="text-2xl md:text-3xl font-semibold text-zinc-900 dark:text-zinc-100">
-            Page Not Found
-          </h2>
-          <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
-            Oops! The page you&apos;re looking for doesn&apos;t exist. It might
-            have been moved or deleted.
-          </p>
-        </motion.div>
-
-        {/* Action Buttons */}
-        <motion.div
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-        >
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-medium transition-colors"
-          >
-            <Home size={20} />
-            Go Home
-          </Link>
-          <button
-            type="button"
-            onClick={() => window.history.back()}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-900 dark:text-zinc-100 font-medium transition-colors"
-          >
-            <LuArrowLeft size={20} />
-            Go Back
-          </button>
-        </motion.div>
-
-        {/* Helpful Links */}
-        <motion.div
-          className="pt-8 space-y-2"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.8 }}
-        >
-          <p className="text-sm text-zinc-500 dark:text-zinc-500">
-            Here are some helpful links instead:
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center text-sm">
-            <Link
-              href="/about"
-              className="text-blue-600 dark:text-blue-400 hover:underline"
-            >
-              About
-            </Link>
-            <Link
-              href="/projects"
-              className="text-blue-600 dark:text-blue-400 hover:underline"
-            >
-              Projects
-            </Link>
-            <Link
-              href="/contact"
-              className="text-blue-600 dark:text-blue-400 hover:underline"
-            >
-              Contact
-            </Link>
+    <section className="bg-canvas-light py-16 text-ink-primary sm:py-24">
+      <Container>
+        <div className="grid min-h-[70svh] gap-12 lg:grid-cols-[0.75fr_1.5fr]">
+          <div className="flex flex-col justify-between gap-16">
+            <div>
+              <SectionLabel>404</SectionLabel>
+              <h1 className="mt-12 text-[clamp(3.5rem,7vw,7rem)] font-medium leading-[0.9] tracking-[-0.06em]">
+                Looks like you’ve reached unfamiliar territory.
+              </h1>
+            </div>
+            <div>
+              <p className="mb-6 max-w-sm text-ink-muted">
+                The page you are looking for is unavailable. Return home and continue
+                exploring.
+              </p>
+              <Link className="button bg-canvas-dark text-ink-inverse" href="/">
+                Return home
+                <ArrowRight />
+              </Link>
+            </div>
           </div>
-        </motion.div>
-      </motion.div>
-    </Container>
+          <div className="abstract-art min-h-[520px] overflow-hidden rounded-[28px]" />
+        </div>
+      </Container>
+    </section>
   );
 }
