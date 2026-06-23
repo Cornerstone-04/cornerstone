@@ -12,6 +12,11 @@
   ],
   "portrait": "/cornerstone.jpg",
   "portraitAlt": "Portrait of Cornerstone Ephraim",
+  "resume": {
+    "label": "Download resume",
+    "href": "/docs/CORNERSTONE_EPHRAIM_RESUME.pdf",
+    "external": true
+  },
   "principles": [
     {
       "title": "Clarity first",

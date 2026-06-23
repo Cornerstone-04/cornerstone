@@ -9,8 +9,8 @@ export default function ResumeDownloadButton() {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/docs/cornerstone-ephraim.pdf";
-    link.download = "Cornerstone-Ephraim-Resume.pdf";
+    link.href = "/docs/CORNERSTONE_EPHRAIM_RESUME.pdf";
+    link.download = "Cornerstone_Ephraim_Resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

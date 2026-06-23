@@ -7,6 +7,16 @@
   "heading": "Let’s build something meaningful.",
   "description": "Whether you are building a product, launching an idea, or improving an existing experience, I would love to hear about it.",
   "email": "fortunecornerstone@gmail.com",
+  "resume": {
+    "label": "Download resume",
+    "href": "/docs/CORNERSTONE_EPHRAIM_RESUME.pdf",
+    "external": true
+  },
+  "scheduler": {
+    "label": "Book a call",
+    "href": "https://calendar.app.google/AUVVLpgcJnVH1Nd57",
+    "external": true
+  },
   "socials": [
     {
       "label": "LinkedIn",

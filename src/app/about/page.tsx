@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { Download } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { Container } from "@/components/layout/container";
 import { ExperienceSection } from "@/components/sections/experience-section";
 import { ContactSection } from "@/components/sections/contact-section";
@@ -53,6 +55,15 @@ export default function AboutPage() {
                   {paragraph}
                 </p>
               ))}
+              <Link
+                href={content.resume.href}
+                target="_blank"
+                download="Cornerstone_Ephraim_Resume.pdf"
+                className="button button-ghost-dark motion-link mt-4"
+              >
+                {content.resume.label}
+                <Download />
+              </Link>
             </Reveal>
           </div>
         </Container>

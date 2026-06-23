@@ -52,6 +52,22 @@ export default function Footer({
             >
               {contact.email}
             </Link>
+            <Link
+              href={contact.resume.href}
+              target="_blank"
+              download="Cornerstone_Ephraim_Resume.pdf"
+              className="mt-3 block text-sm text-ink-inverse/70 hover:text-ink-inverse"
+            >
+              {contact.resume.label}
+            </Link>
+            <Link
+              href={contact.scheduler.href}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-3 block text-sm text-ink-inverse/70 hover:text-ink-inverse"
+            >
+              {contact.scheduler.label}
+            </Link>
           </div>
         </div>
         <div className="flex flex-col gap-3 pt-7 font-mono text-[10px] uppercase tracking-[0.1em] text-ink-inverse/35 sm:flex-row sm:justify-between">

@@ -45,6 +45,7 @@ export type HomeContent = {
     heading: string;
     description: string;
     action: LinkItem;
+    scheduler?: LinkItem;
   };
 };
 
@@ -55,6 +56,7 @@ export type AboutContent = {
   introduction: string[];
   portrait: string;
   portraitAlt: string;
+  resume: LinkItem;
   principles: Array<{ title: string; description: string }>;
   tools: string[];
 };
@@ -75,6 +77,8 @@ export type ContactContent = {
   heading: string;
   description: string;
   email: string;
+  resume: LinkItem;
+  scheduler: LinkItem;
   socials: LinkItem[];
   form: {
     heading: string;

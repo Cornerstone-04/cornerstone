@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Download } from "lucide-react";
 import Link from "next/link";
-import ContactForm from "@/components/contact/contact-form";
 import { Container } from "@/components/layout/container";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionLabel } from "@/components/ui/section-label";
@@ -19,8 +18,8 @@ export default function ContactPage() {
     <section className="bg-canvas-light py-20 text-ink-primary sm:py-28">
       <Container>
         <SectionLabel>{content.label}</SectionLabel>
-        <div className="mt-14 grid gap-16 lg:grid-cols-[0.8fr_1.5fr]">
-          <Reveal className="flex flex-col justify-between gap-16">
+        <div className="mt-14 grid gap-16 lg:grid-cols-[1fr_0.85fr] lg:items-start">
+          <Reveal>
             <div>
               <h1 className="max-w-2xl text-[clamp(3.5rem,7vw,7rem)] font-medium leading-[0.88] tracking-[-0.065em]">
                 {content.heading}
@@ -29,42 +28,84 @@ export default function ContactPage() {
                 {content.description}
               </p>
             </div>
-            <div>
-              <Link
-                href={`mailto:${content.email}`}
-                className="text-lg font-medium underline decoration-ink-primary/20 underline-offset-8"
-              >
-                {content.email}
-              </Link>
-              <div className="mt-7 flex flex-wrap gap-5">
-                {content.socials.map((social) => (
-                  <Link
-                    key={social.href}
-                    href={social.href}
-                    target="_blank"
-                    className="inline-flex items-center gap-1.5 text-sm"
-                  >
-                    {social.label}
-                    <ArrowUpRight className="size-4" />
-                  </Link>
-                ))}
-              </div>
-            </div>
           </Reveal>
 
           <Reveal delay={0.08}>
-            <div className="rounded-[28px] bg-surface-light p-6 sm:p-10 lg:p-12">
-              <h2 className="text-3xl font-medium tracking-[-0.04em]">
-                {content.form.heading}
-              </h2>
-              <p className="mt-3 max-w-xl leading-7 text-ink-muted">
-                {content.form.description}
-              </p>
-              <ContactForm submitLabel={content.form.submitLabel} />
+            <div className="rounded-[28px] border border-ink-primary/10 bg-surface-light p-6 sm:p-8 lg:p-10">
+              <ContactRow label="Email">
+                <Link
+                  href={`mailto:${content.email}`}
+                  className="inline-flex items-center gap-2 break-all text-xl font-medium tracking-[-0.035em] sm:text-2xl"
+                >
+                  {content.email}
+                  <ArrowUpRight className="size-5" />
+                </Link>
+              </ContactRow>
+
+              <ContactRow label="Schedule">
+                <Link
+                  href={content.scheduler.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 text-xl font-medium tracking-[-0.035em] sm:text-2xl"
+                >
+                  {content.scheduler.label}
+                  <ArrowUpRight className="size-5" />
+                </Link>
+              </ContactRow>
+
+              <ContactRow label="Resume">
+                <Link
+                  href={content.resume.href}
+                  target="_blank"
+                  download="Cornerstone_Ephraim_Resume.pdf"
+                  className="inline-flex items-center gap-2 text-xl font-medium tracking-[-0.035em] sm:text-2xl"
+                >
+                  {content.resume.label}
+                  <Download className="size-5" />
+                </Link>
+              </ContactRow>
+
+              <div className="pt-7">
+                <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-ink-muted">
+                  Elsewhere
+                </p>
+                <div className="mt-5 flex flex-wrap gap-4">
+                  {content.socials.map((social) => (
+                    <Link
+                      key={social.href}
+                      href={social.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1.5 rounded-full border border-ink-primary/10 px-4 py-2 text-sm transition-colors hover:border-ink-primary/25"
+                    >
+                      {social.label}
+                      <ArrowUpRight className="size-4" />
+                    </Link>
+                  ))}
+                </div>
+              </div>
             </div>
           </Reveal>
         </div>
       </Container>
     </section>
+  );
+}
+
+function ContactRow({
+  label,
+  children,
+}: {
+  label: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="border-b border-ink-primary/10 py-7 first:pt-0">
+      <p className="mb-3 font-mono text-[10px] uppercase tracking-[0.12em] text-ink-muted">
+        {label}
+      </p>
+      {children}
+    </div>
   );
 }

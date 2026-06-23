@@ -49,6 +49,7 @@ export function HeroSection({ content }: { content: HomeContent["hero"] }) {
                   className="button button-ghost-dark motion-link"
                   href={content.secondaryAction.href}
                   target={content.secondaryAction.external ? "_blank" : undefined}
+                  download="Cornerstone_Ephraim_Resume.pdf"
                 >
                   {content.secondaryAction.label}
                   <Download />

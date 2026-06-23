@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { Container } from "@/components/layout/container";
 import { Reveal } from "@/components/ui/reveal";
@@ -18,13 +18,26 @@ export function ContactSection({
           </h2>
           <div>
             <p className="text-lg leading-8">{content.description}</p>
-            <Link
-              className="button mt-8 bg-canvas-dark text-ink-inverse"
-              href={content.action.href}
-            >
-              {content.action.label}
-              <ArrowRight />
-            </Link>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row lg:flex-col">
+              <Link
+                className="button motion-link bg-canvas-dark text-ink-inverse"
+                href={content.action.href}
+              >
+                {content.action.label}
+                <ArrowRight />
+              </Link>
+              {content.scheduler ? (
+                <Link
+                  className="button border border-ink-primary/25 text-ink-primary transition-colors hover:bg-ink-primary/10"
+                  href={content.scheduler.href}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {content.scheduler.label}
+                  <ArrowUpRight />
+                </Link>
+              ) : null}
+            </div>
           </div>
         </Reveal>
       </Container>
