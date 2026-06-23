@@ -62,6 +62,8 @@
 html {
   scroll-behavior: smooth;
   background: var(--dark);
+  scrollbar-color: var(--color-brand-accent) var(--color-canvas-dark);
+  scrollbar-width: thin;
 }
 
 body {
@@ -70,6 +72,25 @@ body {
   color: var(--dark);
   font-family: var(--font-geist-sans), Arial, sans-serif;
   text-rendering: optimizeLegibility;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-canvas-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--color-brand-accent) 82%, var(--color-canvas-dark));
+  border: 2px solid var(--color-canvas-dark);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-accent);
 }
 
 a,
