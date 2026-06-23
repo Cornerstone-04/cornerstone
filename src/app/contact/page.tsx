@@ -31,7 +31,8 @@ export default function ContactPage() {
           </Reveal>
 
           <Reveal delay={0.08}>
-            <div className="rounded-[28px] border border-ink-primary/10 bg-surface-light p-6 sm:p-8 lg:p-10">
+            {/*<div className="rounded-[28px] border border-ink-primary/10 bg-surface-light p-6 sm:p-8 lg:p-10">*/}
+            <div>
               <ContactRow label="Email">
                 <Link
                   href={`mailto:${content.email}`}
