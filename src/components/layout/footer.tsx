@@ -45,7 +45,7 @@ export default function Footer({
             </div>
           </div>
           <div>
-            <p className="footer-label">Email</p>
+            <p className="footer-label">Contact Me</p>
             <Link
               href={`mailto:${contact.email}`}
               className="mt-5 block break-all text-sm text-ink-inverse/70 hover:text-ink-inverse"
