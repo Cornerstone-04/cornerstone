@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Footer from "@/components/layout/footer";
 import Navbar from "@/components/layout/navbar";
 import ScrollProgress from "@/components/layout/scroll-progress";
+import ScrollToTop from "@/components/layout/scroll-to-top";
 import StructuredData from "@/components/common/structured-data";
 import {
   getContactContent,
@@ -65,6 +66,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ScrollProgress />
         <Navbar content={navigation} />
         <main>{children}</main>
+        <ScrollToTop />
         <Footer navigation={navigation} contact={contact} />
       </body>
     </html>
