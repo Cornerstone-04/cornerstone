@@ -21,7 +21,7 @@ export function HeroSection({ content }: { content: HomeContent["hero"] }) {
               className="hero-portrait object-cover object-[50%_28%] grayscale md:object-[90%_10%]"
             />
           </div>
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,color-mix(in_srgb,var(--color-canvas-dark)_98%,transparent)_0%,color-mix(in_srgb,var(--color-canvas-dark)_90%,transparent)_43%,color-mix(in_srgb,var(--color-canvas-dark)_18%,transparent)_78%,color-mix(in_srgb,var(--color-canvas-dark)_38%,transparent)_100%)]" />
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,color-mix(in_srgb,var(--color-canvas-dark)_98%,transparent)_0%,color-mix(in_srgb,var(--color-canvas-dark)_75%,transparent)_35%,color-mix(in_srgb,var(--color-canvas-dark)_18%,transparent)_78%,color-mix(in_srgb,var(--color-canvas-dark)_38%,transparent)_100%)]" />
           <div className="absolute inset-0 bg-[linear-gradient(0deg,color-mix(in_srgb,var(--color-canvas-dark)_80%,transparent)_0%,transparent_50%)] md:hidden" />
 
           <div className="relative flex min-h-[calc(100svh-7rem)] flex-col justify-between p-6 sm:p-10 lg:p-14">
