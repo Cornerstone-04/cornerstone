@@ -45,6 +45,12 @@
     "alt": "Forever Ephraim project identity",
     "tone": "rose"
   },
+  "interactionPreview": {
+    "video": "/videos/projects/forever-preview.webm",
+    "poster": "/images/projects/forever.png",
+    "label": "Interaction preview",
+    "caption": "A short preview of the Forever Ephraim content and storytelling experience."
+  },
   "seo": {
     "title": "Forever Ephraim | Cornerstone Ephraim",
     "description": "A digital experience built around content, storytelling, and personal publishing."

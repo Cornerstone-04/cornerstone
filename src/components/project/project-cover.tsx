@@ -30,7 +30,7 @@ export function ProjectCover({
   return (
     <div
       className={cn(
-        "group/cover relative isolate aspect-[16/10] overflow-hidden rounded-[24px] bg-gradient-to-br p-6 sm:p-10",
+        "group/cover relative isolate aspect-video overflow-hidden rounded-[24px] bg-gradient-to-br p-6 sm:p-10",
         tones[project.cover.tone] ?? tones.oxide,
         className,
       )}

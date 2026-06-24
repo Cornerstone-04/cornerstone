@@ -53,6 +53,12 @@
     "alt": "Kelvar Industries project cover",
     "tone": "signal"
   },
+  "interactionPreview": {
+    "video": "/videos/projects/kelvar-preview.webm",
+    "poster": "/images/projects/kelvar.png",
+    "label": "Interaction preview",
+    "caption": "A short preview of the Kelvar Industries website experience."
+  },
   "seo": {
     "title": "Kelvar Industries | Cornerstone Ephraim",
     "description": "Digital experiences designed to communicate advanced AI surveillance and autonomous technologies."

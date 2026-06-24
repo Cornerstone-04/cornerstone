@@ -1,5 +1,6 @@
 import { Container } from "@/components/layout/container";
 import { ProjectCover } from "@/components/project/project-cover";
+import { ProjectVideoPreview } from "@/components/project/project-video-preview";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionLabel } from "@/components/ui/section-label";
 import type { ProjectContent } from "@/lib/types";
@@ -69,12 +70,30 @@ export function ProjectDetail({ project }: { project: ProjectContent }) {
           </div>
         </div>
 
-        <Reveal>
-          <div className="mt-28 sm:mt-36">
-            <SectionLabel>Project image</SectionLabel>
-            <ProjectCover project={project} className="mt-10 aspect-[16/8]" />
-          </div>
-        </Reveal>
+        {project.interactionPreview ? (
+          <Reveal>
+            <div className="mt-28 sm:mt-36">
+              <SectionLabel>
+                {project.interactionPreview.label ?? "Interaction preview"}
+              </SectionLabel>
+              <div className="mt-10">
+                <ProjectVideoPreview
+                  preview={project.interactionPreview}
+                  title={project.title}
+                />
+              </div>
+            </div>
+          </Reveal>
+        ) : null}
+
+        {!project.interactionPreview ? (
+          <Reveal>
+            <div className="mt-28 sm:mt-36">
+              <SectionLabel>Project image</SectionLabel>
+              <ProjectCover project={project} className="mt-10 aspect-[16/8]" />
+            </div>
+          </Reveal>
+        ) : null}
       </Container>
     </section>
   );
@@ -92,7 +111,11 @@ function StickyPanel({
       <div className="rounded-[28px] border border-ink-primary/10 bg-surface-light p-6 sm:p-8">
         <DetailList title="Role" items={role} />
         <div className="mt-10">
-          <DetailList title="Technologies" items={project.technologies} compact />
+          <DetailList
+            title="Technologies"
+            items={project.technologies}
+            compact
+          />
         </div>
       </div>
     </aside>
@@ -156,7 +179,13 @@ function DetailList({
       <h2 className="font-mono text-[11px] uppercase tracking-[0.12em] text-ink-muted">
         {title}
       </h2>
-      <ul className={compact ? "mt-5 flex flex-wrap gap-2" : "mt-6 border-t border-ink-primary/10"}>
+      <ul
+        className={
+          compact
+            ? "mt-5 flex flex-wrap gap-2"
+            : "mt-6 border-t border-ink-primary/10"
+        }
+      >
         {items.map((item, index) =>
           compact ? (
             <li

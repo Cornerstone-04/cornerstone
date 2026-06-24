@@ -51,6 +51,12 @@
     "alt": "PeerShelf project identity",
     "tone": "violet"
   },
+  "interactionPreview": {
+    "video": "/videos/projects/peershelf-preview.webm",
+    "poster": "/images/projects/peershelf.png",
+    "label": "Interaction preview",
+    "caption": "A short preview of the PeerShelf product experience."
+  },
   "seo": {
     "title": "PeerShelf | Cornerstone Ephraim",
     "description": "An academic collaboration platform focused on knowledge sharing and accessible learning."

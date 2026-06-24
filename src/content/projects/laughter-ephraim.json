@@ -45,6 +45,12 @@
     "alt": "Laughter Ephraim project identity",
     "tone": "amber"
   },
+  "interactionPreview": {
+    "video": "/videos/projects/laughter-preview.webm",
+    "poster": "/images/projects/laughter.png",
+    "label": "Interaction preview",
+    "caption": "A short preview of the Laughter Ephraim creative portfolio experience."
+  },
   "seo": {
     "title": "Laughter Ephraim | Cornerstone Ephraim",
     "description": "A creative portfolio focused on storytelling through visual and multimedia experiences."

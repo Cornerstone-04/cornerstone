@@ -56,6 +56,12 @@
     "alt": "CertifyChain project identity",
     "tone": "blue"
   },
+  "interactionPreview": {
+    "video": "/videos/projects/certifychain-preview.webm",
+    "poster": "/images/projects/certifychain.png",
+    "label": "Interaction preview",
+    "caption": "A short preview of the CertifyChain credential verification experience."
+  },
   "seo": {
     "title": "CertifyChain | Cornerstone Ephraim",
     "description": "A certificate verification platform exploring secure digital credentials."

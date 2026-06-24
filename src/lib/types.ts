@@ -133,6 +133,12 @@ export type ProjectContent = {
     alt: string;
     tone: string;
   };
+  interactionPreview?: {
+    video: string;
+    poster: string;
+    label?: string;
+    caption?: string;
+  };
   seo: SeoContent;
 };
 

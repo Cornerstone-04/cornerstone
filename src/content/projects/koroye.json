@@ -53,6 +53,12 @@
     "alt": "Koroye project cover",
     "tone": "paper"
   },
+  "interactionPreview": {
+    "video": "/videos/projects/keniye-preview.webm",
+    "poster": "/images/projects/koroye.png",
+    "label": "Interaction preview",
+    "caption": "A short preview of the Koroye website experience."
+  },
   "seo": {
     "title": "Koroye | Cornerstone Ephraim",
     "description": "A digital platform showcasing multidisciplinary design, research, and innovation work."
