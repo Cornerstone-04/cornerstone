@@ -21,6 +21,31 @@
     "Innovation"
   ],
   "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+  "caseStudy": {
+    "overview": [
+      "A digital platform for industrial designer, researcher, and product strategist Keniye Koroye.",
+      "The objective was to create a portfolio that reflected multidisciplinary work across design, innovation, and research."
+    ],
+    "role": [
+      "Frontend development",
+      "Content architecture",
+      "Responsive implementation",
+      "Experience design"
+    ],
+    "challenges": [
+      "The website needed to present several disciplines without overwhelming visitors.",
+      "Research, industrial design, strategy, and innovation all needed equal importance."
+    ],
+    "approach": [
+      "Used strong typography and visual hierarchy.",
+      "Created modular content sections.",
+      "Built an editorial layout that could support multiple types of work."
+    ],
+    "outcome": [
+      "The platform successfully showcases multidisciplinary work through a clear and engaging experience."
+    ],
+    "pullQuote": "The experience had to give equal weight to design, research, strategy, and innovation."
+  },
   "featured": true,
   "order": 3,
   "cover": {

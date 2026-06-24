@@ -25,6 +25,30 @@
     "Framer Motion",
     "Tailwind CSS"
   ],
+  "caseStudy": {
+    "overview": [
+      "CertifyChain explores secure digital credential verification using modern web technologies and decentralized principles.",
+      "The product focuses on how certificates and credentials can be verified through a clear digital experience."
+    ],
+    "role": [
+      "Frontend development",
+      "State management",
+      "API integration"
+    ],
+    "challenges": [
+      "The project needed to communicate digital credential verification clearly.",
+      "The interface had to support verification concepts without making the product feel too technical."
+    ],
+    "approach": [
+      "Built frontend flows for a credential verification platform.",
+      "Used state management to support product interactions.",
+      "Structured the experience around secure digital credentials and verification systems."
+    ],
+    "outcome": [
+      "CertifyChain is a certificate verification platform exploring secure digital credentials."
+    ],
+    "pullQuote": "Trust products need interfaces that feel precise and easy to understand."
+  },
   "featured": false,
   "order": 8,
   "cover": {

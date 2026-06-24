@@ -45,6 +45,7 @@ export function getAllProjects(): ProjectContent[] {
       const source = fs.readFileSync(path.join(projectDirectory, file), "utf8");
       return JSON.parse(source) as ProjectContent;
     })
+    .filter((project) => project.published !== false)
     .sort((a, b) => a.order - b.order);
 }
 

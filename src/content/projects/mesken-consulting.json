@@ -20,6 +20,32 @@
     "Student recruitment"
   ],
   "technologies": ["Next.js", "TypeScript", "Framer Motion", "Tailwind CSS"],
+  "published": false,
+  "caseStudy": {
+    "overview": [
+      "Mesken Consulting supports students pursuing international education opportunities by connecting them with overseas institutions.",
+      "The platform needed to present educational consulting services with clarity and trust."
+    ],
+    "role": [
+      "Frontend development",
+      "Information architecture",
+      "Conversion-focused design",
+      "Responsive implementation"
+    ],
+    "challenges": [
+      "The experience needed to support student recruitment while keeping the content easy to understand.",
+      "The platform had to balance trust, clarity, and conversion."
+    ],
+    "approach": [
+      "Structured the experience around clear service information.",
+      "Built responsive layouts for students browsing across devices.",
+      "Presented international education content in a direct and approachable format."
+    ],
+    "outcome": [
+      "The final platform communicates Mesken Consulting's education services with a focus on trust, clarity, and student conversion."
+    ],
+    "pullQuote": "For education consulting, clarity is part of the product experience."
+  },
   "featured": false,
   "order": 4,
   "cover": {

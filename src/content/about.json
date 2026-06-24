@@ -29,7 +29,25 @@
     {
       "title": "Product awareness",
       "description": "Connect engineering decisions to user needs and business context."
+    },
+    {
+      "title": "Craft with restraint",
+      "description": "Use motion, layout, and visual detail where they make the product clearer."
     }
+  ],
+  "workingStyle": [
+    "I like to start by understanding the product goal, the audience, and the content before moving into implementation.",
+    "I work well with founders, designers, product teams, and technical teams that care about clarity and execution.",
+    "I enjoy turning early ideas, rough flows, or polished designs into interfaces that feel considered and reliable."
+  ],
+  "industries": [
+    "Fintech",
+    "Education",
+    "Consulting",
+    "Industrial design",
+    "Aerospace and defense",
+    "Wearable technology",
+    "Digital products"
   ],
   "tools": [
     "React",
@@ -39,5 +57,11 @@
     "Zustand",
     "Playwright",
     "PostgreSQL"
+  ],
+  "enjoyBuilding": [
+    "Product websites that explain complex ideas clearly.",
+    "Interfaces for startups, technology companies, and ambitious founders.",
+    "Content-led experiences where structure and storytelling matter.",
+    "Frontend systems that can grow without becoming messy."
   ]
 }

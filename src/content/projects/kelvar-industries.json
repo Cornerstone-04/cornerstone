@@ -21,6 +21,31 @@
     "Surveillance platforms"
   ],
   "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+  "caseStudy": {
+    "overview": [
+      "Kelvar Industries develops intelligent surveillance and autonomous security systems.",
+      "The website needed to communicate advanced defense and AI technologies without relying on technical jargon."
+    ],
+    "role": [
+      "Frontend implementation",
+      "Responsive development",
+      "Experience design implementation",
+      "Content structure"
+    ],
+    "challenges": [
+      "Autonomous surveillance and AI systems can be difficult to explain to non-technical audiences.",
+      "The experience needed to feel modern, intelligent, and trustworthy."
+    ],
+    "approach": [
+      "Used strong typography to make complex technology easier to scan.",
+      "Created large visual moments and minimal layouts.",
+      "Structured content around a clear hierarchy."
+    ],
+    "outcome": [
+      "The final experience communicates sophisticated technologies in a clear and approachable way."
+    ],
+    "pullQuote": "The goal was to make advanced systems feel understandable and trustworthy."
+  },
   "featured": true,
   "order": 2,
   "cover": {

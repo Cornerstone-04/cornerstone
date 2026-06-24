@@ -41,7 +41,7 @@ export function ProjectHero({ project }: { project: ProjectContent }) {
           )}
         </Reveal>
         <Reveal>
-          <ProjectCover project={project} priority className="aspect-[16/8]" />
+          <ProjectCover project={project} priority className="aspect-[4/3] md:aspect-[16/8]" />
         </Reveal>
       </Container>
     </section>
