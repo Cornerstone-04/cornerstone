@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { ContactSection } from "@/components/sections/contact-section";
 import { ProjectDetail } from "@/components/project/project-detail";
 import { ProjectHero } from "@/components/project/project-hero";
+import { ProjectNavigation } from "@/components/project/project-navigation";
 import { getAllProjects, getHomeContent, getProjectBySlug } from "@/lib/content";
 
 export function generateStaticParams() {
@@ -31,11 +32,13 @@ export default async function ProjectPage({
   const { slug } = await params;
   const project = getProjectBySlug(slug);
   if (!project) notFound();
+  const projects = getAllProjects();
 
   return (
     <>
       <ProjectHero project={project} />
       <ProjectDetail project={project} />
+      <ProjectNavigation current={project} projects={projects} />
       <ContactSection content={getHomeContent().contact} />
     </>
   );

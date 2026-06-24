@@ -39,21 +39,35 @@ export function HeroSection({ content }: { content: HomeContent["hero"] }) {
               </h1>
             </div>
 
-            <Reveal delay={0.88} className="grid items-end gap-8 md:grid-cols-[minmax(0,1fr)_360px]">
-              <div className="flex flex-wrap gap-3">
-                <Link className="button button-light motion-link" href={content.primaryAction.href}>
-                  {content.primaryAction.label}
-                  <ArrowRight />
-                </Link>
-                <Link
-                  className="button button-ghost-dark motion-link"
-                  href={content.secondaryAction.href}
-                  target={content.secondaryAction.external ? "_blank" : undefined}
-                  download="Cornerstone_Ephraim_Resume.pdf"
-                >
-                  {content.secondaryAction.label}
-                  <Download />
-                </Link>
+            <Reveal delay={0.88} className="grid items-end gap-8 md:grid-cols-[minmax(0,1fr)_420px]">
+              <div className="space-y-7">
+                <div className="flex flex-wrap gap-3">
+                  <Link className="button button-light motion-link" href={content.primaryAction.href}>
+                    {content.primaryAction.label}
+                    <ArrowRight />
+                  </Link>
+                  <Link
+                    className="button button-ghost-dark motion-link"
+                    href={content.secondaryAction.href}
+                    target={content.secondaryAction.external ? "_blank" : undefined}
+                    download="Cornerstone_Ephraim_Resume.pdf"
+                  >
+                    {content.secondaryAction.label}
+                    <Download />
+                  </Link>
+                </div>
+                {content.trustSignals?.length ? (
+                  <div className="flex max-w-2xl flex-wrap gap-2">
+                    {content.trustSignals.map((signal) => (
+                      <span
+                        key={signal}
+                        className="rounded-full border border-ink-inverse/15 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.1em] text-ink-inverse/55"
+                      >
+                        {signal}
+                      </span>
+                    ))}
+                  </div>
+                ) : null}
               </div>
               <p className="max-w-sm text-base leading-7 text-ink-inverse/65 sm:text-lg">
                 {content.description}

@@ -14,12 +14,42 @@
   ],
   "highlights": ["Content strategy", "Writing portfolio", "Digital publishing"],
   "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+  "caseStudy": {
+    "overview": [
+      "Forever Ephraim is a content-focused portfolio experience designed to showcase writing, marketing, and digital storytelling.",
+      "The experience needed to make content presentation feel clear, personal, and easy to browse."
+    ],
+    "role": [
+      "Frontend development",
+      "Content presentation",
+      "Experience design"
+    ],
+    "challenges": [
+      "The project needed to support writing, marketing, and digital storytelling without making the experience feel crowded.",
+      "The content needed a structure that could stay readable and flexible."
+    ],
+    "approach": [
+      "Focused on content hierarchy and clean presentation.",
+      "Built a digital publishing experience around storytelling.",
+      "Used responsive layouts to keep the work readable across screen sizes."
+    ],
+    "outcome": [
+      "The result is a digital experience built around content, storytelling, and personal publishing."
+    ],
+    "pullQuote": "Content-led websites work best when the interface gets out of the way."
+  },
   "featured": false,
   "order": 5,
   "cover": {
     "image": "/images/projects/forever.png",
     "alt": "Forever Ephraim project identity",
     "tone": "rose"
+  },
+  "interactionPreview": {
+    "video": "/videos/projects/forever-preview.webm",
+    "poster": "/images/projects/forever.png",
+    "label": "Interaction preview",
+    "caption": "A short preview of the Forever Ephraim content and storytelling experience."
   },
   "seo": {
     "title": "Forever Ephraim | Cornerstone Ephraim",

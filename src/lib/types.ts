@@ -26,6 +26,7 @@ export type HomeContent = {
     secondaryAction: LinkItem;
     portrait: string;
     portraitAlt: string;
+    trustSignals?: string[];
   };
   selectedWork: {
     label: string;
@@ -44,6 +45,7 @@ export type HomeContent = {
     label: string;
     heading: string;
     description: string;
+    availability?: string[];
     action: LinkItem;
     scheduler?: LinkItem;
   };
@@ -58,7 +60,10 @@ export type AboutContent = {
   portraitAlt: string;
   resume: LinkItem;
   principles: Array<{ title: string; description: string }>;
+  workingStyle: string[];
+  industries: string[];
   tools: string[];
+  enjoyBuilding: string[];
 };
 
 export type ExperienceItem = {
@@ -67,6 +72,7 @@ export type ExperienceItem = {
   description: string;
   url?: string;
   logo?: string;
+  color?: string;
 };
 
 export type ExperienceContent = { items: ExperienceItem[] };
@@ -94,10 +100,7 @@ export type NavigationContent = {
   footerDescription: string;
 };
 
-export type ProjectCategory =
-  | "Client Work"
-  | "Product"
-  | "Digital Experience";
+export type ProjectCategory = "Client Work" | "Product" | "Digital Experience";
 
 export type ProjectContent = {
   slug: string;
@@ -112,12 +115,27 @@ export type ProjectContent = {
   responsibilities: string[];
   highlights: string[];
   technologies: string[];
+  caseStudy?: {
+    overview: string[];
+    role: string[];
+    challenges: string[];
+    approach: string[];
+    outcome: string[];
+    pullQuote?: string;
+  };
+  published?: boolean;
   featured: boolean;
   order: number;
   cover: {
     image?: string;
     alt: string;
     tone: string;
+  };
+  interactionPreview?: {
+    video: string;
+    poster: string;
+    label?: string;
+    caption?: string;
   };
   seo: SeoContent;
 };

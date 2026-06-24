@@ -14,12 +14,42 @@
   ],
   "highlights": ["Creative work", "Multimedia", "Visual storytelling"],
   "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+  "caseStudy": {
+    "overview": [
+      "Laughter Ephraim is a creative portfolio showcasing visual storytelling, multimedia work, and artistic projects.",
+      "The project focused on presenting creative work through a digital experience that could support visual and multimedia content."
+    ],
+    "role": [
+      "Frontend development",
+      "Experience design",
+      "Content presentation"
+    ],
+    "challenges": [
+      "The experience needed to support creative work, multimedia, and visual storytelling.",
+      "The layout needed to keep the work expressive without overwhelming the content."
+    ],
+    "approach": [
+      "Designed the presentation around visual storytelling.",
+      "Built responsive content sections for creative and multimedia work.",
+      "Kept the interface focused on the work being presented."
+    ],
+    "outcome": [
+      "The result is a creative portfolio focused on storytelling through visual and multimedia experiences."
+    ],
+    "pullQuote": "The interface needed to create room for the creative work to lead."
+  },
   "featured": false,
   "order": 6,
   "cover": {
     "image": "/images/projects/laughter.png",
     "alt": "Laughter Ephraim project identity",
     "tone": "amber"
+  },
+  "interactionPreview": {
+    "video": "/videos/projects/laughter-preview.webm",
+    "poster": "/images/projects/laughter.png",
+    "label": "Interaction preview",
+    "caption": "A short preview of the Laughter Ephraim creative portfolio experience."
   },
   "seo": {
     "title": "Laughter Ephraim | Cornerstone Ephraim",
