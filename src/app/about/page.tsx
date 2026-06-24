@@ -94,7 +94,7 @@ export default function AboutPage() {
               </Reveal>
             ))}
           </div>
-          <div className="mt-24 grid gap-16 border-t border-ink-primary/15 pt-12 lg:grid-cols-[1fr_1.6fr]">
+          <div className="mt-24 items-start grid gap-16 border-t border-ink-primary/15 pt-12 lg:grid-cols-[1fr_1.6fr]">
             <SectionLabel>Working style</SectionLabel>
             <Reveal>
               <div className="space-y-6">
@@ -140,7 +140,7 @@ export default function AboutPage() {
             </Reveal>
           </div>
 
-          <div className="mt-24 grid gap-12 border-t border-ink-primary/15 pt-12 lg:grid-cols-[0.9fr_1.5fr]">
+          <div className="mt-24 grid items-start gap-12 border-t border-ink-primary/15 pt-12 lg:grid-cols-[0.9fr_1.5fr]">
             <SectionLabel>What I enjoy building</SectionLabel>
             <Reveal>
               <div className="grid gap-4 sm:grid-cols-2">

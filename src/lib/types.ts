@@ -72,6 +72,7 @@ export type ExperienceItem = {
   description: string;
   url?: string;
   logo?: string;
+  color?: string;
 };
 
 export type ExperienceContent = { items: ExperienceItem[] };
@@ -99,10 +100,7 @@ export type NavigationContent = {
   footerDescription: string;
 };
 
-export type ProjectCategory =
-  | "Client Work"
-  | "Product"
-  | "Digital Experience";
+export type ProjectCategory = "Client Work" | "Product" | "Digital Experience";
 
 export type ProjectContent = {
   slug: string;
