@@ -3,6 +3,7 @@
   "title": "PeerShelf",
   "category": "Product",
   "industry": "Education Technology",
+  "website": "https://peershelf.vercel.app",
   "status": "Personal Project",
   "role": "Product Designer & Frontend Engineer",
   "summary": "PeerShelf is an academic collaboration platform designed to help students discover, share, and access educational resources.",
@@ -18,7 +19,14 @@
     "Resource sharing",
     "Educational technology"
   ],
-  "technologies": ["React", "TypeScript", "Tailwind CSS", "ShadCN UI", "Zustand"],
+  "technologies": [
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "ShadCN UI",
+    "Firebase",
+    "Zustand"
+  ],
   "caseStudy": {
     "overview": [
       "PeerShelf is an academic collaboration platform designed to help students discover, share, and access educational resources.",
