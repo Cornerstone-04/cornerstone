@@ -20,7 +20,7 @@
     "Student recruitment"
   ],
   "technologies": ["Next.js", "TypeScript", "Framer Motion", "Tailwind CSS"],
-  "published": false,
+  "published": true,
   "caseStudy": {
     "overview": [
       "Mesken Consulting supports students pursuing international education opportunities by connecting them with overseas institutions.",
@@ -46,7 +46,7 @@
     ],
     "pullQuote": "For education consulting, clarity is part of the product experience."
   },
-  "featured": false,
+  "featured": true,
   "order": 4,
   "cover": {
     "image": "/images/projects/mesken.png",
