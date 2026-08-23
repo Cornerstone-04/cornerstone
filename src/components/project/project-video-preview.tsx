@@ -70,7 +70,7 @@ export function ProjectVideoPreview({
         <button
           type="button"
           onClick={handleToggle}
-          className="absolute cursor-pointer left-5 top-5 inline-flex items-center gap-2 rounded-full bg-surface-light px-4 py-2 text-sm font-medium text-ink-primary transition-transform duration-300 hover:-translate-y-0.5 sm:left-8 sm:top-8"
+          className="absolute top-5 left-5 inline-flex cursor-pointer items-center gap-2 rounded-full bg-surface-light px-4 py-2 text-sm font-medium text-ink-primary transition-transform duration-300 hover:-translate-y-0.5 sm:top-8 sm:left-8"
           aria-label={
             active && playing
               ? "Pause interaction preview"
@@ -87,7 +87,7 @@ export function ProjectVideoPreview({
       </div>
 
       <div className="grid gap-4 p-5 sm:grid-cols-[0.8fr_1.2fr] sm:p-7">
-        <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-ink-inverse/45">
+        <p className="font-mono text-[10px] tracking-[0.12em] text-ink-inverse/45 uppercase">
           {preview.label ?? "Interaction preview"}
         </p>
         {preview.caption ? (

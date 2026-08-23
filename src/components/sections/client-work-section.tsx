@@ -22,7 +22,7 @@ export function ClientWorkSection({
             <h2>{heading}</h2>
           </Reveal>
         </div>
-        <div className="[&_.group_span]:border-ink-inverse/15 [&_.group_p]:text-ink-inverse/55">
+        <div className="[&_.group_p]:text-ink-inverse/55 [&_.group_span]:border-ink-inverse/15">
           <ProjectGrid projects={projects} />
         </div>
       </Container>

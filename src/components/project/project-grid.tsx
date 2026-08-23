@@ -9,7 +9,11 @@ export function ProjectGrid({
   featured?: boolean;
 }) {
   return (
-    <div className={featured ? "grid gap-20" : "grid gap-x-8 gap-y-16 md:grid-cols-2"}>
+    <div
+      className={
+        featured ? "grid gap-20" : "grid gap-x-8 gap-y-16 md:grid-cols-2"
+      }
+    >
       {projects.map((project, index) => (
         <ProjectCard
           key={project.slug}

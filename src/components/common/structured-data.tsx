@@ -1,10 +1,5 @@
 import Script from "next/script";
-import {
-  DEFAULT_SEO_IMAGE,
-  SITE_AUTHOR,
-  SITE_NAME,
-  SITE_URL,
-} from "@/lib/seo";
+import { DEFAULT_SEO_IMAGE, SITE_AUTHOR, SITE_NAME, SITE_URL } from "@/lib/seo";
 
 export default function StructuredData() {
   const personSchema = {

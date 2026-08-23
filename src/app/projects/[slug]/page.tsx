@@ -4,7 +4,11 @@ import { ContactSection } from "@/components/sections/contact-section";
 import { ProjectDetail } from "@/components/project/project-detail";
 import { ProjectHero } from "@/components/project/project-hero";
 import { ProjectNavigation } from "@/components/project/project-navigation";
-import { getAllProjects, getHomeContent, getProjectBySlug } from "@/lib/content";
+import {
+  getAllProjects,
+  getHomeContent,
+  getProjectBySlug,
+} from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
 
 export function generateStaticParams() {

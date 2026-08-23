@@ -12,8 +12,11 @@ export function ProjectNavigation({
   projects: ProjectContent[];
 }) {
   const ordered = [...projects].sort((a, b) => a.order - b.order);
-  const currentIndex = ordered.findIndex((project) => project.slug === current.slug);
-  const previous = ordered[(currentIndex - 1 + ordered.length) % ordered.length];
+  const currentIndex = ordered.findIndex(
+    (project) => project.slug === current.slug,
+  );
+  const previous =
+    ordered[(currentIndex - 1 + ordered.length) % ordered.length];
   const next = ordered[(currentIndex + 1) % ordered.length];
 
   return (
@@ -21,7 +24,11 @@ export function ProjectNavigation({
       <Container>
         <Reveal>
           <div className="grid gap-4 border-t border-ink-primary/15 pt-8 md:grid-cols-2">
-            <ProjectNavLink direction="Previous project" project={previous} previous />
+            <ProjectNavLink
+              direction="Previous project"
+              project={previous}
+              previous
+            />
             <ProjectNavLink direction="Next project" project={next} />
           </div>
         </Reveal>
@@ -46,9 +53,10 @@ function ProjectNavLink({
         previous ? "" : "md:text-right"
       }`}
     >
-      <p className={`flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.12em] text-ink-muted ${
-        previous ? "" : "md:justify-end"
-      }`}
+      <p
+        className={`flex items-center gap-2 font-mono text-[10px] tracking-[0.12em] text-ink-muted uppercase ${
+          previous ? "" : "md:justify-end"
+        }`}
       >
         {previous ? (
           <ArrowLeft className="size-4 transition-transform duration-500 group-hover:-translate-x-1" />
@@ -58,10 +66,12 @@ function ProjectNavLink({
           <ArrowRight className="size-4 transition-transform duration-500 group-hover:translate-x-1" />
         ) : null}
       </p>
-      <h2 className="mt-6 text-[clamp(2rem,4vw,4rem)] font-medium leading-[0.92] tracking-[-0.055em]">
+      <h2 className="mt-6 text-[clamp(2rem,4vw,4rem)] leading-[0.92] font-medium tracking-[-0.055em]">
         {project.title}
       </h2>
-      <p className="mt-4 text-sm leading-6 text-ink-muted">{project.industry}</p>
+      <p className="mt-4 text-sm leading-6 text-ink-muted">
+        {project.industry}
+      </p>
     </Link>
   );
 }

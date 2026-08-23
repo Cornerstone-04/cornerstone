@@ -88,25 +88,31 @@ export default function MobileNav({
           aria-modal="true"
           aria-label="Mobile navigation"
           initial={
-            shouldReduceMotion ? { opacity: 0 } : { clipPath: "inset(0 0 100% 0)" }
+            shouldReduceMotion
+              ? { opacity: 0 }
+              : { clipPath: "inset(0 0 100% 0)" }
           }
           animate={
-            shouldReduceMotion ? { opacity: 1 } : { clipPath: "inset(0 0 0% 0)" }
+            shouldReduceMotion
+              ? { opacity: 1 }
+              : { clipPath: "inset(0 0 0% 0)" }
           }
           exit={
-            shouldReduceMotion ? { opacity: 0 } : { clipPath: "inset(0 0 100% 0)" }
+            shouldReduceMotion
+              ? { opacity: 0 }
+              : { clipPath: "inset(0 0 100% 0)" }
           }
           transition={{
             duration: shouldReduceMotion ? 0.01 : 0.55,
             ease: [0.76, 0, 0.24, 1],
           }}
-          className="fixed inset-0 z-[60] flex min-h-dvh flex-col bg-canvas-dark px-5 pb-8 text-canvas-light sm:px-8 md:hidden"
+          className="fixed inset-0 z-[60] flex min-h-dvh flex-col overflow-y-auto bg-canvas-dark px-5 pb-8 text-canvas-light sm:px-8 md:hidden"
         >
-          <div className="flex items-center justify-between h-20">
+          <div className="flex h-20 items-center justify-between">
             <Link
               href="/"
               onClick={onCloseAction}
-              className="text-lg font-semibold capitalize tracking-[-0.035em]"
+              className="text-lg font-semibold tracking-[-0.035em] capitalize"
             >
               {content.brand}
             </Link>
@@ -155,7 +161,7 @@ export default function MobileNav({
                   <Link
                     href={item.href}
                     onClick={onCloseAction}
-                    className={`block text-center text-[clamp(3.25rem,15vw,5.6rem)] font-black capitalize leading-[0.82] tracking-[-0.08em] ${
+                    className={`block text-center text-[clamp(3.25rem,15vw,5.6rem)] leading-[0.82] font-black tracking-[-0.08em] capitalize ${
                       active ? "text-canvas-light" : "text-ink-secondary"
                     }`}
                   >
@@ -171,7 +177,7 @@ export default function MobileNav({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 18 }}
             transition={{ delay: 0.5, duration: 0.35 }}
-            className="pb-3 text-center text-sm font-semibold capitalize tracking-[-0.02em]"
+            className="pb-3 text-center text-sm font-semibold tracking-[-0.02em] capitalize"
           >
             ©2026 {content.brand}
           </motion.p>

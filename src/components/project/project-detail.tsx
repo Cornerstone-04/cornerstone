@@ -1,3 +1,5 @@
+import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 import { Container } from "@/components/layout/container";
 import { ProjectCover } from "@/components/project/project-cover";
 import { Reveal } from "@/components/ui/reveal";
@@ -7,7 +9,7 @@ import type { ProjectContent } from "@/lib/types";
 export function ProjectDetail({ project }: { project: ProjectContent }) {
   const caseStudy = project.caseStudy ?? {
     overview: [project.summary],
-    role: project.responsibilities,
+    contribution: project.responsibilities,
     challenges: project.highlights,
     approach: project.responsibilities,
     outcome: [project.shortDescription],
@@ -25,7 +27,7 @@ export function ProjectDetail({ project }: { project: ProjectContent }) {
                   key={paragraph}
                   className={
                     index === 0
-                      ? "text-[clamp(2.35rem,4.8vw,5.2rem)] font-medium leading-[1] tracking-[-0.06em]"
+                      ? "text-[clamp(2.35rem,4.8vw,5.2rem)] leading-[1] font-medium tracking-[-0.06em]"
                       : "max-w-3xl text-lg leading-8 text-ink-muted sm:text-xl sm:leading-9"
                   }
                 >
@@ -38,7 +40,7 @@ export function ProjectDetail({ project }: { project: ProjectContent }) {
 
         {caseStudy.pullQuote ? (
           <Reveal>
-            <blockquote className="my-24 border-y border-ink-primary/15 py-10 text-[clamp(2.4rem,5vw,5.8rem)] font-medium leading-[0.95] tracking-[-0.065em] sm:my-32 sm:py-14">
+            <blockquote className="my-24 border-y border-ink-primary/15 py-10 text-[clamp(2.4rem,5vw,5.8rem)] leading-[0.95] font-medium tracking-[-0.065em] sm:my-32 sm:py-14">
               “{caseStudy.pullQuote}”
             </blockquote>
           </Reveal>
@@ -46,7 +48,10 @@ export function ProjectDetail({ project }: { project: ProjectContent }) {
 
         <div className="grid gap-16 lg:grid-cols-[1fr_1.2fr] lg:gap-20">
           <Reveal>
-            <StickyPanel project={project} role={caseStudy.role} />
+            <StickyPanel
+              project={project}
+              contribution={caseStudy.contribution}
+            />
           </Reveal>
 
           <div className="space-y-20 sm:space-y-28">
@@ -82,15 +87,15 @@ export function ProjectDetail({ project }: { project: ProjectContent }) {
 
 function StickyPanel({
   project,
-  role,
+  contribution,
 }: {
   project: ProjectContent;
-  role: string[];
+  contribution: string[];
 }) {
   return (
     <aside className="lg:sticky lg:top-28">
       <div className="rounded-[28px] border border-ink-primary/10 bg-surface-light p-6 sm:p-8">
-        <DetailList title="Role" items={role} />
+        <DetailList title="Contribution" items={contribution} />
         <div className="mt-10">
           <DetailList
             title="Technologies"
@@ -98,6 +103,11 @@ function StickyPanel({
             compact
           />
         </div>
+        {project.credits?.length ? (
+          <div className="mt-10">
+            <CreditList credits={project.credits} />
+          </div>
+        ) : null}
       </div>
     </aside>
   );
@@ -118,11 +128,11 @@ function CaseSection({
     <Reveal>
       <section className="border-t border-ink-primary/15 pt-8">
         <div className="grid gap-8 md:grid-cols-[0.7fr_1.3fr]">
-          <h2 className="font-mono text-[11px] uppercase tracking-[0.12em] text-ink-muted">
+          <h2 className="font-mono text-[11px] tracking-[0.12em] text-ink-muted uppercase">
             {label}
           </h2>
           <div>
-            <h3 className="max-w-2xl text-[clamp(2rem,4vw,4rem)] font-medium leading-[0.95] tracking-[-0.055em]">
+            <h3 className="max-w-2xl text-[clamp(2rem,4vw,4rem)] leading-[0.95] font-medium tracking-[-0.055em]">
               {title}
             </h3>
             <div className="mt-8 space-y-5">
@@ -157,7 +167,7 @@ function DetailList({
 }) {
   return (
     <div>
-      <h2 className="font-mono text-[11px] uppercase tracking-[0.12em] text-ink-muted">
+      <h2 className="font-mono text-[11px] tracking-[0.12em] text-ink-muted uppercase">
         {title}
       </h2>
       <ul
@@ -171,7 +181,7 @@ function DetailList({
           compact ? (
             <li
               key={item}
-              className="rounded-full border border-ink-primary/10 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.08em]"
+              className="rounded-full border border-ink-primary/10 px-3 py-1.5 font-mono text-[10px] tracking-[0.08em] uppercase"
             >
               {item}
             </li>
@@ -187,6 +197,44 @@ function DetailList({
             </li>
           ),
         )}
+      </ul>
+    </div>
+  );
+}
+
+function CreditList({
+  credits,
+}: {
+  credits: NonNullable<ProjectContent["credits"]>;
+}) {
+  return (
+    <div>
+      <h2 className="font-mono text-[11px] tracking-[0.12em] text-ink-muted uppercase">
+        Credits
+      </h2>
+      <ul className="mt-5 space-y-3">
+        {credits.map((credit) => (
+          <li key={`${credit.role}-${credit.name}`}>
+            <p className="font-mono text-[10px] tracking-[0.1em] text-ink-muted uppercase">
+              {credit.role}
+            </p>
+            {credit.href ? (
+              <Link
+                href={credit.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-1 inline-flex items-center gap-2 text-sm font-medium text-ink-primary transition-colors hover:text-ink-muted"
+              >
+                {credit.name}
+                <ArrowUpRight className="size-3.5" />
+              </Link>
+            ) : (
+              <p className="mt-1 text-sm font-medium text-ink-primary">
+                {credit.name}
+              </p>
+            )}
+          </li>
+        ))}
       </ul>
     </div>
   );

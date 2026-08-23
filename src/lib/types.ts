@@ -118,9 +118,14 @@ export type ProjectContent = {
   responsibilities: string[];
   highlights: string[];
   technologies: string[];
+  credits?: Array<{
+    role: string;
+    name: string;
+    href?: string;
+  }>;
   caseStudy?: {
     overview: string[];
-    role: string[];
+    contribution: string[];
     challenges: string[];
     approach: string[];
     outcome: string[];

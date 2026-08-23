@@ -103,11 +103,11 @@ export default function ContactForm({
         noValidate
         aria-busy={submitting}
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           <div className="flex flex-col gap-2">
             <Label
               htmlFor="firstName"
-              className="font-mono text-[10px] uppercase tracking-[0.1em] text-ink-muted"
+              className="font-mono text-[10px] tracking-[0.1em] text-ink-muted uppercase"
             >
               First Name
             </Label>
@@ -128,10 +128,7 @@ export default function ContactForm({
               }
             />
             {errors.firstName && (
-              <p
-                id="firstName-error"
-                className="text-xs text-red-600"
-              >
+              <p id="firstName-error" className="text-xs text-red-600">
                 {errors.firstName}
               </p>
             )}
@@ -140,7 +137,7 @@ export default function ContactForm({
           <div className="flex flex-col gap-2">
             <Label
               htmlFor="lastName"
-              className="font-mono text-[10px] uppercase tracking-[0.1em] text-ink-muted"
+              className="font-mono text-[10px] tracking-[0.1em] text-ink-muted uppercase"
             >
               Last Name
             </Label>
@@ -159,10 +156,7 @@ export default function ContactForm({
               aria-describedby={errors.lastName ? "lastName-error" : undefined}
             />
             {errors.lastName && (
-              <p
-                id="lastName-error"
-                className="text-xs text-red-600"
-              >
+              <p id="lastName-error" className="text-xs text-red-600">
                 {errors.lastName}
               </p>
             )}
@@ -170,7 +164,10 @@ export default function ContactForm({
         </div>
 
         <div className="flex flex-col gap-2">
-          <Label htmlFor="email" className="font-mono text-[10px] uppercase tracking-[0.1em] text-ink-muted">
+          <Label
+            htmlFor="email"
+            className="font-mono text-[10px] tracking-[0.1em] text-ink-muted uppercase"
+          >
             Email
           </Label>
           <Input
@@ -188,17 +185,17 @@ export default function ContactForm({
             aria-describedby={errors.email ? "email-error" : undefined}
           />
           {errors.email && (
-            <p
-              id="email-error"
-              className="text-xs text-red-600"
-            >
+            <p id="email-error" className="text-xs text-red-600">
               {errors.email}
             </p>
           )}
         </div>
 
         <div className="flex flex-col gap-2">
-          <Label htmlFor="message" className="font-mono text-[10px] uppercase tracking-[0.1em] text-ink-muted">
+          <Label
+            htmlFor="message"
+            className="font-mono text-[10px] tracking-[0.1em] text-ink-muted uppercase"
+          >
             Message
           </Label>
           <Textarea
@@ -214,10 +211,7 @@ export default function ContactForm({
             aria-describedby={errors.message ? "message-error" : undefined}
           />
           {errors.message && (
-            <p
-              id="message-error"
-              className="text-xs text-red-600"
-            >
+            <p id="message-error" className="text-xs text-red-600">
               {errors.message}
             </p>
           )}

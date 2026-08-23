@@ -16,7 +16,9 @@ export default function Footer({
       <Container>
         <div className="grid gap-12 border-b border-ink-inverse/15 pb-16 md:grid-cols-4">
           <div>
-            <p className="text-xl font-semibold tracking-[-0.04em]">{navigation.brand}</p>
+            <p className="text-xl font-semibold tracking-[-0.04em]">
+              {navigation.brand}
+            </p>
             <p className="mt-4 max-w-xs text-sm leading-6 text-ink-inverse/50">
               {navigation.footerDescription}
             </p>
@@ -25,7 +27,11 @@ export default function Footer({
             <p className="footer-label">Navigation</p>
             <div className="mt-5 flex flex-col gap-3">
               {navigation.items.map((item) => (
-                <Link key={item.href} href={item.href} className="text-sm text-ink-inverse/70 hover:text-ink-inverse">
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="text-sm text-ink-inverse/70 hover:text-ink-inverse"
+                >
                   {item.label}
                 </Link>
               ))}
@@ -53,7 +59,7 @@ export default function Footer({
               href={`mailto:${contact.email}?subject=${encodeURIComponent(emailSubject)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-5 block break-all text-sm text-ink-inverse/70 hover:text-ink-inverse"
+              className="mt-5 block text-sm break-all text-ink-inverse/70 hover:text-ink-inverse"
             >
               {contact.email}
             </Link>
@@ -76,7 +82,7 @@ export default function Footer({
             </Link>
           </div>
         </div>
-        <div className="flex flex-col gap-3 pt-7 font-mono text-[10px] uppercase tracking-[0.1em] text-ink-inverse/55 sm:flex-row sm:justify-between">
+        <div className="flex flex-col gap-3 pt-7 font-mono text-[10px] tracking-[0.1em] text-ink-inverse/55 uppercase sm:flex-row sm:justify-between">
           <span>© {new Date().getFullYear()} Cornerstone Ephraim</span>
           <span>Designed and built with intention</span>
         </div>

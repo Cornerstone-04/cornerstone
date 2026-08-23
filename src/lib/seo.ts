@@ -40,7 +40,9 @@ export function buildMetadata({
   type = "website",
   noIndex = false,
 }: BuildMetadataOptions): Metadata {
-  const mergedKeywords = Array.from(new Set([...DEFAULT_KEYWORDS, ...keywords]));
+  const mergedKeywords = Array.from(
+    new Set([...DEFAULT_KEYWORDS, ...keywords]),
+  );
 
   return {
     title,

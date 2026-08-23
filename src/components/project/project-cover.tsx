@@ -3,18 +3,13 @@ import { cn } from "@/lib/utils";
 import type { ProjectContent } from "@/lib/types";
 
 const tones: Record<string, string> = {
-  oxide:
-    "from-cover-oxide-start via-cover-oxide-mid to-cover-oxide-end",
-  signal:
-    "from-cover-signal-start via-cover-signal-mid to-cover-signal-end",
-  paper:
-    "from-cover-paper-start via-cover-paper-mid to-cover-paper-end",
+  oxide: "from-cover-oxide-start via-cover-oxide-mid to-cover-oxide-end",
+  signal: "from-cover-signal-start via-cover-signal-mid to-cover-signal-end",
+  paper: "from-cover-paper-start via-cover-paper-mid to-cover-paper-end",
   sage: "from-cover-sage-start via-cover-sage-mid to-cover-sage-end",
   rose: "from-cover-rose-start via-cover-rose-mid to-cover-rose-end",
-  amber:
-    "from-cover-amber-start via-cover-amber-mid to-cover-amber-end",
-  violet:
-    "from-cover-violet-start via-cover-violet-mid to-cover-violet-end",
+  amber: "from-cover-amber-start via-cover-amber-mid to-cover-amber-end",
+  violet: "from-cover-violet-start via-cover-violet-mid to-cover-violet-end",
   blue: "from-cover-blue-start via-cover-blue-mid to-cover-blue-end",
 };
 
@@ -49,30 +44,30 @@ export function ProjectCover({
         </>
       ) : (
         <>
-          <div className="cover-orbit absolute -right-[8%] -top-[25%] size-[70%] rounded-full border border-ink-inverse/20" />
+          <div className="cover-orbit absolute -top-[25%] -right-[8%] size-[70%] rounded-full border border-ink-inverse/20" />
           <div className="cover-orbit-reverse absolute -bottom-[45%] left-[8%] size-[80%] rounded-full border border-ink-inverse/15" />
-          <div className="cover-grid absolute inset-0 opacity-30 [background-image:linear-gradient(color-mix(in_srgb,var(--color-ink-inverse)_12%,transparent)_1px,transparent_1px),linear-gradient(90deg,color-mix(in_srgb,var(--color-ink-inverse)_12%,transparent)_1px,transparent_1px)] [background-size:48px_48px]" />
+          <div className="cover-grid absolute inset-0 [background-image:linear-gradient(color-mix(in_srgb,var(--color-ink-inverse)_12%,transparent)_1px,transparent_1px),linear-gradient(90deg,color-mix(in_srgb,var(--color-ink-inverse)_12%,transparent)_1px,transparent_1px)] [background-size:48px_48px] opacity-30" />
         </>
       )}
 
       <div className="relative flex h-full flex-col justify-between">
-        <div className="flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.14em] text-ink-inverse/75">
+        <div className="flex items-center justify-between font-mono text-[10px] tracking-[0.14em] text-ink-inverse/75 uppercase">
           <span>{project.industry}</span>
           <span>{String(project.order).padStart(2, "0")}</span>
         </div>
 
         {!project.cover.image && (
           <div className="absolute inset-0 flex items-center justify-center">
-            <span className="font-mono text-[clamp(5rem,14vw,12rem)] font-medium uppercase leading-none tracking-[-0.08em] text-ink-inverse/15 transition-transform duration-[1200ms] ease-out group-hover/cover:scale-[1.12]">
+            <span className="font-mono text-[clamp(5rem,14vw,12rem)] leading-none font-medium tracking-[-0.08em] text-ink-inverse/15 uppercase transition-transform duration-[1200ms] ease-out group-hover/cover:scale-[1.12]">
               {project.title
                 .split(" ")
                 .map((word) => word[0])
-              .join("")}
+                .join("")}
             </span>
           </div>
         )}
 
-        <p className="max-w-[80%] text-[clamp(1.6rem,4vw,4.5rem)] font-medium leading-[0.92] tracking-[-0.055em] text-ink-inverse drop-shadow-sm transition-transform duration-[900ms] ease-out group-hover/cover:-translate-y-2">
+        <p className="max-w-[80%] text-[clamp(1.6rem,4vw,4.5rem)] leading-[0.92] font-medium tracking-[-0.055em] text-ink-inverse drop-shadow-sm transition-transform duration-[900ms] ease-out group-hover/cover:-translate-y-2">
           {project.title}
         </p>
       </div>

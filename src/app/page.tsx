@@ -37,7 +37,8 @@ export default function Home() {
     .filter((project) => project !== undefined);
   const clientProjects = allProjects.filter(
     (project) =>
-      project.category === "Client Work" || project.category === "Digital Experience",
+      project.category === "Client Work" ||
+      project.category === "Digital Experience",
   );
 
   return (

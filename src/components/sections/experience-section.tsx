@@ -28,7 +28,7 @@ export function ExperienceSection({
           {experience.items.map((item, index) => (
             <Reveal key={item.company} delay={index * 0.06}>
               <article className="group grid gap-5 border-b border-ink-primary/15 py-8 md:grid-cols-[0.75fr_1.25fr_2fr_auto] md:items-start md:py-10">
-                <p className="font-mono text-xs uppercase tracking-[0.12em] text-ink-muted">
+                <p className="font-mono text-xs tracking-[0.12em] text-ink-muted uppercase">
                   {String(index + 1).padStart(2, "0")}
                 </p>
                 <div className="flex items-center gap-4">
@@ -42,8 +42,7 @@ export function ExperienceSection({
                         alt={`${item.company} logo`}
                         width={96}
                         height={48}
-                        className="max-h-7 w-auto object-contain  transition duration-300 group-hover:opacity-100"
-                        
+                        className="max-h-7 w-auto object-contain transition duration-300 group-hover:opacity-100"
                       />
                     </div>
                   ) : null}
@@ -68,7 +67,7 @@ export function ExperienceSection({
                     <ArrowUpRight className="size-4" />
                   </Link>
                 ) : (
-                  <div className="rounded-full border border-ink-primary/15 size-10 transition-colors hover:bg-ink-primary hover:text-ink-inverse" />
+                  <div className="size-10 rounded-full border border-ink-primary/15 transition-colors hover:bg-ink-primary hover:text-ink-inverse" />
                 )}
               </article>
             </Reveal>

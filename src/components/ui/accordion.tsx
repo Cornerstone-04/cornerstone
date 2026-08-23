@@ -22,7 +22,7 @@ export function Accordion({ handleToggle, active, exp }: AccordionProps) {
   // Split summary into sentences for line breaks
   const sentences = useMemo(
     () => summary.split(/(?<=\.)\s*/).filter((s) => s.trim().length > 0),
-    [summary]
+    [summary],
   );
 
   // measure content height for smooth transitions
@@ -42,7 +42,7 @@ export function Accordion({ handleToggle, active, exp }: AccordionProps) {
 
   const period = useMemo(
     () => `${startDate} - ${endDate || "Present"}`,
-    [startDate, endDate]
+    [startDate, endDate],
   );
 
   // keyboard a11y for header
@@ -55,7 +55,7 @@ export function Accordion({ handleToggle, active, exp }: AccordionProps) {
 
   const panelId = useMemo(
     () => `acc-panel-${position.replace(/\s+/g, "-").toLowerCase()}`,
-    [position]
+    [position],
   );
 
   return (
@@ -70,14 +70,14 @@ export function Accordion({ handleToggle, active, exp }: AccordionProps) {
         aria-controls={panelId}
         onClick={handleToggle}
         onKeyDown={onKeyDown}
-        className="flex cursor-pointer items-center justify-between rounded-lg p-3 text-xs md:text-sm transition-all ease-linear hover:bg-zinc-100 dark:hover:bg-[#0f0f0f]"
+        className="flex cursor-pointer items-center justify-between rounded-lg p-3 text-xs transition-all ease-linear hover:bg-zinc-100 md:text-sm dark:hover:bg-[#0f0f0f]"
       >
         <h4 className="mb-0 font-medium">
           {position} <span className="opacity-70">@ {company}</span>
         </h4>
 
         <div className="flex items-center gap-3">
-          <h5 className="mb-0 whitespace-nowrap text-xs opacity-80">
+          <h5 className="mb-0 text-xs whitespace-nowrap opacity-80">
             {period}
           </h5>
         </div>
@@ -90,7 +90,7 @@ export function Accordion({ handleToggle, active, exp }: AccordionProps) {
       >
         <div ref={contentRef} className="p-3">
           {/* Summary with line breaks */}
-          <p className="text-xs md:text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed text-justify">
+          <p className="text-justify text-xs leading-relaxed text-zinc-700 md:text-sm dark:text-zinc-300">
             {sentences.map((sentence, index) => (
               <React.Fragment key={index}>
                 {sentence}

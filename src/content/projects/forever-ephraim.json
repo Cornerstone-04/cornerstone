@@ -18,24 +18,31 @@
   "caseStudy": {
     "overview": [
       "Forever Ephraim is a content-focused portfolio experience designed to showcase writing, marketing, and digital storytelling.",
-      "The experience needed to make content presentation feel clear, personal, and easy to browse."
+      "The experience needed to make content presentation feel clear, personal, and easy to browse.",
+      "The site sits closer to a publishing surface than a traditional portfolio, so the structure had to support writing, positioning, and storytelling without overcomplicating the interface."
     ],
-    "role": [
-      "Frontend development",
-      "Content presentation",
-      "Experience design"
+    "contribution": [
+      "Built the frontend with Next.js, TypeScript, Tailwind CSS, and Framer Motion.",
+      "Structured the experience around content hierarchy, storytelling, and personal publishing.",
+      "Implemented responsive layouts that keep writing and marketing content readable across screen sizes.",
+      "Focused the interface on clear content presentation without making the experience feel crowded."
     ],
     "challenges": [
       "The project needed to support writing, marketing, and digital storytelling without making the experience feel crowded.",
-      "The content needed a structure that could stay readable and flexible."
+      "The content needed a structure that could stay readable and flexible.",
+      "The design had to leave enough room for the writing to carry the experience.",
+      "The site also needed responsive layouts that would keep longer text sections comfortable on mobile and desktop."
     ],
     "approach": [
-      "Focused on content hierarchy and clean presentation.",
-      "Built a digital publishing experience around storytelling.",
-      "Used responsive layouts to keep the work readable across screen sizes."
+      "Focused the build around content hierarchy, clean presentation, and simple navigation.",
+      "Built a digital publishing experience where storytelling stays central and the interface supports the message.",
+      "Used responsive layouts to keep the work readable across screen sizes.",
+      "Applied restrained motion and spacing so the experience could feel personal without becoming visually noisy."
     ],
     "outcome": [
-      "The result is a digital experience built around content, storytelling, and personal publishing."
+      "The result is a digital experience built around content, storytelling, and personal publishing.",
+      "The website gives the brand a clearer home for writing and marketing work.",
+      "Visitors can move through the experience with less friction because the content is presented with stronger hierarchy and breathing room."
     ],
     "pullQuote": "Content-led websites work best when the interface gets out of the way."
   },

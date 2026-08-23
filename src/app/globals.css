@@ -60,10 +60,13 @@
 }
 
 html {
-  scroll-behavior: smooth;
   background: var(--dark);
   scrollbar-color: var(--color-brand-accent) var(--color-canvas-dark);
   scrollbar-width: thin;
+}
+
+html.route-scroll-reset {
+  scroll-behavior: auto !important;
 }
 
 body {
@@ -84,7 +87,11 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: color-mix(in srgb, var(--color-brand-accent) 82%, var(--color-canvas-dark));
+  background: color-mix(
+    in srgb,
+    var(--color-brand-accent) 82%,
+    var(--color-canvas-dark)
+  );
   border: 2px solid var(--color-canvas-dark);
   border-radius: 999px;
 }
@@ -124,7 +131,8 @@ main:focus {
   padding: 0.75rem 1rem;
   font-size: 0.875rem;
   font-weight: 650;
-  box-shadow: 0 18px 40px color-mix(in srgb, var(--color-ink-primary) 20%, transparent);
+  box-shadow: 0 18px 40px
+    color-mix(in srgb, var(--color-ink-primary) 20%, transparent);
   transition: transform 180ms ease;
 }
 
@@ -196,7 +204,8 @@ main:focus {
 }
 
 .button-ghost-dark {
-  border: 1px solid color-mix(in srgb, var(--color-ink-inverse) 20%, transparent);
+  border: 1px solid
+    color-mix(in srgb, var(--color-ink-inverse) 20%, transparent);
   color: var(--color-ink-inverse);
 }
 
@@ -241,14 +250,24 @@ main:focus {
       var(--color-surface-dark) 13.5% 14%,
       transparent 14.5%
     ),
-    radial-gradient(circle at 70% 35%, transparent 0 20%, var(--color-border-dark) 20.5% 21.5%, transparent 22%),
+    radial-gradient(
+      circle at 70% 35%,
+      transparent 0 20%,
+      var(--color-border-dark) 20.5% 21.5%,
+      transparent 22%
+    ),
     radial-gradient(
       circle at 35% 80%,
       transparent 0 28%,
       var(--color-canvas-dark) 28.5% 29.5%,
       transparent 30%
     ),
-    linear-gradient(135deg, var(--color-art-soft), var(--color-canvas-light) 42%, var(--color-art-muted) 100%);
+    linear-gradient(
+      135deg,
+      var(--color-art-soft),
+      var(--color-canvas-light) 42%,
+      var(--color-art-muted) 100%
+    );
 }
 
 .abstract-art::before,
