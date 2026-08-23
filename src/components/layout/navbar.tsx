@@ -53,6 +53,7 @@ export default function Navbar({ content }: { content: NavigationContent }) {
         <div className="hidden items-center gap-8 md:flex">
           {content.items.map((item) => {
             const active = activeHref(item.href);
+
             return (
               <Link
                 key={item.href}

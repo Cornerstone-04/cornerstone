@@ -2,13 +2,11 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Footer from "@/components/layout/footer";
 import Navbar from "@/components/layout/navbar";
+import RouteScrollManager from "@/components/layout/route-scroll-manager";
 import ScrollProgress from "@/components/layout/scroll-progress";
 import ScrollToTop from "@/components/layout/scroll-to-top";
 import StructuredData from "@/components/common/structured-data";
-import {
-  getContactContent,
-  getNavigationContent,
-} from "@/lib/content";
+import { getContactContent, getNavigationContent } from "@/lib/content";
 import {
   DEFAULT_SEO_IMAGE,
   DEFAULT_SEO_MONOGRAM,
@@ -67,6 +65,7 @@ export default function RootLayout({
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>
+        <RouteScrollManager />
         <ScrollProgress />
         <Navbar content={navigation} />
         <main id="main-content" tabIndex={-1}>

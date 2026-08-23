@@ -38,9 +38,11 @@ export default function AboutPage() {
     <>
       <section className="bg-canvas-dark py-20 text-ink-inverse sm:py-28">
         <Container>
-          <SectionLabel className="text-ink-inverse/60">{content.label}</SectionLabel>
+          <SectionLabel className="text-ink-inverse/60">
+            {content.label}
+          </SectionLabel>
           <Reveal>
-            <h1 className="mt-16 max-w-6xl text-[clamp(4rem,9vw,9rem)] font-medium leading-[0.86] tracking-[-0.07em]">
+            <h1 className="mt-16 max-w-6xl text-[clamp(4rem,9vw,9rem)] leading-[0.86] font-medium tracking-[-0.07em]">
               {content.heading}
             </h1>
           </Reveal>
@@ -92,7 +94,7 @@ export default function AboutPage() {
           <div className="grid border-t border-ink-primary/15 md:grid-cols-2 lg:grid-cols-4">
             {content.principles.map((principle, index) => (
               <Reveal key={principle.title} delay={index * 0.06}>
-                <article className="min-h-64 border-b border-ink-primary/15 py-8 md:border-b-0 md:border-r md:px-8 first:pl-0 last:border-r-0">
+                <article className="min-h-64 border-b border-ink-primary/15 py-8 first:pl-0 last:border-r-0 md:border-r md:border-b-0 md:px-8">
                   <p className="font-mono text-[10px] text-ink-secondary">
                     {String(index + 1).padStart(2, "0")}
                   </p>
@@ -106,12 +108,15 @@ export default function AboutPage() {
               </Reveal>
             ))}
           </div>
-          <div className="mt-24 items-start grid gap-16 border-t border-ink-primary/15 pt-12 lg:grid-cols-[1fr_1.6fr]">
+          <div className="mt-24 grid items-start gap-16 border-t border-ink-primary/15 pt-12 lg:grid-cols-[1fr_1.6fr]">
             <SectionLabel>Working style</SectionLabel>
             <Reveal>
               <div className="space-y-6">
                 {content.workingStyle.map((item) => (
-                  <p key={item} className="max-w-3xl text-xl leading-9 text-ink-muted sm:text-2xl sm:leading-10">
+                  <p
+                    key={item}
+                    className="max-w-3xl text-xl leading-9 text-ink-muted sm:text-2xl sm:leading-10"
+                  >
                     {item}
                   </p>
                 ))}
@@ -127,7 +132,7 @@ export default function AboutPage() {
                   {content.industries.map((industry) => (
                     <span
                       key={industry}
-                      className="rounded-full border border-ink-primary/15 px-4 py-2 font-mono text-[11px] uppercase tracking-[0.08em]"
+                      className="rounded-full border border-ink-primary/15 px-4 py-2 font-mono text-[11px] tracking-[0.08em] uppercase"
                     >
                       {industry}
                     </span>
@@ -142,7 +147,7 @@ export default function AboutPage() {
                   {content.tools.map((tool) => (
                     <span
                       key={tool}
-                      className="rounded-full border border-ink-primary/15 px-4 py-2 font-mono text-[11px] uppercase tracking-[0.08em]"
+                      className="rounded-full border border-ink-primary/15 px-4 py-2 font-mono text-[11px] tracking-[0.08em] uppercase"
                     >
                       {tool}
                     </span>
@@ -157,11 +162,14 @@ export default function AboutPage() {
             <Reveal>
               <div className="grid gap-4 sm:grid-cols-2">
                 {content.enjoyBuilding.map((item, index) => (
-                  <div key={item} className="rounded-[24px] border border-ink-primary/10 p-5 sm:p-6">
-                    <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-ink-secondary">
+                  <div
+                    key={item}
+                    className="rounded-[24px] border border-ink-primary/10 p-5 sm:p-6"
+                  >
+                    <p className="font-mono text-[10px] tracking-[0.12em] text-ink-secondary uppercase">
                       {String(index + 1).padStart(2, "0")}
                     </p>
-                    <p className="mt-8 text-xl font-medium leading-7 tracking-[-0.035em]">
+                    <p className="mt-8 text-xl leading-7 font-medium tracking-[-0.035em]">
                       {item}
                     </p>
                   </div>

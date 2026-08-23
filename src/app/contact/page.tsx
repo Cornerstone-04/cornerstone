@@ -32,7 +32,7 @@ export default function ContactPage() {
         <div className="mt-14 grid gap-16 lg:grid-cols-[1fr_0.85fr] lg:items-start">
           <Reveal>
             <div>
-              <h1 className="max-w-2xl text-[clamp(3.5rem,7vw,7rem)] font-medium leading-[0.88] tracking-[-0.065em]">
+              <h1 className="max-w-2xl text-[clamp(3.5rem,7vw,7rem)] leading-[0.88] font-medium tracking-[-0.065em]">
                 {content.heading}
               </h1>
               <p className="mt-8 max-w-md text-lg leading-8 text-ink-muted">
@@ -49,7 +49,7 @@ export default function ContactPage() {
                   href={`mailto:${content.email}?subject=${encodeURIComponent(emailSubject)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 break-all text-xl font-medium tracking-[-0.035em] sm:text-2xl"
+                  className="inline-flex items-center gap-2 text-xl font-medium tracking-[-0.035em] break-all sm:text-2xl"
                 >
                   {content.email}
                   <ArrowUpRight className="size-5" />
@@ -82,7 +82,7 @@ export default function ContactPage() {
               </ContactRow>
 
               <div className="pt-7">
-                <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-ink-muted">
+                <p className="font-mono text-[10px] tracking-[0.12em] text-ink-muted uppercase">
                   Elsewhere
                 </p>
                 <div className="mt-5 flex flex-wrap gap-4">
@@ -117,7 +117,7 @@ function ContactRow({
 }) {
   return (
     <div className="border-b border-ink-primary/10 py-7 first:pt-0">
-      <p className="mb-3 font-mono text-[10px] uppercase tracking-[0.12em] text-ink-muted">
+      <p className="mb-3 font-mono text-[10px] tracking-[0.12em] text-ink-muted uppercase">
         {label}
       </p>
       {children}

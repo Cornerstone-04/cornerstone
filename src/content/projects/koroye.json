@@ -24,25 +24,31 @@
   "caseStudy": {
     "overview": [
       "A digital platform for industrial designer, researcher, and product strategist Keniye Koroye.",
-      "The objective was to create a portfolio that reflected multidisciplinary work across design, innovation, and research."
+      "The objective was to create a portfolio that reflected multidisciplinary work across design, innovation, and research.",
+      "The project needed to feel editorial and personal while still giving structure to a broad body of work."
     ],
-    "role": [
-      "Frontend development",
-      "Content architecture",
-      "Responsive implementation",
-      "Experience design"
+    "contribution": [
+      "Built the frontend with Next.js, TypeScript, Tailwind CSS, and Framer Motion.",
+      "Structured the content architecture around design, research, strategy, and innovation work.",
+      "Implemented responsive editorial layouts that support multiple types of multidisciplinary work.",
+      "Used strong typography and modular sections to keep the portfolio clear and engaging."
     ],
     "challenges": [
       "The website needed to present several disciplines without overwhelming visitors.",
-      "Research, industrial design, strategy, and innovation all needed equal importance."
+      "Research, industrial design, strategy, and innovation all needed equal importance.",
+      "The content architecture had to support different types of work without flattening them into one generic portfolio format.",
+      "The visual presentation needed to feel distinctive while keeping navigation and reading flow simple."
     ],
     "approach": [
-      "Used strong typography and visual hierarchy.",
-      "Created modular content sections.",
-      "Built an editorial layout that could support multiple types of work."
+      "Used strong typography and visual hierarchy to give the portfolio a more editorial feel.",
+      "Created modular content sections that could support different kinds of multidisciplinary work.",
+      "Built responsive layouts that keep research, product strategy, industrial design, and innovation content easy to browse.",
+      "Structured the interface so the platform could feel personal without becoming hard to navigate."
     ],
     "outcome": [
-      "The platform successfully showcases multidisciplinary work through a clear and engaging experience."
+      "The platform showcases multidisciplinary work through a clear and engaging experience.",
+      "The final website gives Keniye Koroye a stronger digital platform for presenting design, research, strategy, and innovation work.",
+      "The experience balances personality and structure, making the portfolio feel more memorable while keeping the work accessible."
     ],
     "pullQuote": "The experience had to give equal weight to design, research, strategy, and innovation."
   },

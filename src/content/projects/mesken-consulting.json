@@ -2,47 +2,58 @@
   "slug": "mesken-consulting",
   "title": "Mesken Consulting",
   "category": "Client Work",
-  "industry": "Education",
+  "industry": "Education Consultancy",
   "website": "https://meskenconsult.com",
   "status": "Live",
   "role": "Frontend Engineer",
-  "summary": "Mesken Consulting supports students pursuing international education opportunities by connecting them with overseas institutions.",
-  "shortDescription": "An educational consultancy platform focused on trust, clarity, and student conversion.",
+  "summary": "Mesken Consulting helps students navigate international admissions, visa preparation, and study abroad planning.",
+  "shortDescription": "A conversion-focused website for an education consultancy helping students study abroad.",
   "responsibilities": [
     "Frontend development",
-    "Information architecture",
-    "Conversion-focused design",
-    "Responsive implementation"
+    "Responsive implementation",
+    "CMS integration",
+    "SEO foundations",
+    "Lead-generation flow"
   ],
   "highlights": [
-    "Educational consulting",
-    "International education",
-    "Student recruitment"
+    "Study abroad consulting",
+    "Lead generation",
+    "CMS-managed content",
+    "Responsive experience"
   ],
-  "technologies": ["Next.js", "TypeScript", "Framer Motion", "Tailwind CSS"],
+  "technologies": [
+    "Next.js",
+    "TypeScript",
+    "Sanity CMS",
+    "Tailwind CSS",
+    "Framer Motion"
+  ],
   "published": true,
   "caseStudy": {
     "overview": [
-      "Mesken Consulting supports students pursuing international education opportunities by connecting them with overseas institutions.",
-      "The platform needed to present educational consulting services with clarity and trust."
+      "Mesken Consulting helps students pursue international education through admissions guidance, visa preparation, and study abroad support.",
+      "The website needed to present the consultancy's services clearly while building trust with prospective students and parents."
     ],
-    "role": [
-      "Frontend development",
-      "Information architecture",
-      "Conversion-focused design",
-      "Responsive implementation"
+    "contribution": [
+      "Built the frontend with Next.js, TypeScript, Tailwind CSS, and Framer Motion.",
+      "Structured the page experience around lead generation and clear service discovery.",
+      "Integrated Sanity CMS so the client can manage page content, testimonials, blogs, events, and global site settings.",
+      "Implemented responsive layouts, SEO metadata, sitemap support, and contact/consultation flows."
     ],
     "challenges": [
-      "The experience needed to support student recruitment while keeping the content easy to understand.",
-      "The platform had to balance trust, clarity, and conversion."
+      "The site needed to communicate credibility quickly for students and families making high-stakes education decisions.",
+      "The content system had to give the client editing control without making the website harder to maintain.",
+      "The booking and contact flows needed to feel simple, reliable, and conversion-focused across devices."
     ],
     "approach": [
-      "Structured the experience around clear service information.",
-      "Built responsive layouts for students browsing across devices.",
-      "Presented international education content in a direct and approachable format."
+      "Designed a clear homepage structure that moves visitors from brand introduction to services, destinations, testimonials, FAQs, and consultation booking.",
+      "Built reusable page sections and shared components to keep the interface consistent across the website.",
+      "Connected the website to Sanity CMS for editable written content, testimonials, blogs, events, footer text, and SEO fields.",
+      "Added form validation, email delivery, confirmation emails, and Calendly handoff for consultation bookings."
     ],
     "outcome": [
-      "The final platform communicates Mesken Consulting's education services with a focus on trust, clarity, and student conversion."
+      "The final platform gives Mesken Consulting a professional, CMS-powered website with clear service messaging and reliable lead-generation paths.",
+      "Prospective students can understand the offer, read success stories, submit enquiries, and book consultations from a responsive experience."
     ],
     "pullQuote": "For education consulting, clarity is part of the product experience."
   },
@@ -50,11 +61,11 @@
   "order": 4,
   "cover": {
     "image": "/images/projects/mesken.webp",
-    "alt": "Mesken Consulting project cover",
+    "alt": "Mesken Consulting website preview",
     "tone": "sage"
   },
   "seo": {
     "title": "Mesken Consulting | Cornerstone Ephraim",
-    "description": "An educational consultancy platform focused on trust, clarity, and student conversion."
+    "description": "A CMS-powered study abroad consultancy website built for trust, clarity, and lead generation."
   }
 }

@@ -30,20 +30,31 @@
   "caseStudy": {
     "overview": [
       "CertifyChain explores secure digital credential verification using modern web technologies and decentralized principles.",
-      "The product focuses on how certificates and credentials can be verified through a clear digital experience."
+      "The product focuses on how certificates and credentials can be issued, checked, and understood through a clear digital experience.",
+      "Because credential verification can easily become too technical, the interface needed to make trust, verification, and record integrity feel approachable."
     ],
-    "role": ["Frontend development", "State management", "API integration"],
+    "contribution": [
+      "Built frontend flows for certificate verification and digital credential interactions.",
+      "Implemented the interface with React, TypeScript, ShadCN UI, Framer Motion, and Tailwind CSS.",
+      "Used Zustand to manage product state across verification-focused interactions.",
+      "Integrated API-driven flows to support the credential verification experience."
+    ],
     "challenges": [
       "The project needed to communicate digital credential verification clearly.",
-      "The interface had to support verification concepts without making the product feel too technical."
+      "The interface had to support verification concepts without making the product feel too technical.",
+      "The experience needed to balance blockchain-inspired trust signals with familiar product patterns.",
+      "The product also needed enough structure to support API-driven interactions and future credential flows."
     ],
     "approach": [
-      "Built frontend flows for a credential verification platform.",
-      "Used state management to support product interactions.",
-      "Structured the experience around secure digital credentials and verification systems."
+      "Built frontend flows around the core user actions: understanding the platform, interacting with credentials, and verifying certificate information.",
+      "Used Zustand to manage product state across verification-focused interactions.",
+      "Structured the interface around digital credentials, verification systems, and clear feedback.",
+      "Used ShadCN UI, Framer Motion, and Tailwind CSS to keep the interface precise without making it feel heavy."
     ],
     "outcome": [
-      "CertifyChain is a certificate verification platform exploring secure digital credentials."
+      "CertifyChain became a focused certificate verification platform exploring secure digital credentials.",
+      "The project gives the verification concept a clearer product surface, making credential checks easier to understand and interact with.",
+      "The frontend foundation can support continued exploration around trusted records, certificate data, and verification workflows."
     ],
     "pullQuote": "Trust products need interfaces that feel precise and easy to understand."
   },

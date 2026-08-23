@@ -24,25 +24,31 @@
   "caseStudy": {
     "overview": [
       "Kelvar Industries develops intelligent surveillance and autonomous security systems.",
-      "The website needed to communicate advanced defense and AI technologies without relying on technical jargon."
+      "The website needed to communicate advanced defense and AI technologies without relying on technical jargon.",
+      "The product story had to feel credible for a serious technology company while still being understandable to visitors who may not have deep technical context."
     ],
-    "role": [
-      "Frontend implementation",
-      "Responsive development",
-      "Experience design implementation",
-      "Content structure"
+    "contribution": [
+      "Built the frontend with Next.js, TypeScript, Tailwind CSS, and Framer Motion.",
+      "Structured the content around advanced AI surveillance, autonomous systems, and defense technology.",
+      "Implemented responsive layouts that make the experience feel modern, intelligent, and trustworthy.",
+      "Used typography, visual hierarchy, and large visual moments to make complex technology easier to scan."
     ],
     "challenges": [
       "Autonomous surveillance and AI systems can be difficult to explain to non-technical audiences.",
-      "The experience needed to feel modern, intelligent, and trustworthy."
+      "The experience needed to feel modern, intelligent, and trustworthy.",
+      "The site had to present aerospace, defense, artificial intelligence, and surveillance ideas without overwhelming the page with dense explanation.",
+      "The visual system needed to support a premium technical tone while keeping the content easy to scan."
     ],
     "approach": [
       "Used strong typography to make complex technology easier to scan.",
-      "Created large visual moments and minimal layouts.",
-      "Structured content around a clear hierarchy."
+      "Created large visual moments and minimal layouts that give the brand a more confident product presence.",
+      "Structured content around a clear hierarchy so visitors can understand the company, its technology focus, and the value of its systems.",
+      "Implemented responsive pages with Next.js, TypeScript, Tailwind CSS, and Framer Motion to keep the experience consistent across screen sizes."
     ],
     "outcome": [
-      "The final experience communicates sophisticated technologies in a clear and approachable way."
+      "The final experience communicates sophisticated technologies in a clear and approachable way.",
+      "Kelvar Industries now has a digital presence that better reflects its work in AI surveillance and autonomous systems.",
+      "The site gives technical ideas more structure, making the company easier to understand for partners, prospects, and broader audiences."
     ],
     "pullQuote": "The goal was to make advanced systems feel understandable and trustworthy."
   },

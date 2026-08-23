@@ -8,22 +8,24 @@ import type { ProjectContent } from "@/lib/types";
 
 export function ProjectHero({ project }: { project: ProjectContent }) {
   return (
-    <section className="bg-canvas-dark pb-16 pt-16 text-ink-inverse sm:pb-24 sm:pt-24">
+    <section className="bg-canvas-dark pt-16 pb-16 text-ink-inverse sm:pt-24 sm:pb-24">
       <Container>
-        <SectionLabel className="text-ink-inverse/60">{project.category}</SectionLabel>
+        <SectionLabel className="text-ink-inverse/60">
+          {project.category}
+        </SectionLabel>
         <Reveal>
-          <h1 className="mt-14 max-w-6xl text-[clamp(4rem,11vw,10rem)] font-medium leading-[0.82] tracking-[-0.075em]">
+          <h1 className="mt-14 max-w-6xl text-[clamp(4rem,11vw,10rem)] leading-[0.82] font-medium tracking-[-0.075em]">
             {project.title}
           </h1>
         </Reveal>
-        <Reveal className="mb-14 mt-10 grid gap-8 border-t border-ink-inverse/15 pt-8 md:grid-cols-4">
+        <Reveal className="mt-10 mb-14 grid gap-8 border-t border-ink-inverse/15 pt-8 md:grid-cols-4">
           {[
             ["Industry", project.industry],
             ["Role", project.role],
             ["Status", project.status],
           ].map(([label, value]) => (
             <div key={label}>
-              <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-ink-inverse/40">
+              <p className="font-mono text-[10px] tracking-[0.12em] text-ink-inverse/40 uppercase">
                 {label}
               </p>
               <p className="mt-2 text-sm text-ink-inverse/80">{value}</p>
@@ -57,7 +59,11 @@ export function ProjectHero({ project }: { project: ProjectContent }) {
           )}
         </Reveal>
         <Reveal>
-          <ProjectCover project={project} priority className="aspect-[4/3] md:aspect-[16/8]" />
+          <ProjectCover
+            project={project}
+            priority
+            className="aspect-[4/3] md:aspect-[16/8]"
+          />
         </Reveal>
       </Container>
     </section>

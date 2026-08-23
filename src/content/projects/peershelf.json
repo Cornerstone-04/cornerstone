@@ -31,25 +31,31 @@
   "caseStudy": {
     "overview": [
       "PeerShelf is an academic collaboration platform designed to help students discover, share, and access educational resources.",
-      "The product explores how learning resources can become easier to organize and access through a shared academic experience."
+      "The product explores how learning resources can become easier to organize and access through a shared academic experience.",
+      "The idea came from a simple student problem: useful learning materials often exist, but they are not always easy to find, share, or revisit."
     ],
-    "role": [
-      "Product design",
-      "Frontend development",
-      "User experience",
-      "Product strategy"
+    "contribution": [
+      "Worked across product strategy, product design, user experience, and frontend development.",
+      "Built the interface with React, TypeScript, Tailwind CSS, ShadCN UI, Firebase, and Zustand.",
+      "Structured the product experience around student collaboration, resource sharing, and educational discovery.",
+      "Created reusable UI patterns to support a scalable academic collaboration experience."
     ],
     "challenges": [
       "The product needed to make student collaboration and resource sharing feel simple.",
-      "The experience needed to support discovery, access, and educational usefulness."
+      "The experience needed to support discovery, access, and educational usefulness.",
+      "The platform had to feel approachable for students while still leaving room for structured resource management.",
+      "The interface needed reusable patterns that could support a growing product without becoming difficult to maintain."
     ],
     "approach": [
       "Worked across product strategy, user experience, and frontend development.",
-      "Focused the interface around resource sharing and academic collaboration.",
-      "Used reusable UI patterns to support a scalable product experience."
+      "Focused the interface around resource sharing, academic collaboration, and resource discovery.",
+      "Used reusable UI patterns to support a scalable product experience.",
+      "Built the product surface with React, TypeScript, Tailwind CSS, ShadCN UI, Firebase, and Zustand."
     ],
     "outcome": [
-      "PeerShelf is an academic collaboration platform focused on knowledge sharing and accessible learning."
+      "PeerShelf became an academic collaboration platform focused on knowledge sharing and accessible learning.",
+      "The product gives students a clearer way to think about discovering, sharing, and accessing educational resources.",
+      "The frontend foundation supports continued product exploration around learning resources, collaboration, and student-focused discovery."
     ],
     "pullQuote": "The product asks how students can discover useful academic resources faster."
   },

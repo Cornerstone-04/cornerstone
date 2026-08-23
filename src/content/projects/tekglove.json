@@ -1,0 +1,86 @@
+{
+  "slug": "tekglove",
+  "title": "TekGlove",
+  "category": "Client Work",
+  "industry": "Wearable Technology",
+  "website": "https://www.tekglove.co.uk",
+  "status": "Live",
+  "role": "Frontend Engineer",
+  "summary": "TekGlove is a wearable technology platform powered by a Smart Dorsal Sensor. Its ecosystem uses hand-derived data, artificial intelligence, gesture recognition, biometrics, and connected technology to support products across healthcare, sport, productivity, rehabilitation, security, and human-computer interaction.",
+  "shortDescription": "A scalable digital platform for an intelligent wearable ecosystem powered by hand-derived data and Smart Dorsal Sensor technology.",
+  "responsibilities": [
+    "Frontend development",
+    "Information architecture",
+    "Product architecture",
+    "Responsive implementation",
+    "Design system development",
+    "Motion design implementation",
+    "Accessibility improvements",
+    "SEO implementation",
+    "Waitlist system development"
+  ],
+  "highlights": [
+    "Six-product wearable ecosystem",
+    "Smart Dorsal Sensor platform",
+    "Product-specific visual identities",
+    "Interactive technical storytelling",
+    "Verified waitlist system",
+    "Responsive motion system"
+  ],
+  "technologies": [
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "Motion",
+    "Supabase",
+    "Resend",
+    "Cloudflare Turnstile"
+  ],
+  "caseStudy": {
+    "overview": [
+      "TekGlove is a wearable technology platform that transforms data from the hand into useful intelligence across a growing family of connected gloves.",
+      "The project evolved from a single product website into a scalable ecosystem for six products serving healthcare, sport, rehabilitation, productivity, security, and human-computer interaction.",
+      "The digital experience needed to explain the shared Smart Dorsal Sensor architecture while giving each product a distinct purpose and identity."
+    ],
+    "contribution": [
+      "Built the frontend with Next.js, TypeScript, Tailwind CSS, and Motion.",
+      "Structured the information architecture around the Smart Dorsal Sensor and a six-product wearable ecosystem.",
+      "Developed product and content architecture, responsive layouts, design-system patterns, and motion implementation.",
+      "Implemented accessibility improvements, SEO support, and verified waitlist infrastructure using Supabase, Resend, and Cloudflare Turnstile."
+    ],
+    "challenges": [
+      "The original product story did not clearly communicate what TekGlove was or how its technology worked.",
+      "Six products needed to feel distinct while remaining visibly connected to one core platform.",
+      "Complex concepts involving sensors, biometrics, gestures, artificial intelligence, and connected hardware had to remain understandable to a broad audience.",
+      "The website needed to support product renders that would become available gradually without making incomplete pages feel unfinished.",
+      "The existing external waitlist journey did not belong to TekGlove and had to be replaced with a secure, brand-specific system."
+    ],
+    "approach": [
+      "Reframed TekGlove around the hand as a rich source of interpretable data.",
+      "Established the Smart Dorsal Sensor as the technology powering the wider product ecosystem.",
+      "Created a shared product-page structure that can scale consistently across all six gloves.",
+      "Developed individual accent-colour systems to distinguish each product without weakening the TekGlove identity.",
+      "Used restrained motion, product imagery, interactive diagrams, and textured surfaces to make technical storytelling more engaging.",
+      "Built a verified waitlist flow using Supabase, Resend, and Cloudflare Turnstile, including product-interest capture and glove-specific audience segmentation.",
+      "Improved metadata, accessibility, responsive behaviour, navigation, validation, and component architecture across the website."
+    ],
+    "outcome": [
+      "The completed experience presents TekGlove as a coherent wearable technology platform rather than a collection of unrelated concepts.",
+      "Visitors can understand how one core sensor architecture supports six products across multiple industries.",
+      "Each priority product now has a dedicated, scalable storytelling experience and its own recognisable visual identity.",
+      "TekGlove can securely capture verified audience interest and organise subscribers according to the products they want to hear about."
+    ],
+    "pullQuote": "The hand is not just an interface. It is a source of data."
+  },
+  "featured": true,
+  "order": 1,
+  "cover": {
+    "image": "/images/projects/tekglove.webp",
+    "alt": "TekGlove wearable technology platform project cover",
+    "tone": "signal"
+  },
+  "seo": {
+    "title": "TekGlove | Cornerstone Ephraim",
+    "description": "Design and frontend development for a six-product wearable technology ecosystem powered by hand-derived data and Smart Dorsal Sensor technology."
+  }
+}

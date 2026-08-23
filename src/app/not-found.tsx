@@ -20,14 +20,14 @@ export default function NotFound() {
           <div className="flex flex-col justify-between gap-16">
             <div>
               <SectionLabel>404</SectionLabel>
-              <h1 className="mt-12 text-[clamp(3.5rem,7vw,7rem)] font-medium leading-[0.9] tracking-[-0.06em]">
+              <h1 className="mt-12 text-[clamp(3.5rem,7vw,7rem)] leading-[0.9] font-medium tracking-[-0.06em]">
                 Looks like you’ve reached unfamiliar territory.
               </h1>
             </div>
             <div>
               <p className="mb-6 max-w-sm text-ink-muted">
-                The page you are looking for is unavailable. Return home and continue
-                exploring.
+                The page you are looking for is unavailable. Return home and
+                continue exploring.
               </p>
               <Link className="button bg-canvas-dark text-ink-inverse" href="/">
                 Return home

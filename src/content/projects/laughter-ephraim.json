@@ -6,48 +6,81 @@
   "website": "https://laughterephraim.com",
   "status": "Client Work",
   "role": "Frontend Engineer",
-  "summary": "A creative portfolio showcasing visual storytelling, multimedia work, and artistic projects.",
-  "shortDescription": "A creative portfolio focused on storytelling through visual and multimedia experiences.",
+  "summary": "A CMS-powered portfolio for a film editor, built to present selected work clearly and make future content updates easier to manage.",
+  "shortDescription": "A CMS-powered creative portfolio for a film editor, designed to showcase work clearly and support independent content updates.",
   "responsibilities": [
     "Frontend development",
-    "Experience design",
-    "Content presentation"
+    "CMS architecture",
+    "Responsive implementation",
+    "Content modelling",
+    "Content migration",
+    "Motion implementation",
+    "SEO implementation",
+    "Contact form development",
+    "Deployment",
+    "Client onboarding"
   ],
-  "highlights": ["Creative work", "Multimedia", "Visual storytelling"],
-  "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+  "highlights": [
+    "Sanity CMS",
+    "Selected works",
+    "Work details",
+    "Content management",
+    "SEO"
+  ],
+  "technologies": [
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "Framer Motion",
+    "Sanity",
+    "Resend",
+    "Vercel"
+  ],
+  "credits": [
+    {
+      "role": "Designer",
+      "name": "Tolulope Adebunmi",
+      "href": "https://linktr.ee/ToluwalopeAdebunmi"
+    }
+  ],
   "caseStudy": {
     "overview": [
-      "Laughter Ephraim is a creative portfolio showcasing visual storytelling, multimedia work, and artistic projects.",
-      "The project focused on presenting creative work through a digital experience that could support visual and multimedia content."
+      "A portfolio website for a film editor, created to present his work in a clearer, more intentional, and less template-driven way.",
+      "The project combined a custom frontend with an embedded Sanity Studio, giving the client control over key portfolio content without needing to edit code."
     ],
-    "role": [
-      "Frontend development",
-      "Experience design",
-      "Content presentation"
+    "contribution": [
+      "Built the frontend with Next.js, TypeScript, Tailwind CSS, and Framer Motion.",
+      "Structured the CMS architecture around hero content, selected works, full work details, testimonials, and homepage content.",
+      "Integrated Sanity CMS so the client can manage portfolio content without editing code.",
+      "Implemented responsive layouts, motion, SEO support, contact handling, deployment, and client onboarding."
     ],
     "challenges": [
-      "The experience needed to support creative work, multimedia, and visual storytelling.",
-      "The layout needed to keep the work expressive without overwhelming the content."
+      "The previous portfolio was difficult to use and felt too generic for the quality of work being presented.",
+      "The new experience needed to showcase selected projects, support a full works archive, and allow the client to update content independently.",
+      "The CMS structure needed to stay simple enough for non-technical use while still supporting rich project details, testimonials, and homepage content."
     ],
     "approach": [
-      "Designed the presentation around visual storytelling.",
-      "Built responsive content sections for creative and multimedia work.",
-      "Kept the interface focused on the work being presented."
+      "Built a responsive portfolio experience focused on letting the work lead.",
+      "Structured Sanity around the sections the client needed to update most: hero content, selected works, full work details, and testimonials.",
+      "Created a full works page and work details modal to support deeper project exploration without making the homepage feel overloaded.",
+      "Migrated existing content into the CMS and onboarded the client so future updates could happen directly from Sanity.",
+      "Added contact handling and SEO support to make the site more complete as a production portfolio."
     ],
     "outcome": [
-      "The result is a creative portfolio focused on storytelling through visual and multimedia experiences."
+      "The finished portfolio gives the client a clearer way to present his work and a simpler way to keep the site current.",
+      "Content updates were moved from code changes into CMS edits, enabling the client to publish, update, and remove portfolio content independently."
     ],
-    "pullQuote": "The interface needed to create room for the creative work to lead."
+    "pullQuote": "The goal was to move the portfolio away from a generic template and give the client a system he could actually maintain."
   },
   "featured": false,
   "order": 6,
   "cover": {
     "image": "/images/projects/laughter.webp",
-    "alt": "Laughter Ephraim project identity",
+    "alt": "Laughter Ephraim portfolio website",
     "tone": "amber"
   },
   "seo": {
     "title": "Laughter Ephraim | Cornerstone Ephraim",
-    "description": "A creative portfolio focused on storytelling through visual and multimedia experiences."
+    "description": "A CMS-powered creative portfolio for a film editor, designed to showcase work clearly and support independent content updates."
   }
 }
