@@ -1,0 +1,86 @@
+{
+  "slug": "asoebi-fashion-week",
+  "title": "Asoebi Fashion Week",
+  "category": "Client Work",
+  "industry": "Fashion, Culture and Event Technology",
+  "website": "https://asoebifw.com",
+  "status": "Live",
+  "role": "Design Engineer & Full-Stack Developer",
+  "summary": "Asoebi Fashion Week is a fashion and technology platform celebrating African fashion, cultural expression, emerging designers and the wider Asoebi ecosystem.",
+  "shortDescription": "An editorial fashion platform connecting African culture, emerging talent, commerce and live experiences.",
+  "responsibilities": [
+    "Product and interface design",
+    "Frontend development",
+    "Responsive implementation",
+    "Backend and database integration",
+    "Authentication and admin tooling",
+    "Email workflow development",
+    "Accessibility and SEO"
+  ],
+  "highlights": [
+    "Asoebi Fashion Prize applications",
+    "Waitlist and newsletter acquisition",
+    "Secure administrator dashboard",
+    "Event and ticket promotion",
+    "Editorial motion system",
+    "Automated email notifications"
+  ],
+  "technologies": [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Convex",
+    "Better Auth",
+    "Resend",
+    "Motion",
+    "Cuelume",
+    "Sentry"
+  ],
+  "published": true,
+  "caseStudy": {
+    "overview": [
+      "Asoebi Fashion Week is being developed as the global home of Asoebi fashion, culture and celebration. The platform brings together the Asoebi Fashion Prize, Asoebi Vendor, live events and community participation.",
+      "The website needed to introduce a new cultural fashion platform, establish a distinctive identity and support real applications, registrations and internal review workflows."
+    ],
+    "contribution": [
+      "Designed and developed the responsive website using Next.js, React, TypeScript and Tailwind CSS.",
+      "Created an editorial visual system built around the AEFW brand palette, fashion photography, expressive typography and purposeful motion.",
+      "Built the waitlist and Fashion Prize application workflows with validation, duplicate-entry handling and accessible feedback states.",
+      "Integrated Convex for application storage, Better Auth for passwordless administrator access and Resend for applicant confirmations and administrative notifications.",
+      "Developed a protected dashboard for reviewing Prize applications, monitoring waitlist entries, updating application statuses and exporting filtered records.",
+      "Implemented metadata, structured navigation, accessibility improvements, error handling, testing and production deployment foundations."
+    ],
+    "challenges": [
+      "The platform needed to feel rooted in African fashion without resembling a generic event or technology landing page.",
+      "The product direction evolved from a traditional fashion-week website into a broader fashion, commerce and cultural ecosystem.",
+      "Public forms needed to manage duplicate submissions, email failures and sensitive age-verification documents without creating confusing user experiences.",
+      "The administrative experience needed to remain secure and practical for a small team without introducing an unnecessarily complex account system."
+    ],
+    "approach": [
+      "Developed a flexible design system that combines editorial layouts, brand-led colour, fashion imagery and restrained interaction motion.",
+      "Restructured the public experience around the Fashion Prize, Asoebi Vendor, the After Party, founders and participation opportunities.",
+      "Separated form schemas, hooks, submission actions, email templates and database operations into focused feature modules.",
+      "Created passwordless administrator access for approved team members using named account selection and email-delivered one-time codes.",
+      "Added responsive application tables, filters, review statuses, protected document access and spreadsheet-safe CSV exports.",
+      "Established automated tests for forms, validation, email templates, administrator workflows, UI components and accessibility-sensitive interactions."
+    ],
+    "outcome": [
+      "The resulting platform gives Asoebi Fashion Week a distinctive digital presence that communicates its cultural vision while supporting real audience growth and Prize applications.",
+      "Applicants can submit collections and receive confirmation emails, while the AEFW team can securely review entries, track application progress and manage waitlist data from one dashboard.",
+      "The architecture provides a foundation for future marketplace, accreditation, newsletter and event-management capabilities."
+    ],
+    "pullQuote": "African fashion deserves a digital experience as expressive, intentional and ambitious as the culture it represents."
+  },
+  "featured": true,
+  "order": 1,
+  "cover": {
+    "image": "/images/projects/asoebifw.webp",
+    "alt": "Asoebi Fashion Week website preview",
+    "tone": "royal-purple"
+  },
+  "seo": {
+    "title": "Asoebi Fashion Week | Cornerstone Ephraim",
+    "description": "An editorial fashion and technology platform built for African culture, emerging talent, applications and live experiences."
+  }
+}
